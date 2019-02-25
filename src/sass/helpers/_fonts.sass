@@ -5,3 +5,26 @@
 	font-family: $name
 	font-style: $style
 	font-weight: $weight
+
+
+
+$familyVerdana: 'Verdana'
+
+=verdana
+	font-family: 'Verdana', Arial, -apple-system, BlinkMacSystemFont, 'Oxygen', sans-serif
+
+
+// Verdana
+
+@font-face
+	+fontdefault(normal, 400, $familyVerdana)
+	+fontpath('Verdana', 'Verdana', Verdana)
+@font-face
+	+fontdefault(italic, 400, $familyVerdana)
+	+fontpath('Verdana-Italic', 'Verdana-Italic', Verdana-Italic)
+@font-face
+	+fontdefault(normal, 700, $familyVerdana)
+	+fontpath('Verdana-Bold', 'Verdana-Bold', Verdana-Bold)
+@font-face
+	+fontdefault(italic, 700, $familyVerdana)
+	+fontpath('Verdana-BoldItalic', 'Verdana-BoldItalic', Verdana-BoldItalic)

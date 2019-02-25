@@ -3,3 +3,5 @@ ProjectTitle: template
 PageList:
 - file: page.html
   ready: 50
+- file: UI.html
+  ready: 50
