@@ -1,0 +1,42 @@
+.course
+	padding: 2em
+	box-shadow: 0 20px 56px -33px rgba($black, 0.2)
+	min-height: 300px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	max-width: 317px
+	width: 100%
+	border-radius: 10px
+	transition: background-color .4s, color .4s, box-shadow .4s
+	+hover
+		background-color: $orange
+		color: $white
+		box-shadow: 0 25px 42px -14px $orange
+		.course__aside
+			color: $white
+		.course__price:before
+			background-color: $white
+		.course__title.title
+			color: $white
+	&__aside
+		color: $grayLight
+		transition: color .4s
+	&__bottom
+		display: flex
+		padding-top: 1em
+		+f(1.2em, 700)
+	&__price
+		margin-left: 30px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			+circle(7)
+			background-color: $black
+			left: -18.5px
+			top: 50%
+			margin-top: -3.5px
+			transition: background-color .4s
+	&__title
+		transition: color .4s
