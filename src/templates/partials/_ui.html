@@ -1,3 +1,4 @@
+{% import "partials/_mixins.html" as mixins %}
 {# 									COURSE #}
 {% macro course(props) %}
 <div class="course {% if props.class %}{{props.class}}{% endif %}">
@@ -26,8 +27,8 @@
 {# 									EVENT #}
 
 {# 									INSTRUCTOR #}
-{% macro instructor() %}
-<div class="instructor">
+{% macro instructor(props) %}
+<div class="instructor {% if props.class %}{{props.class}}{% endif %}">
 	<div class="instructor__top"></div>
 	<div class="instructor__bottom">
 		<div class="instructor__img" style="background-image: url(./img/instructor.png)"></div>
@@ -40,8 +41,8 @@
 {# 									INSTRUCTOR #}
 
 {# 									TESTIMONIAL #}
-{% macro testimonial() %}
-	<div class="testimonial">
+{% macro testimonial(props) %}
+	<div class="testimonial {% if props.class %}{{props.class}}{% endif %}">
 		<div class="testimonial__top">
 			<div class="testimonial__img" style="background-image: url(./img/testimonial.png)"></div>
 			<div class="testimonial__main">
@@ -56,3 +57,30 @@
 	</div>
 {% endmacro %}
 {# 									TESTIMONIAL #}
+
+{# 										FORM #}
+{% macro form(props) %}
+<div class="feedback {% if props.class %}{{props.class}}{% endif %}">
+	<div class="feedback__inner">
+		<h3 class="feedback__title title title_lg">{% if props.title %}{{props.title}}{% endif %}</h3>
+		<form action="/" class="form">
+			<div class="form-group">
+				<input type="text" placeholder="Имя">
+			</div>
+			<div class="form-group">
+				<input type="text" placeholder="Телефон">
+			</div>
+			<div class="form-group">
+				<input type="text" placeholder="Email">
+			</div>
+			<div class="form__btn">
+				<button type="submit" class="btn btn_md">Отправить</button>
+			</div>
+		</form>
+		<div class="feedback__check">
+			{{mixins.checkbox({text: 'Я согласен с условиями обработки персональных данных'})}}
+		</div>
+	</div>
+</div>
+{% endmacro %}
+{# 										FORM #}

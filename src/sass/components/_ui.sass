@@ -142,3 +142,77 @@
 		p
 			&:first-child
 				padding: 0 2em
+
+// 										FEEDBACK
+.feedback
+	padding: 2em
+	background-color: $blue
+	&__inner
+		border: 2px solid $white
+		padding: 2.36em 4em
+	&__title
+		text-align: center
+		margin-bottom: 1.28em
+		&.title
+			color: $white
+	&__check
+		text-align: center
+		margin-top: 2.66em
+		color: $white
+		letter-spacing: normal
+
+// 										FORM
+.form
+	// width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	&__btn
+		padding-left: $gap_s
+.form-group
+	max-width: 300px
+	width: 100%
+	padding: 0 $gap_s
+	input
+		color: $grayLight
+		+verdana
+		+f(15px, 400)
+		letter-spacing: 0.066em
+		padding: 1.33em
+		background-color: $white
+		border-radius: 10px
+		width: 100%
+		&:focus
+			&::placeholder
+				font-size: 0
+		+placeholder
+			color: $grayLight
+			+verdana
+			+f(15px, 400)
+			letter-spacing: 0.066em
+.checkbox
+	position: relative
+	cursor: pointer
+	&__icon
+		position: absolute
+		top: -5px
+		left: -39px
+		width: 25px
+		height: 25px
+		border-radius: 4px
+		border: 1px solid $white
+	input
+		position: absolute
+		width: 1px
+		height: 1px
+		margin: -1px
+		padding: 0
+		border: 0
+		clip: rect(0 0 0 0)
+		overflow: hidden
+		&:checked
+			~ .checkbox__icon
+				background-image: url(../img/check.svg)
+				background-size: 70%
+				background-repeat: no-repeat
+				background-position: 50% 50%

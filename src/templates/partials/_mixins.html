@@ -25,6 +25,7 @@
 <label class="{% if props.radio %}radio{% else %}checkbox{% endif %}{% if props.class %} {{ props.class }}{% endif %}">
 	<input type="{% if props.radio %}radio{% else %}checkbox{% endif %}" name="{{ props.name or 'checkbox' }}"{% if props.checked %} checked{% endif %}>
 	<span class="{% if props.radio %}radio{% else %}checkbox{% endif %}__text">{{ props.text or 'checkbox' }}</span>
+	<span class="{% if props.radio %}radio{% else %}checkbox{% endif %}__icon"></span>
 </label>
 <!-- end input -->
 {% endmacro %}
