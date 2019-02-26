@@ -4,6 +4,13 @@ title: UI
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	{% include "partials/_ui.html" %}
 
+	{{ui.course()}}
+	<br>
+	{{ui.event()}}
+	<br>
+	{{ui.instructor()}}
+	<br>
+	{{ui.testimonial()}}
+	<br>
 {% endblock %}

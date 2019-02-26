@@ -1,6 +1,7 @@
 // 												COURSE
 .course
-	padding: 2em
+	padding: 1.7em 2em
+	background-color: $white
 	box-shadow: 0 20px 56px -33px rgba($black, 0.2)
 	min-height: 300px
 	display: flex
@@ -27,6 +28,7 @@
 		display: flex
 		padding-top: 1em
 		+f(1.2em, 700)
+		letter-spacing: normal
 	&__price
 		margin-left: 30px
 		position: relative
@@ -40,6 +42,7 @@
 			margin-top: -3.5px
 			transition: background-color .4s
 	&__title
+		margin-top: .4em
 		transition: color .4s
 
 // 												EVENT
@@ -54,9 +57,52 @@
 		font-size: 16px
 		line-height: 1.75
 		padding-top: 1.25em
+		letter-spacing: normal
 		span
 			text-transform: uppercase
 			color: $orange
 			font-weight: 700
 	&__title
 		max-width: 300px
+		margin-top: 0.25em
+
+// 										INSTRUCTOR
+.instructor
+	max-width: 433px
+	width: 100%
+	box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
+	border-radius: 10px
+	overflow: hidden
+	&__top
+		background-color: $blue
+		padding-bottom: 34%
+		position: relative
+		overflow: hidden
+		&:before
+			content: ''
+			position: absolute
+			top: 1.33em
+			left: 2em
+			right: 2em
+			bottom: -1em
+			border: 1px solid $white
+			border-radius: 10px
+	&__bottom
+		text-align: center
+		padding: 0 2em 2.66em
+	&__img
+		+circle(120)
+		+cover
+		margin: -5.7em auto 0
+		overflow: hidden
+		z-index: 1
+		position: relative
+	&__title
+		margin-top: 0.5em
+	&__aside
+		letter-spacing: 0.063em
+		color: $grayLight
+		margin-bottom: 1em
+	p
+		text-align: left
+		line-height: 1.9
