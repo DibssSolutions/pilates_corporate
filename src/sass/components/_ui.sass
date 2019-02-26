@@ -90,6 +90,9 @@
 	&__bottom
 		text-align: center
 		padding: 0 2em 2.66em
+		p
+			text-align: left
+			line-height: 1.9
 	&__img
 		+circle(120)
 		+cover
@@ -103,6 +106,39 @@
 		letter-spacing: 0.063em
 		color: $grayLight
 		margin-bottom: 1em
-	p
-		text-align: left
-		line-height: 1.9
+
+// 									TESTIMONIAL
+.testimonial
+	padding: 2em 2em 2.66em
+	max-width: 433px
+	width: 100%
+	box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
+	border-radius: 10px
+	&__top
+		display: flex
+		align-items: center
+	&__img
+		flex-shrink: 0
+		+circle(90)
+		+cover
+		overflow: hidden
+		margin-right: 1.33em
+	&__aside
+		color: $grayLight
+		letter-spacing: 0.033em
+	&__bottom
+		position: relative
+		margin-top: 1.6em
+		&:before
+			content: ''
+			position: absolute
+			width: 54px
+			height: 38px
+			background-image: url(../img/quotes.svg)
+			+cover
+			top: 9px
+			left: 0
+			z-index: -1
+		p
+			&:first-child
+				padding: 0 2em
