@@ -84,3 +84,41 @@
 </div>
 {% endmacro %}
 {# 										FORM #}
+
+{# 										SEMINAR #}
+{% macro seminar(props) %}
+<div class="seminar">
+	<div class="seminar__top" style="background-image: url(./img/{{props.img}})">
+		<div class="seminar__btn">
+			<a href="#" class="btn btn_shadow btn_bold">{{props.title}}</a>
+		</div>
+	</div>
+	<ul class="seminar__list">
+		{% for item in props.items %}
+			<li class="seminar__item">{{item}}</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endmacro %}
+{# 										SEMINAR #}
+
+{# 										MAP #}
+{% macro map(props) %}
+<div class="contacts">
+	<div class="contacts__info">
+		<h4 class="contacts__title title title_md">{{props.title}}</h4>
+		<div class="contacts__aside">Адрес</div>
+		<address>Метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж</address>
+		<div class="contacts__aside">Телефон</div>
+		<div class="contacts__phone">
+			<a href="tel:+74952553056">+7(495)255-30-56</a>
+		</div>
+		<div class="contacts__aside">Почта</div>
+		<div class="contacts__phone">
+			<a href="mailto:contact@pilates-institute.ru">Сontact@pilates-institute.ru</a>
+		</div>
+	</div>
+	<div class="map" id="map"></div>
+</div>
+{% endmacro %}
+{# 										MAP #}
