@@ -5,13 +5,30 @@ title: UI
 
 {% block content %}
 
-	{{ui.course()}}
+	{{ui.course({
+		title: 'Пилатес для беременных',
+		time: '90 мин',
+		price: '1 500 ₽'
+	})}}
 	<br>
-	{{ui.event()}}
+	{{ui.event({
+		title: 'MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)',
+		event: 'Пилатес',
+		date: '/ 01.12.2019'
+	})}}
 	<br>
-	{{ui.instructor()}}
+	{{ui.instructor({
+		name: 'Gussie Hammond',
+		aside: 'Стаж инструктора 10 лет',
+		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+	})}}
 	<br>
-	{{ui.testimonial()}}
+	{{ui.testimonial({
+		name: 'Harold Roberts',
+		aside: 'Студентка Пилатоса',
+		quote: 'Lorem ipsum dolor sit amet, outdd consectetur adipiscing elit.',
+		text: 'Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+	})}}
 	<br>
 	{{ui.form({title: 'Получите подробную консультацию об обучении'})}}
 	<br>

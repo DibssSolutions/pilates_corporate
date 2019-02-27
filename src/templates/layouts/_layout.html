@@ -1,5 +1,6 @@
 {% import "partials/_mixins.html" as mixins %}
 {% import "partials/_ui.html" as ui %}
+{% import "partials/_header.html" as header %}
 <!doctype html>
 <html>
   <head>
@@ -37,16 +38,16 @@
             //   map.controls.remove('routeEditor');
             map.controls.remove('rulerControl');
             map.container.fitToViewport();
-            if (map) {
-              ymaps.modules.require(['Placemark', 'Circle'], function(Placemark, Circle) {
-                var placemark = new Placemark([55.76, 37.64],{
-                  balloonContentBody: 'ул. Садовая-Спасская дом 21/1 офис 321'
-                });
-                map.geoObjects.add(placemark);
-                // Балун откроется в точке «привязки» балуна — т. е. над меткой.
-                //placemark.balloon.open();
-              });
-            }
+            /* if (map) {
+				ymaps.modules.require(['Placemark', 'Circle'], function(Placemark, Circle) {
+				  var placemark = new Placemark([55.76, 37.64],{
+					balloonContentBody: 'ул. Садовая-Спасская дом 21/1 офис 321'
+				  });
+				  map.geoObjects.add(placemark);
+				  // Балун откроется в точке «привязки» балуна — т. е. над меткой.
+				  //placemark.balloon.open();
+				});
+			  } */
           });
         }
         
