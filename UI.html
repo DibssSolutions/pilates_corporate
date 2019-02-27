@@ -86,10 +86,77 @@
         </div>
       </div>
       <br>
+      <div class="seminar">
+        <div class="seminar__top" style="background-image: url(./img/seminar.png)">
+          <div class="seminar__btn">
+            <a href="#" class="btn btn_shadow btn_bold">Пилатес </a>
+          </div>
+        </div>
+        <ul class="seminar__list">
+          <li class="seminar__item">MatWork уровень 1 - (Базовый курс)</li>
+          <li class="seminar__item">MatWork уровень 2 + работа с малым оборудованием</li>
+          <li class="seminar__item">Работа с большим оборудованием</li>
+          <li class="seminar__item">Пилатес для беременных</li>
+          <li class="seminar__item">Пилатес для беременных и людей старшего возраста</li>
+          <li class="seminar__item">Функциональный пилатес</li>
+        </ul>
+      </div>
+      <br>
+      <div class="contacts">
+        <div class="contacts__info">
+          <h4 class="contacts__title title title_md">Москва</h4>
+          <div class="contacts__aside">Адрес</div>
+          <address>Метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж</address>
+          <div class="contacts__aside">Телефон</div>
+          <div class="contacts__phone">
+            <a href="tel:+74952553056">+7(495)255-30-56</a>
+          </div>
+          <div class="contacts__aside">Почта</div>
+          <div class="contacts__phone">
+            <a href="mailto:contact@pilates-institute.ru">Сontact@pilates-institute.ru</a>
+          </div>
+        </div>
+        <div class="map" id="map"></div>
+      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=7a9648bf-398b-4673-ad66-512ef28875ce&lang=ru_RU" type="text/javascript"></script>
+    <script>
+      if (document.querySelector('#map'))
+      {
+        ymaps.ready(function()
+        {
+          var map = new ymaps.Map('map',
+          {
+            center: [55.76, 37.64],
+            zoom: 10
+          });
+          map.behaviors.disable('scrollZoom');
+          map.controls.remove('smallMapDefaultSet');
+          //   map.controls.remove('searchControl');
+          map.controls.remove('trafficControl');
+          //   map.controls.remove('routeEditor');
+          map.controls.remove('rulerControl');
+          map.container.fitToViewport();
+          if (map)
+          {
+            ymaps.modules.require(['Placemark', 'Circle'], function(Placemark, Circle)
+            {
+              var placemark = new Placemark([55.76, 37.64],
+              {
+                balloonContentBody: 'ул. Садовая-Спасская дом 21/1 офис 321'
+              });
+              map.geoObjects.add(placemark);
+              // Балун откроется в точке «привязки» балуна — т. е. над меткой.
+              //placemark.balloon.open();
+            });
+          }
+        });
+      }
+
+    </script>
     <!-- END scripts -->
   </body>
 
