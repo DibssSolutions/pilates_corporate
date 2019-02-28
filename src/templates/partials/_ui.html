@@ -18,7 +18,7 @@
 {% macro event(props) %}
 <div class="event {% if props.class %}{{props.class}}{% endif %}">
 	<div class="event__img">
-		<img src="./img/event1.jpg" alt="event">
+		<img src="./img/{{props.img}}" alt="event">
 	</div>
 	<div class="event__date"><span>{{props.event}}</span> {{props.date}}</div>
 	<h4 class="event__title title title_md">{{props.title}}</h4>
@@ -60,25 +60,27 @@
 
 {# 										FORM #}
 {% macro form(props) %}
-<div class="feedback {% if props.class %}{{props.class}}{% endif %}">
-	<div class="feedback__inner">
-		<h3 class="feedback__title title title_lg">{% if props.title %}{{props.title}}{% endif %}</h3>
-		<form action="/" class="form">
-			<div class="form-group">
-				<input type="text" placeholder="Имя">
+<div class="feedback__wrap inner">
+	<div class="feedback {% if props.class %}{{props.class}}{% endif %}">
+		<div class="feedback__inner">
+			<h3 class="feedback__title title title_lg">{% if props.title %}{{props.title}}{% endif %}</h3>
+			<form action="/" class="form">
+				<div class="form-group">
+					<input type="text" placeholder="Имя">
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="Телефон">
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="Email">
+				</div>
+				<div class="form__btn">
+					<button type="submit" class="btn btn_md">Отправить</button>
+				</div>
+			</form>
+			<div class="feedback__check">
+				{{mixins.checkbox({text: 'Я согласен с условиями обработки персональных данных'})}}
 			</div>
-			<div class="form-group">
-				<input type="text" placeholder="Телефон">
-			</div>
-			<div class="form-group">
-				<input type="text" placeholder="Email">
-			</div>
-			<div class="form__btn">
-				<button type="submit" class="btn btn_md">Отправить</button>
-			</div>
-		</form>
-		<div class="feedback__check">
-			{{mixins.checkbox({text: 'Я согласен с условиями обработки персональных данных'})}}
 		</div>
 	</div>
 </div>

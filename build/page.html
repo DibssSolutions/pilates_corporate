@@ -182,8 +182,8 @@
               <a href="#" class="btn">Все онлайн курсы</a>
             </div>
           </div>
-          <div class="course-block__list row">
-            <div class="col-3">
+          <ul class="course-block__list row">
+            <li class="col-3">
               <div class="course col-3">
                 <div class="course__top">
                   <div class="course__aside">Пилатес</div>
@@ -194,8 +194,8 @@
                   <div class="course__price">1 500 ₽</div>
                 </div>
               </div>
-            </div>
-            <div class="col-3">
+            </li>
+            <li class="col-3">
               <div class="course col-3">
                 <div class="course__top">
                   <div class="course__aside">Пилатес</div>
@@ -206,8 +206,8 @@
                   <div class="course__price">1 500 ₽</div>
                 </div>
               </div>
-            </div>
-            <div class="col-3">
+            </li>
+            <li class="col-3">
               <div class="course col-3">
                 <div class="course__top">
                   <div class="course__aside">Пилатес</div>
@@ -218,8 +218,8 @@
                   <div class="course__price">1 500 ₽</div>
                 </div>
               </div>
-            </div>
-            <div class="col-3">
+            </li>
+            <li class="col-3">
               <div class="course col-3">
                 <div class="course__top">
                   <div class="course__aside">Пилатес</div>
@@ -230,7 +230,147 @@
                   <div class="course__price">1 500 ₽</div>
                 </div>
               </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="feedback__wrap inner">
+        <div class="feedback ">
+          <div class="feedback__inner">
+            <h3 class="feedback__title title title_lg">Получите подробную консультацию об обучении</h3>
+            <form action="/" class="form">
+              <div class="form-group">
+                <input type="text" placeholder="Имя">
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Телефон">
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Email">
+              </div>
+              <div class="form__btn">
+                <button type="submit" class="btn btn_md">Отправить</button>
+              </div>
+            </form>
+            <div class="feedback__check">
+              <!-- begin input -->
+              <label class="checkbox">
+                <input type="checkbox" name="checkbox">
+                <span class="checkbox__text">Я согласен с условиями обработки персональных данных</span>
+                <span class="checkbox__icon"></span>
+              </label>
+              <!-- end input -->
             </div>
+          </div>
+        </div>
+      </div>
+      <section class="event-block" data-tabs>
+        <div class="event-block__inner inner">
+          <div class="event-block__head">
+            <h2 class="event-block__title title">Ближайшие мероприятия</h2>
+            <ul class="event-block__tabs tabs">
+              <li class="tabs__item">
+                <button class="btn btn_blue" data-tabs-control='Moscow'>Москва</button>
+              </li>
+              <li class="tabs__item">
+                <button class="btn btn_blue" data-tabs-control='SaintP'>Санкт-Петербруг</button>
+              </li>
+              <li class="tabs__item">
+                <button class="btn btn_blue" data-tabs-control='Other'>Другие города</button>
+              </li>
+            </ul>
+            <div class="event-block__btn">
+              <a href="#" class="btn">Полное рассписание</a>
+            </div>
+          </div>
+          <div data-tabs-wrapper>
+            <ul class="event-block__list row" data-tabs-container='Moscow'>
+              <li class="col-4">
+                <div class="event ">
+                  <div class="event__img">
+                    <img src="./img/event1.jpg" alt="event">
+                  </div>
+                  <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
+                  <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
+                </div>
+              </li>
+              <li class="col-4">
+                <div class="event ">
+                  <div class="event__img">
+                    <img src="./img/event1.jpg" alt="event">
+                  </div>
+                  <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
+                  <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
+                </div>
+              </li>
+              <li class="col-4">
+                <div class="event ">
+                  <div class="event__img">
+                    <img src="./img/event1.jpg" alt="event">
+                  </div>
+                  <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
+                  <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
+                </div>
+              </li>
+            </ul>
+            <ul class="event-block__list row" data-tabs-container='SaintP'>
+              <li class="col-4">
+                <div class="event ">
+                  <div class="event__img">
+                    <img src="./img/event2.png" alt="event">
+                  </div>
+                  <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
+                  <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
+                </div>
+              </li>
+              <li class="col-4">
+                <div class="event ">
+                  <div class="event__img">
+                    <img src="./img/event2.png" alt="event">
+                  </div>
+                  <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
+                  <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
+                </div>
+              </li>
+              <li class="col-4">
+                <div class="event ">
+                  <div class="event__img">
+                    <img src="./img/event2.png" alt="event">
+                  </div>
+                  <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
+                  <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
+                </div>
+              </li>
+            </ul>
+            <ul class="event-block__list row" data-tabs-container='Other'>
+              <li class="col-4">
+                <div class="event ">
+                  <div class="event__img">
+                    <img src="./img/event3.png" alt="event">
+                  </div>
+                  <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
+                  <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
+                </div>
+              </li>
+              <li class="col-4">
+                <div class="event ">
+                  <div class="event__img">
+                    <img src="./img/event3.png" alt="event">
+                  </div>
+                  <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
+                  <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
+                </div>
+              </li>
+              <li class="col-4">
+                <div class="event ">
+                  <div class="event__img">
+                    <img src="./img/event3.png" alt="event">
+                  </div>
+                  <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
+                  <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

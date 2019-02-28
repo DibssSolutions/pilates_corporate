@@ -25,5 +25,17 @@
 		text-transform: uppercase
 		font-weight: 700
 		padding: 1.4em 1.8em
+	&_blue
+		background-color: $white
+		box-shadow: none
+		color: $grayLight
+		transition: background-color .3s, box-shadow .3s, color .3s
+		&.is-active
+			color: $white
+			background-color: $blue
+			box-shadow: 0 19px 25px -12px $blue
+		+hover
+			background-color: $blue
+			box-shadow: none
 	&_md
 		min-width: 280px
