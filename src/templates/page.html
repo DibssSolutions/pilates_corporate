@@ -4,6 +4,7 @@ title: Home
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	{{header.block({class: 'header__absolute'})}}
-
+	{# {{header.block({class: 'header__absolute'})}} #}
+	{{header.block()}}
+	{% include "partials/_about.html" %}
 {% endblock %}
