@@ -272,20 +272,31 @@
 		transform: translateX(-50%)
 		z-index: 1
 		background-color: $white
-		max-width: 350px
-		width: 100%
-		padding: 2em
-		border-radius: 10px
-		box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
+.contacts-info
+	max-width: 350px
+	width: 100%
+	padding: 2em
+	border-radius: 10px
+	box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
+	.footer &
+		padding: 0 2em
+		border-radius: 0
+		box-shadow: 0
+	&__title
+		.footer &
+			color: $white
 	&__aside
 		margin-top: 0.8em
 		margin-bottom: 0.1em
 		color: $grayLight
+		.footer &
+			color: $white
+			opacity: 0.5
 	a
 		border-bottom: 1px solid transparent
 		transition: border-color .3s
 		+hover
-			border-color: $black
+			border-color: currentColor
 	address
 		font-style: normal
 		line-height: 1.73

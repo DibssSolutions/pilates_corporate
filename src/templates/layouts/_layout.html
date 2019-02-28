@@ -1,6 +1,7 @@
 {% import "partials/_mixins.html" as mixins %}
 {% import "partials/_ui.html" as ui %}
 {% import "partials/_header.html" as header %}
+{% import "partials/_footer.html" as footer %}
 {% import "partials/_seminar.html" as seminar %}
 {% import "partials/_course.html" as course %}
 {% import "partials/_event.html" as event %}
@@ -30,62 +31,25 @@
     <!-- BEGIN scripts -->
 	<script type="text/javascript" src="js/app.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=7a9648bf-398b-4673-ad66-512ef28875ce&lang=ru_RU" type="text/javascript"></script>
-    <script>
-      if (document.querySelector('#map')) {
-          ymaps.ready(function() {
-            var map = new ymaps.Map('map', {
-              center: [55.76, 37.64], 
-              zoom: 10
-            });
-            map.behaviors.disable('scrollZoom');
-            map.controls.remove('smallMapDefaultSet');
-            //   map.controls.remove('searchControl');
-            map.controls.remove('trafficControl');
-            //   map.controls.remove('routeEditor');
-            map.controls.remove('rulerControl');
-            map.container.fitToViewport();
-            /* if (map) {
-				ymaps.modules.require(['Placemark', 'Circle'], function(Placemark, Circle) {
-				  var placemark = new Placemark([55.76, 37.64],{
-					balloonContentBody: 'ул. Садовая-Спасская дом 21/1 офис 321'
+    {# <script>
+		const map = document.querySelectorAll('.map');
+		if (map) {
+			map.forEach(function(el) {
+				ymaps.ready(function() {
+				  var map = new ymaps.Map(el, {
+					center: [55.76, 37.64], 
+					zoom: 10
 				  });
-				  map.geoObjects.add(placemark);
-				  // Балун откроется в точке «привязки» балуна — т. е. над меткой.
-				  //placemark.balloon.open();
+				  map.behaviors.disable('scrollZoom');
+				  map.controls.remove('smallMapDefaultSet');
+				  map.controls.remove('trafficControl');
+				  map.controls.remove('rulerControl');
+				  map.container.fitToViewport();
 				});
-			  } */
-          });
-        }
+			})
+			}
         
-    </script>
-    <script>
-      if (document.querySelector('#map2')) {
-          ymaps.ready(function() {
-            var map = new ymaps.Map('map', {
-              center: [55.76, 37.64], 
-              zoom: 10
-            });
-            map.behaviors.disable('scrollZoom');
-            map.controls.remove('smallMapDefaultSet');
-            //   map.controls.remove('searchControl');
-            map.controls.remove('trafficControl');
-            //   map.controls.remove('routeEditor');
-            map.controls.remove('rulerControl');
-            map.container.fitToViewport();
-            /* if (map) {
-				ymaps.modules.require(['Placemark', 'Circle'], function(Placemark, Circle) {
-				  var placemark = new Placemark([55.76, 37.64],{
-					balloonContentBody: 'ул. Садовая-Спасская дом 21/1 офис 321'
-				  });
-				  map.geoObjects.add(placemark);
-				  // Балун откроется в точке «привязки» балуна — т. е. над меткой.
-				  //placemark.balloon.open();
-				});
-			  } */
-          });
-        }
-        
-    </script>
+    </script> #}
     <!-- END scripts -->
 
   </body>
