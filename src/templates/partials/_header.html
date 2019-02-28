@@ -26,9 +26,27 @@
 				</h1>
 				<nav class="header__nav nav">
 					<ul class="nav__list">
-						{% for item in ['Главная', 'О нас', 'Обучение', 'Онлайн курсы', 'Преподаватели', 'Контакты'] %}
+						{% for item in [
+							{nav: 'Главная'},
+							{nav: 'О нас',
+								list: ['Новости', 'Отзывы', 'Галерея']},
+							{nav: 'Обучение',
+								list: ['Пилатес  MatWork 1', 'Пилатес  MatWork 2', 'Большое оборудование', 'Постуральная гимнастика']},
+							{nav: 'Онлайн курсы'},
+							{nav: 'Преподаватели'},
+							{nav: 'Контакты'}
+							] %}
 						<li class="nav__item">
-							<a href="#" class="nav__link {% if loop.index == props.index %}nav__link_current{% endif %}">{{item}}</a>
+							<a href="#" class="nav__link {% if loop.index == props.index %}nav__link_current{% endif %}">{{item.nav}}</a>
+							{% if item.list %}
+							<ul class="nav__sublist">
+								{% for sub in item.list %}
+								<li class="nav__subitem">
+									<a href="#">{{sub}}</a>
+								</li>
+								{% endfor %}
+							</ul>
+							{% endif %}
 						</li>
 						{% endfor %}
 					</ul>
