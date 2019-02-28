@@ -87,7 +87,7 @@
 
 {# 										SEMINAR #}
 {% macro seminar(props) %}
-<div class="seminar">
+<div class="seminar {% if props.class %}{{props.class}}{% endif %}">
 	<div class="seminar__top" style="background-image: url(./img/{{props.img}})">
 		<div class="seminar__btn">
 			<a href="#" class="btn btn_bold">{{props.title}}</a>
