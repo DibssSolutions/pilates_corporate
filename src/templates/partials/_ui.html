@@ -47,7 +47,7 @@
 			<div class="testimonial__img" style="background-image: url(./img/testimonial.png)"></div>
 			<div class="testimonial__main">
 				<h4 class="testimonial__title title title_md">{{props.name}}</h4>
-				<div class="testimonial__aside"></div>
+				<div class="testimonial__aside">{{props.aside}}</div>
 			</div>
 		</div>
 		<div class="testimonial__bottom">
@@ -120,7 +120,7 @@
 			<a href="mailto:contact@pilates-institute.ru">Сontact@pilates-institute.ru</a>
 		</div>
 	</div>
-	<div class="map" id="map"></div>
+	<div class="map" id="{{props.id}}"></div>
 </div>
 {% endmacro %}
 {# 										MAP #}
