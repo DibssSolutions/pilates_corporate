@@ -14,12 +14,12 @@
 	vertical-align: top
 	position: relative
 	outline: none
-	transition: background-color 1s, box-shadow .3s
+	transition: background-color .3s, box-shadow .3s
 	line-height: 1.4
 	cursor: pointer
 	box-shadow: 0 12px 20px -6px $orange
 	+hover
-		background-color: darken($orange, 5%)
+		background-color: $orangeHover
 		box-shadow: none
 	&_bold
 		text-transform: uppercase
@@ -36,7 +36,7 @@
 			box-shadow: 0 19px 25px -12px $blue
 		+hover
 			color: $white
-			background-color: $blue
+			background-color: $blueCityHover
 			box-shadow: 0 19px 25px -12px $blue
 	&_md
 		min-width: 280px

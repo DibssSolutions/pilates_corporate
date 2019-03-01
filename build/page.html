@@ -40,11 +40,11 @@
             </h1>
             <nav class="header__nav nav">
               <ul class="nav__list">
-                <li class="nav__item">
-                  <a href="#" class="nav__link ">Главная</a>
+                <li class="nav__item nav__item_current">
+                  <a href="#" class="nav__link">Главная</a>
                 </li>
-                <li class="nav__item">
-                  <a href="#" class="nav__link ">О нас</a>
+                <li class="nav__item ">
+                  <a href="#" class="nav__link">О нас</a>
                   <ul class="nav__sublist">
                     <li class="nav__subitem">
                       <a href="#">Новости</a>
@@ -57,8 +57,8 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav__item">
-                  <a href="#" class="nav__link ">Обучение</a>
+                <li class="nav__item ">
+                  <a href="#" class="nav__link">Обучение</a>
                   <ul class="nav__sublist">
                     <li class="nav__subitem">
                       <a href="#">Пилатес MatWork 1</a>
@@ -74,14 +74,14 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav__item">
-                  <a href="#" class="nav__link ">Онлайн курсы</a>
+                <li class="nav__item ">
+                  <a href="#" class="nav__link">Онлайн курсы</a>
                 </li>
-                <li class="nav__item">
-                  <a href="#" class="nav__link ">Преподаватели</a>
+                <li class="nav__item ">
+                  <a href="#" class="nav__link">Преподаватели</a>
                 </li>
-                <li class="nav__item">
-                  <a href="#" class="nav__link ">Контакты</a>
+                <li class="nav__item ">
+                  <a href="#" class="nav__link">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -97,8 +97,11 @@
                 </svg>
               </a>
               <div class="header__btn">
-                <a href="#" class="btn btn_shadow">Расписание</a>
+                <a href="#" class="btn">Расписание</a>
               </div>
+            </div>
+            <div class="header__toggle js-toggle">
+              <div class="header__toggle-icon js-toggle-icon"></div>
             </div>
           </div>
         </div>
@@ -127,48 +130,45 @@
           <h2 class="seminar-block__title title">Направления и семинары</h2>
           <div class="seminar-block__list row">
             <div class="seminar col-4">
-              <div class="seminar__top" style="background-image: url(./img/seminar.png)">
+              <a href="#" class="seminar__top" style="background-image: url(./img/seminar.png)">
                 <div class="seminar__btn">
-                  <a href="#" class="btn btn_bold">Пилатес </a>
-                </div>
-              </div>
+                  <button type="button" class="btn btn_bold">Пилатес </div>
+              </a>
               <ul class="seminar__list">
-                <li class="seminar__item">MatWork уровень 1 - (Базовый курс)</li>
-                <li class="seminar__item">MatWork уровень 2 + работа с малым оборудованием</li>
-                <li class="seminar__item">Работа с большим оборудованием</li>
-                <li class="seminar__item">Пилатес для беременных</li>
-                <li class="seminar__item">Пилатес для беременных и людей старшего возраста</li>
-                <li class="seminar__item">Функциональный пилатес</li>
+                <li class="seminar__item"><a href="#">MatWork уровень 1 - (Базовый курс)</a></li>
+                <li class="seminar__item"><a href="#">MatWork уровень 2 + работа с малым оборудованием</a></li>
+                <li class="seminar__item"><a href="#">Работа с большим оборудованием</a></li>
+                <li class="seminar__item"><a href="#">Пилатес для беременных</a></li>
+                <li class="seminar__item"><a href="#">Пилатес для беременных и людей старшего возраста</a></li>
+                <li class="seminar__item"><a href="#">Функциональный пилатес</a></li>
               </ul>
             </div>
             <div class="seminar col-4">
-              <div class="seminar__top" style="background-image: url(./img/seminar.png)">
+              <a href="#" class="seminar__top" style="background-image: url(./img/seminar.png)">
                 <div class="seminar__btn">
-                  <a href="#" class="btn btn_bold">Пилатес </a>
-                </div>
-              </div>
+                  <button type="button" class="btn btn_bold">Пилатес </div>
+              </a>
               <ul class="seminar__list">
-                <li class="seminar__item">MatWork уровень 1 - (Базовый курс)</li>
-                <li class="seminar__item">MatWork уровень 2 + работа с малым оборудованием</li>
-                <li class="seminar__item">Работа с большим оборудованием</li>
-                <li class="seminar__item">Пилатес для беременных</li>
-                <li class="seminar__item">Пилатес для беременных и людей старшего возраста</li>
-                <li class="seminar__item">Функциональный пилатес</li>
+                <li class="seminar__item"><a href="#">MatWork уровень 1 - (Базовый курс)</a></li>
+                <li class="seminar__item"><a href="#">MatWork уровень 2 + работа с малым оборудованием</a></li>
+                <li class="seminar__item"><a href="#">Работа с большим оборудованием</a></li>
+                <li class="seminar__item"><a href="#">Пилатес для беременных</a></li>
+                <li class="seminar__item"><a href="#">Пилатес для беременных и людей старшего возраста</a></li>
+                <li class="seminar__item"><a href="#">Функциональный пилатес</a></li>
               </ul>
             </div>
             <div class="seminar col-4">
-              <div class="seminar__top" style="background-image: url(./img/seminar.png)">
+              <a href="#" class="seminar__top" style="background-image: url(./img/seminar.png)">
                 <div class="seminar__btn">
-                  <a href="#" class="btn btn_bold">Пилатес </a>
-                </div>
-              </div>
+                  <button type="button" class="btn btn_bold">Пилатес </div>
+              </a>
               <ul class="seminar__list">
-                <li class="seminar__item">MatWork уровень 1 - (Базовый курс)</li>
-                <li class="seminar__item">MatWork уровень 2 + работа с малым оборудованием</li>
-                <li class="seminar__item">Работа с большим оборудованием</li>
-                <li class="seminar__item">Пилатес для беременных</li>
-                <li class="seminar__item">Пилатес для беременных и людей старшего возраста</li>
-                <li class="seminar__item">Функциональный пилатес</li>
+                <li class="seminar__item"><a href="#">MatWork уровень 1 - (Базовый курс)</a></li>
+                <li class="seminar__item"><a href="#">MatWork уровень 2 + работа с малым оборудованием</a></li>
+                <li class="seminar__item"><a href="#">Работа с большим оборудованием</a></li>
+                <li class="seminar__item"><a href="#">Пилатес для беременных</a></li>
+                <li class="seminar__item"><a href="#">Пилатес для беременных и людей старшего возраста</a></li>
+                <li class="seminar__item"><a href="#">Функциональный пилатес</a></li>
               </ul>
             </div>
           </div>
@@ -184,7 +184,7 @@
           </div>
           <ul class="course-block__list row">
             <li class="col-3">
-              <div class="course col-3">
+              <a href="#" class="course col-3">
                 <div class="course__top">
                   <div class="course__aside">Пилатес</div>
                   <h3 class="course__title title title_md">Пилатес для беременных</h3>
@@ -193,10 +193,10 @@
                   <div class="course__time">90 мин</div>
                   <div class="course__price">1 500 ₽</div>
                 </div>
-              </div>
+              </a>
             </li>
             <li class="col-3">
-              <div class="course col-3">
+              <a href="#" class="course col-3">
                 <div class="course__top">
                   <div class="course__aside">Пилатес</div>
                   <h3 class="course__title title title_md">Пилатес для беременных</h3>
@@ -205,10 +205,10 @@
                   <div class="course__time">90 мин</div>
                   <div class="course__price">1 500 ₽</div>
                 </div>
-              </div>
+              </a>
             </li>
             <li class="col-3">
-              <div class="course col-3">
+              <a href="#" class="course col-3">
                 <div class="course__top">
                   <div class="course__aside">Пилатес</div>
                   <h3 class="course__title title title_md">Пилатес для беременных</h3>
@@ -217,10 +217,10 @@
                   <div class="course__time">90 мин</div>
                   <div class="course__price">1 500 ₽</div>
                 </div>
-              </div>
+              </a>
             </li>
             <li class="col-3">
-              <div class="course col-3">
+              <a href="#" class="course col-3">
                 <div class="course__top">
                   <div class="course__aside">Пилатес</div>
                   <h3 class="course__title title title_md">Пилатес для беременных</h3>
@@ -229,7 +229,7 @@
                   <div class="course__time">90 мин</div>
                   <div class="course__price">1 500 ₽</div>
                 </div>
-              </div>
+              </a>
             </li>
           </ul>
         </div>
@@ -255,8 +255,7 @@
             <div class="feedback__check">
               <!-- begin input -->
               <label class="checkbox">
-                <input type="checkbox" name="checkbox">
-                <span class="checkbox__text">Я согласен с условиями обработки персональных данных</span>
+                <input type="checkbox" name="checkbox" checked> Я согласен с <a href="#" class="checkbox__text">условиями обработки персональных данных</a>
                 <span class="checkbox__icon"></span>
               </label>
               <!-- end input -->
@@ -286,89 +285,89 @@
           <div data-tabs-wrapper>
             <ul class="event-block__list row" data-tabs-container='Moscow'>
               <li class="col-4">
-                <div class="event ">
+                <a href="#" class="event ">
                   <div class="event__img">
                     <img src="./img/event1.jpg" alt="event">
                   </div>
                   <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
                   <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
-                </div>
+                </a>
               </li>
               <li class="col-4">
-                <div class="event ">
+                <a href="#" class="event ">
                   <div class="event__img">
                     <img src="./img/event1.jpg" alt="event">
                   </div>
                   <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
                   <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
-                </div>
+                </a>
               </li>
               <li class="col-4">
-                <div class="event ">
+                <a href="#" class="event ">
                   <div class="event__img">
                     <img src="./img/event1.jpg" alt="event">
                   </div>
                   <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
                   <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
-                </div>
+                </a>
               </li>
             </ul>
             <ul class="event-block__list row" data-tabs-container='SaintP'>
               <li class="col-4">
-                <div class="event ">
+                <a href="#" class="event ">
                   <div class="event__img">
                     <img src="./img/event2.png" alt="event">
                   </div>
                   <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
                   <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
-                </div>
+                </a>
               </li>
               <li class="col-4">
-                <div class="event ">
+                <a href="#" class="event ">
                   <div class="event__img">
                     <img src="./img/event2.png" alt="event">
                   </div>
                   <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
                   <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
-                </div>
+                </a>
               </li>
               <li class="col-4">
-                <div class="event ">
+                <a href="#" class="event ">
                   <div class="event__img">
                     <img src="./img/event2.png" alt="event">
                   </div>
                   <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
                   <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
-                </div>
+                </a>
               </li>
             </ul>
             <ul class="event-block__list row" data-tabs-container='Other'>
               <li class="col-4">
-                <div class="event ">
+                <a href="#" class="event ">
                   <div class="event__img">
                     <img src="./img/event3.png" alt="event">
                   </div>
                   <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
                   <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
-                </div>
+                </a>
               </li>
               <li class="col-4">
-                <div class="event ">
+                <a href="#" class="event ">
                   <div class="event__img">
                     <img src="./img/event3.png" alt="event">
                   </div>
                   <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
                   <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
-                </div>
+                </a>
               </li>
               <li class="col-4">
-                <div class="event ">
+                <a href="#" class="event ">
                   <div class="event__img">
                     <img src="./img/event3.png" alt="event">
                   </div>
                   <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
                   <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
-                </div>
+                </a>
               </li>
             </ul>
           </div>
@@ -583,8 +582,7 @@
               <li class="footer__policy"><a href="#">Публичная оферта</a></li>
               <li class="footer__policy"><a href="#">Политика конфиденциальности</a></li>
             </ul>
-            <div class="footer__studio">
-              <a href="#">Разработка — Blacksmith Studio</a>
+            <div class="footer__studio"> Разработка — <a href="#">Blacksmith Studio</a>
             </div>
           </div>
         </div>
@@ -593,7 +591,7 @@
     <!-- END content -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=7a9648bf-398b-4673-ad66-512ef28875ce&lang=ru_RU" type="text/javascript"></script>
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=7a9648bf-398b-4673-ad66-512ef28875ce&lang=ru_RU" type="text/javascript"></script> -->
     <!-- END scripts -->
   </body>
 

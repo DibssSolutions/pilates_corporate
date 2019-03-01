@@ -2,11 +2,16 @@
 	color: $white
 	padding: 5em 0
 	background-color: $footer
+	a
+		border-bottom: 1px solid transparent
+		transition: border-color .3s
+		+hover
+			border-color: currentColor
 	&__top
 		display: flex
 	&__logo
 		max-width: 223px
-		margin-right: 6.4em
+		margin-right: auto
 	&__socials
 		margin-left: auto
 	&__bottom
@@ -35,5 +40,9 @@
 			width: 2.5em
 			height: 2.5em
 			border-radius: 10px
-.icon-vk
-	width: 1.3em
+			transition: border-color .3s, color .3s
+			+hover
+				border-color: $blueHover
+				color: $blueHover
+	.icon-vk
+		width: 1.3em

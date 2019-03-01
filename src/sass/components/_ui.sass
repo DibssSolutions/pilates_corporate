@@ -1,5 +1,6 @@
 // 												COURSE
 .course
+	display: block
 	padding: 1.7em 2em
 	background-color: $white
 	box-shadow: 0 20px 56px -33px rgba($black, 0.2)
@@ -10,11 +11,12 @@
 	// max-width: 317px
 	// width: 100%
 	border-radius: 10px
-	transition: background-color .4s, color .4s, box-shadow .4s
+	transition: background-color .4s, color .4s, box-shadow .4s, transform .15s
 	+hover
 		background-color: $orange
 		color: $white
 		box-shadow: 0 25px 42px -14px $orange
+		transform: translateY(-8px)
 		.course__aside
 			color: $white
 		.course__price:before
@@ -47,9 +49,11 @@
 
 // 												EVENT
 .event
-	// max-width: 433px
-	// width: 100%
+	display: block
 	color: $black
+	transition: transform .15s
+	+hover
+		transform: translateY(-8px)
 	&__img
 		img
 			max-width: 100%
@@ -75,6 +79,9 @@
 	box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
 	border-radius: 10px
 	overflow: hidden
+	transition: transform .15s
+	+hover
+		transform: translateY(-8px)
 	&__top
 		background-color: $blue
 		padding-bottom: 34%
@@ -117,6 +124,9 @@
 	// width: 100%
 	box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
 	border-radius: 10px
+	transition: transform .15s
+	+hover
+		transform: translateY(-8px)
 	&__top
 		display: flex
 		align-items: center
@@ -209,6 +219,12 @@
 		height: 25px
 		border-radius: 4px
 		border: 1px solid $white
+	&__text
+		display: inline-block
+		border-bottom: 1px solid transparent
+		transition: border-color .3s
+		+hover
+			border-color: currentColor
 	input
 		position: absolute
 		width: 1px
@@ -227,17 +243,18 @@
 
 // 									SEMINAR
 .seminar
-	// max-width: 433px
-	// width: 100%
 	color: $black
 	&__top
+		display: block
 		+cover
 		border-radius: 10px
-		// overflow: hidden
 		height: 0
 		padding-bottom: 57.75%
 		box-shadow: 0 20px 42px -24px rgba(0, 0, 0, 0.3)
 		position: relative
+		transition: transform .15s
+		+hover
+			transform: translateY(-8px)
 	&__btn
 		position: absolute
 		left: 0
@@ -247,14 +264,20 @@
 		background-color: $white
 		border-radius: 10px
 		margin-top: 20px
+		overflow: hidden
 	&__item
-		padding: 1.8em 2em
 		font-weight: 700
 		letter-spacing: 0.033em
 		line-height: 1.66
 		&:not(:last-child)
 			border-bottom: 1px solid $grayBorder
-
+		a
+			display: block
+			padding: 1.8em 2em
+			transition: background-color .3s, color .3s
+			+hover
+				background-color: $orange
+				color: $white
 // 										MAP
 .map
 	width: 100%
@@ -262,9 +285,10 @@
 // 										CONTACTS
 .contacts
 	color: $black
-	// max-width: 665px
-	// width: 100%
 	position: relative
+	transition: transform .15s
+	+hover
+		transform: translateY(-8px)
 	&__info
 		position: absolute
 		bottom: -127px
@@ -292,11 +316,11 @@
 		.footer &
 			color: $white
 			opacity: 0.5
-	a
-		border-bottom: 1px solid transparent
-		transition: border-color .3s
-		+hover
-			border-color: currentColor
+	// a
+	// 	border-bottom: 1px solid transparent
+	// 	transition: border-color .3s
+	// 	+hover
+	// 		border-color: currentColor
 	address
 		font-style: normal
 		line-height: 1.73

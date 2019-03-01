@@ -1,7 +1,7 @@
 {% import "partials/_mixins.html" as mixins %}
 {# 									COURSE #}
 {% macro course(props) %}
-<div class="course {% if props.class %}{{props.class}}{% endif %}">
+<a href="#" class="course {% if props.class %}{{props.class}}{% endif %}">
 	<div class="course__top">
 		<div class="course__aside">Пилатес</div>
 		<h3 class="course__title title title_md">{{props.title}}</h3>
@@ -10,19 +10,19 @@
 		<div class="course__time">{{props.time}}</div>
 		<div class="course__price">{{props.price}}</div>
 	</div>
-</div>
+</a>
 {% endmacro %}
 {# 									COURSE #}
 
 {# 									EVENT #}
 {% macro event(props) %}
-<div class="event {% if props.class %}{{props.class}}{% endif %}">
+<a href="#" class="event {% if props.class %}{{props.class}}{% endif %}">
 	<div class="event__img">
 		<img src="./img/{{props.img}}" alt="event">
 	</div>
 	<div class="event__date"><span>{{props.event}}</span> {{props.date}}</div>
 	<h4 class="event__title title title_md">{{props.title}}</h4>
-</div>
+</a>
 {% endmacro %}
 {# 									EVENT #}
 
@@ -79,7 +79,7 @@
 				</div>
 			</form>
 			<div class="feedback__check">
-				{{mixins.checkbox({text: 'Я согласен с условиями обработки персональных данных'})}}
+				{{mixins.checkbox({text: 'условиями обработки персональных данных', checked: true})}}
 			</div>
 		</div>
 	</div>
@@ -90,14 +90,14 @@
 {# 										SEMINAR #}
 {% macro seminar(props) %}
 <div class="seminar {% if props.class %}{{props.class}}{% endif %}">
-	<div class="seminar__top" style="background-image: url(./img/{{props.img}})">
+	<a href="#" class="seminar__top" style="background-image: url(./img/{{props.img}})">
 		<div class="seminar__btn">
-			<a href="#" class="btn btn_bold">{{props.title}}</a>
+			<button type="button" class="btn btn_bold">{{props.title}}
 		</div>
-	</div>
+	</a>
 	<ul class="seminar__list">
 		{% for item in props.items %}
-			<li class="seminar__item">{{item}}</li>
+			<li class="seminar__item"><a href="#">{{item}}</a></li>
 		{% endfor %}
 	</ul>
 </div>

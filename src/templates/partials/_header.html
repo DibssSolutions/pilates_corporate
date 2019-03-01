@@ -36,8 +36,8 @@
 							{nav: 'Преподаватели'},
 							{nav: 'Контакты'}
 							] %}
-						<li class="nav__item">
-							<a href="#" class="nav__link {% if loop.index == props.index %}nav__link_current{% endif %}">{{item.nav}}</a>
+						<li class="nav__item {% if loop.index == props.index %}nav__item_current{% endif %}">
+							<a href="#" class="nav__link">{{item.nav}}</a>
 							{% if item.list %}
 							<ul class="nav__sublist">
 								{% for sub in item.list %}
@@ -55,8 +55,11 @@
 					<a href="#" class="header__icon">{{mixins.icon('user')}}</a>
 					<a href="#" class="header__icon">{{mixins.icon('basket')}}</a>
 					<div class="header__btn">
-						<a href="#" class="btn btn_shadow">Расписание</a>
+						<a href="#" class="btn">Расписание</a>
 					</div>
+				</div>
+				<div class="header__toggle js-toggle">
+					<div class="header__toggle-icon js-toggle-icon"></div>
 				</div>
 			</div>
 		</div>
