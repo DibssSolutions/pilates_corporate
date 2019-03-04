@@ -21,13 +21,15 @@
 	+hover
 		background-color: $orangeHover
 		box-shadow: none
+	+sm
+		min-width: 288px
 	&_bold
 		text-transform: uppercase
 		font-weight: 700
 		padding: 1.4em 1.8em
 		+md
 			font-size: 10px
-			padding: 14px 20px
+			padding: 13px 18px
 	&_blue
 		background-color: $white
 		box-shadow: none
@@ -41,5 +43,11 @@
 			color: $white
 			background-color: $blueCityHover
 			box-shadow: 0 19px 25px -12px $blue
+		// +md
+		// 	padding: 15px 20px
 	&_md
-		min-width: 280px
+		max-width: 280px
+		box-shadow: none
+		width: 100%
+		+sm
+			padding: 15px 27px 14px

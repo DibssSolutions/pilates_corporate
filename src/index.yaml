@@ -5,3 +5,5 @@ PageList:
   ready: 50
 - file: UI.html
   ready: 50
+- file: seminar.html
+  ready: 50

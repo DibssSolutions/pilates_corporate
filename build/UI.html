@@ -25,6 +25,20 @@
         </div>
       </a>
       <br>
+      <a href="#" class="course course_img">
+        <div class="course__img">
+          <img src="./img/course.png" alt="course">
+        </div>
+        <div class="course__top">
+          <div class="course__aside">Пилатес</div>
+          <h3 class="course__title title title_md">Пилатес для беременных</h3>
+        </div>
+        <div class="course__bottom">
+          <div class="course__time">90 мин</div>
+          <div class="course__price">1 500 ₽</div>
+        </div>
+      </a>
+      <br>
       <a href="#" class="event ">
         <div class="event__img">
           <img src="./img/event1.jpg" alt="event">
@@ -52,8 +66,8 @@
           </div>
         </div>
         <div class="testimonial__bottom">
-          <p>Lorem ipsum dolor sit amet, outdd consectetur adipiscing elit.</p>
-          <p>Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="testimonial__quote"></div>
+          <p>Lorem ipsum dolor sit amet, outdd consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
       <br>
@@ -103,6 +117,7 @@
       </div>
       <br>
       <div class="contacts">
+        <div class="map" id="map"></div>
         <div class="contacts__info contacts-info">
           <h4 class="contacts-info__title title title_md">Москва</h4>
           <div class="contacts-info__aside">Адрес</div>
@@ -116,13 +131,31 @@
             <a href="mailto:contact@pilates-institute.ru">Сontact@pilates-institute.ru</a>
           </div>
         </div>
-        <div class="map" id="map"></div>
       </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
     <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=7a9648bf-398b-4673-ad66-512ef28875ce&lang=ru_RU" type="text/javascript"></script> -->
+    <!-- <script>
+		const map = document.querySelectorAll('.map');
+		if (map) {
+			map.forEach(function(el) {
+				ymaps.ready(function() {
+				  var map = new ymaps.Map(el, {
+					center: [55.76, 37.64], 
+					zoom: 10
+				  });
+				  map.behaviors.disable('scrollZoom');
+				  map.controls.remove('smallMapDefaultSet');
+				  map.controls.remove('trafficControl');
+				  map.controls.remove('rulerControl');
+				  map.container.fitToViewport();
+				});
+			})
+			}
+        
+    </script> -->
     <!-- END scripts -->
   </body>
 

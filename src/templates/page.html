@@ -5,11 +5,17 @@ title: Home
 
 {% block content %}
 	{# {{header.block({class: 'header__absolute'})}} #}
-	{{header.block({index: 1})}}
+	{{header.block({class: 'header__absolute'})}}
 	{% include "partials/_hero.html" %}
+	{# {{header.block({index: 1})}} #}
 	{% include "partials/_about.html" %}
 	{{seminar.block()}}
-	{{course.block()}}
+	{{course.block(
+		{
+			btn: 'Все онлайн курсы',
+			title: 'Онлайн курсы'
+		}
+		)}}
 	{{ui.form({title: 'Получите подробную консультацию об обучении'})}}
 	{{event.block()}}
 	{{instructor.block()}}

@@ -2,6 +2,11 @@
 {# 									COURSE #}
 {% macro course(props) %}
 <a href="#" class="course {% if props.class %}{{props.class}}{% endif %}">
+	{% if props.img %}
+	<div class="course__img">
+		<img src="./img/{{props.img}}" alt="course">
+	</div>
+	{% endif %}
 	<div class="course__top">
 		<div class="course__aside">Пилатес</div>
 		<h3 class="course__title title title_md">{{props.title}}</h3>
@@ -51,7 +56,7 @@
 			</div>
 		</div>
 		<div class="testimonial__bottom">
-			<p>{{props.quote}}</p>
+			<div class="testimonial__quote"></div>
 			<p>{{props.text}}</p>
 		</div>
 	</div>
@@ -107,6 +112,7 @@
 {# 										MAP #}
 {% macro map(props) %}
 <div class="contacts">
+	<div class="map" id="map"></div>
 	<div class="contacts__info contacts-info">
 		<h4 class="contacts-info__title title title_md">{{props.title}}</h4>
 		<div class="contacts-info__aside">Адрес</div>
@@ -120,7 +126,6 @@
 			<a href="mailto:contact@pilates-institute.ru">Сontact@pilates-institute.ru</a>
 		</div>
 	</div>
-	<div class="map" id="map"></div>
 </div>
 {% endmacro %}
 {# 										MAP #}

@@ -4,7 +4,9 @@
 	top: 0
 	left: 0
 	width: 100%
-	z-index: 1
+	z-index: 5
+	background-color: $body
+	transition: .5s
 	&__absolute
 		position: absolute
 		top: 0
@@ -56,6 +58,7 @@
 			flex-wrap: wrap
 		.header__absolute &
 			background-color: transparent
+			padding: 0.8em 0
 		+md
 			padding: 0
 	&__logo
@@ -63,6 +66,7 @@
 		max-width: 80px
 		+md
 			max-width: 56px
+			margin-right: 0
 	&__nav
 		padding-right: 1em
 	&__group
@@ -183,7 +187,7 @@
 	// margin-left: auto
 	width: 62px
 	height: 60px
-	padding: 0 12px 0 28px
+	padding: 0 15px 0 28px
 	+md
 		display: flex
 		z-index: 1
