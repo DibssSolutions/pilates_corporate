@@ -4,7 +4,9 @@ title: Home
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
+	{# {{header.block({class: 'header__absolute'})}} #}
 	{{header.block({class: 'header__absolute'})}}
+	{% include "partials/_hero.html" %}
 	{# {{header.block({index: 1})}} #}
 	{% include "partials/_about.html" %}
 	{{seminar.block()}}
