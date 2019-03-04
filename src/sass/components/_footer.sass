@@ -2,6 +2,8 @@
 	color: $white
 	padding: 5em 0
 	background-color: $footer
+	+sm
+		padding-top: 36px
 	a
 		border-bottom: 1px solid transparent
 		transition: border-color .3s
@@ -9,18 +11,29 @@
 			border-color: currentColor
 	&__top
 		display: flex
+	&__list
+		width: 100%
 	&__logo
 		max-width: 223px
-		margin-right: auto
+		+sm
+			max-width: 127px
 	&__socials
-		margin-left: auto
-	&__bottom
-		display: flex
 		justify-content: flex-end
+		+md
+			justify-content: flex-start
+			margin-top: 20px
+	&__bottom
+		// display: flex
+		// justify-content: flex-end
 		padding-top: 3.15em
+		&-inner
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
 	&__info
 		display: flex
-		margin-right: 11.85em
+		padding-right: 20px
+		flex-wrap: wrap
 	&__policy
 		&:not(:first-child)
 			margin-left: 2em
