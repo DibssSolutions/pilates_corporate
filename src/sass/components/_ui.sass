@@ -8,8 +8,6 @@
 	display: flex
 	flex-direction: column
 	justify-content: space-between
-	// max-width: 317px
-	// width: 100%
 	border-radius: 10px
 	transition: background-color .4s, color .4s, box-shadow .4s, transform .15s
 	+hover
@@ -19,10 +17,14 @@
 		transform: translateY(-8px)
 		.course__aside
 			color: $white
+		.course__bottom
+			color: $white
 		.course__price:before
 			background-color: $white
 		.course__title.title
 			color: $white
+	+lg
+		padding: 27px
 	&__aside
 		color: $grayLight
 		transition: color .4s
@@ -31,6 +33,10 @@
 		padding-top: 1em
 		+f(1.2em, 700)
 		letter-spacing: normal
+		color: $black
+		transition: color .3s
+		+lg
+			font-size: 16px
 	&__price
 		margin-left: 30px
 		position: relative
@@ -70,6 +76,9 @@
 	&__title
 		max-width: 300px
 		margin-top: 0.25em
+		&.title_md
+			+md
+				font-size: 21px
 
 // 										INSTRUCTOR
 .instructor
@@ -84,7 +93,8 @@
 		transform: translateY(-8px)
 	&__top
 		background-color: $blue
-		padding-bottom: 34%
+		// padding-bottom: 34%
+		padding-bottom: 147px
 		position: relative
 		overflow: hidden
 		&:before
@@ -96,25 +106,37 @@
 			bottom: -1em
 			border: 1px solid $white
 			border-radius: 10px
+			+md
+				top: 13px
+				left: 20px
+				right: 20px
 	&__bottom
 		text-align: center
 		padding: 0 2em 2.66em
 		p
 			text-align: left
 			line-height: 1.9
+		+md
+			padding: 0 20px 31px
 	&__img
 		+circle(120)
 		+cover
-		margin: -5.7em auto 0
+		// margin: -23% auto 0
+		margin: -86px auto 0
 		overflow: hidden
 		z-index: 1
 		position: relative
 	&__title
 		margin-top: 0.5em
+		+md
+			&.title_md
+				font-size: 18px
 	&__aside
 		letter-spacing: 0.063em
 		color: $grayLight
 		margin-bottom: 1em
+		+md
+			margin-bottom: 10px
 
 // 									TESTIMONIAL
 .testimonial
@@ -159,13 +181,21 @@
 
 // 										FEEDBACK
 .feedback
-	padding: 2em
+	padding: 30px
 	background-color: $blue
 	&__wrap
 		padding: 10em 30px 0
+		+md
+			padding: 80px 16px 0
+		+sm
+			padding: 80px 0 0
 	&__inner
 		border: 2px solid $white
 		padding: 2.36em 4em
+		+lg
+			padding: 30px
+		+sm
+			padding: 30px 17px
 	&__title
 		text-align: center
 		margin-bottom: 1.28em
@@ -176,6 +206,8 @@
 		margin-top: 2.66em
 		color: $white
 		letter-spacing: normal
+		+sm
+			margin-top: 22px
 
 // 										FORM
 .form
@@ -183,14 +215,26 @@
 	display: flex
 	justify-content: center
 	align-items: center
+	flex-wrap: wrap
 	&__btn
 		padding-left: 10px
-		.btn
-			box-shadow: none
+		width: 25%
+		+md
+			width: 100%
+			margin-top: 30px
+			text-align: center
+		// .btn
+		// 	box-shadow: none
+		// 	width: 100%
 .form-group
-	max-width: 300px
-	width: 100%
+	// max-width: 300px
+	width: 25%
 	padding: 0 10px
+	+md
+		width: 100%
+		max-width: 500px
+		&:not(:first-child)
+			margin-top: 16px
 	input
 		color: $grayLight
 		+verdana
@@ -211,6 +255,8 @@
 .checkbox
 	position: relative
 	cursor: pointer
+	+sm
+		font-size: 10px
 	&__icon
 		position: absolute
 		top: -5px

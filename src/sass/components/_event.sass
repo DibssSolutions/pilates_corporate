@@ -1,5 +1,8 @@
 .event-block
 	padding-top: 8.5em
+	&__inner
+		+ms
+			padding: 0
 	&__head
 		display: flex
 		align-items: center
@@ -7,10 +10,36 @@
 	&__title
 		padding: 0.67em 0
 		max-width: 33%
+		+md
+			max-width: none
+			width: 100%
+		+ms
+			padding: 0.67em 16px
 	&__list
 		padding-top: 2em
+		li
+			+sm
+				&:not(:first-child)
+					margin-top: 30px
+		+sm
+			max-width: 400px
+			margin: 0 auto
+			// &.row
+			// 	margin: 0
 	&__tabs
 		margin-top: 30px
 		margin-left: auto
+		+md
+			margin: 0
+		+sm
+			display: none
 	&__btn
 		margin-top: 30px
+		+lg
+			display: none
+		&_mob
+			display: none
+			+lg
+				display: block
+				text-align: center
+				margin-top: 40px
