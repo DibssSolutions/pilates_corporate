@@ -1,6 +1,8 @@
 .about
 	padding: 144px 0 154px
 	position: relative
+	+sm
+		padding: 60px 0 0
 	&:before
 		content: ''
 		position: absolute
@@ -14,20 +16,31 @@
 		border-left: none
 		box-shadow: 0 0 0px 50px $blue
 		z-index: -1
+		+sm
+			display: none
 	&__inner
 		max-width: 1162px
 		display: flex
 		justify-content: center
 		align-items: center
 		position: relative
+		+sm
+			flex-wrap: wrap
 	&__img
 		width: 50%
 		img
 			display: block
 			max-width: 100%
+		+sm
+			width: 100%
 	&__text
 		width: 50%
 		padding-left: 4em
+		+md
+			padding-left: 2em
+		+sm
+			padding-left: 0
+			width: 100%
 	&__title
 		padding-bottom: 0.5em
 		margin-top: -20px
@@ -44,6 +57,8 @@
 				width: 1.86em // 82px
 				height: 6px
 				background-color: currentColor
+		+sm
+			margin-top: 40px
 	&__dots
 		position: absolute
 		right: 28px
@@ -61,3 +76,5 @@
 		height: 8px
 		margin: 4px 5px
 		background-color: $black
+	+sm
+		display: none

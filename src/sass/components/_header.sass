@@ -187,10 +187,6 @@
 	+hover
 		.header__toggle-icon:before, .header__toggle-icon:after
 			width: 100%
-		.header__toggle-icon:before
-			transform: translateY(0) rotate(45deg)
-		.header__toggle-icon:after
-			transform: translateY(0) rotate(-45deg)
 
 .header__toggle-icon
 	position: relative
@@ -208,18 +204,34 @@
 		background-color: $orange
 		transition: transform .3s, width .3s
 	&:before
-		// top: -6px
 		transform: translateY(-6px)
 	&:after
 		transform: translateY(6px)
-		// bottom: -6px
-	&.is-open
+	.header.is-open &
 		background-color: transparent
 		&:before
-			+rotate(45)
-			top: 0
-			background-color: $white
+			width: 100%
+			background-color: $orange
+			animation: open-before .5s linear both
 		&:after
-			+rotate(-45)
-			bottom: 0
-			background-color: $white
+			width: 100%
+			background-color: $orange
+			animation: open-after .5s linear both
+@keyframes open-before
+	0%
+		
+	40%
+		transform: translateY(0)
+	60%
+		transform: translateY(0)
+	100%
+		transform: translateY(0) rotate(45deg)
+@keyframes open-after
+	0%
+		
+	40%
+		transform: translateY(0)
+	60%
+		transform: translateY(0)
+	100%
+		transform: translateY(0) rotate(-45deg)
