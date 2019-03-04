@@ -2,6 +2,11 @@
 {# 									COURSE #}
 {% macro course(props) %}
 <a href="#" class="course {% if props.class %}{{props.class}}{% endif %}">
+	{% if props.img %}
+	<div class="course__img">
+		<img src="./img/{{props.img}}" alt="course">
+	</div>
+	{% endif %}
 	<div class="course__top">
 		<div class="course__aside">Пилатес</div>
 		<h3 class="course__title title title_md">{{props.title}}</h3>
