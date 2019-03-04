@@ -11,6 +11,17 @@
         height: 100vh
         width: 100%
         position: relative
+        &:before
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            // background-color: rgba($black,.11)
+            background-color: $black
+            opacity: 0.11
+            z-index: 1
     &__content
         height: 100%
         background-position: center
@@ -22,6 +33,8 @@
         left: 50%
         bottom: 30px
         transform: translateX(-50%)
+        +md
+            bottom: 47px
         li
             &:not(:first-child)
                 margin-left: 20px
@@ -33,6 +46,9 @@
         width: 34px
         height: 34px
         transition: background-color .8s
+        font-size: 12px
+        font-weight: 700
+        color: $white
         .slick-active &
             background-color: $orange
         svg

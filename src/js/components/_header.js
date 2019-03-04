@@ -13,6 +13,6 @@ burger.on('click', () => {
 $(window).scroll(function() {
   const scroll = $(window).scrollTop();
   
-  if (scroll > 0) header.removeClass('header__absolute');
-  else header.addClass('header__absolute');
+  if (scroll > 0) header.addClass(ACTIVE);
+  else header.removeClass(ACTIVE);
 });

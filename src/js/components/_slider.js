@@ -21,7 +21,6 @@ heroSlider.each((i, el) => {
   slider.on('init', () => {
     sliderParent.addClass(INIT);
     let dots = slider.find('.js-dot svg circle');
-    console.log(dots);
     $(dots[0]).css('animation-duration', (duration + 'ms'));
     // console.log(dots);
     // dots.each((i, el) => {
@@ -33,7 +32,6 @@ heroSlider.each((i, el) => {
   //   });
   slider.on('beforeChange', (event,slick, currentSlide, nextSlide) => {
     let dots = slider.find('.js-dot svg circle');
-    console.log(slick);
     dots.each((i, el) => {
       $(el).css('animation-duration', '.8s');
     });
@@ -47,9 +45,19 @@ heroSlider.each((i, el) => {
     speed: 800,
     slidesToShow: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: duration,
     customPaging: (slider, pageIndex) => {
-      return $(`<button class="hero-slider__dot js-dot">
+      let index;
+      if (pageIndex < 9) {
+        index = '0' + (pageIndex + 1);
+      }
+      else 
+      { 
+        index = pageIndex + 1;
+      }
+          
+      // console.log(index);
+      return $(`<button class="hero-slider__dot js-dot">${index}
         <svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"> 
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <circle stroke-width="2" cx="17" cy="17" r="16"></circle>
