@@ -80,11 +80,23 @@
 	+hover
 		transform: translateY(-8px)
 	&__img
+		+ms
+			width: 100%
+			position: relative
+			height: 300px
+			overflow: hidden
 		img
 			max-width: 100%
 			display: block
 			+sm
 				min-height: 300px
+			+ms
+				position: absolute
+				top: 0
+				left: 50%
+				transform: translateX(-50%)
+				max-width: none
+				width: 400px
 	&__date
 		font-size: 16px
 		line-height: 1.75
