@@ -12,6 +12,9 @@
 	transition: background-color .4s, color .4s, box-shadow .4s, transform .15s
 	&.course_img
 		padding: 30px
+		box-shadow: 0 5px 51px -19px rgba(0, 0, 0, 0.2)
+		+lg
+			padding: 15px
 	+hover
 		background-color: $orange
 		color: $white
@@ -41,6 +44,8 @@
 		transition: color .4s
 		.course_img &
 			margin-top: 15px
+			+sm
+				margin-top: 10px
 	&__bottom
 		display: flex
 		padding-top: 1em
@@ -50,6 +55,9 @@
 		transition: color .3s
 		+lg
 			font-size: 16px
+		.course_img &
+			+sm
+				padding-top: 22px
 	&__price
 		margin-left: 30px
 		position: relative
@@ -71,6 +79,9 @@
 	&__title
 		margin-top: .4em
 		transition: color .4s
+		.course_img &
+			+sm
+				margin-top: 11px
 
 // 												EVENT
 .event
@@ -231,20 +242,6 @@
 			width: 36px
 			height: 26px
 			margin-right: -18px
-	&__dot
-		+circle(4)
-		background-color: $grayLight
-		transition: background-color .3s, width .3s, height .3s
-		position: relative
-		&:after
-			content: ''
-			position: absolute
-			+vcenter
-			width: 200%
-			height: 200%
-		.slick-active &
-			+circle(6)
-			background-color: $orange
 
 // 										FEEDBACK
 .feedback
@@ -252,17 +249,19 @@
 	background-color: $blue
 	+sm
 		padding: 30px 16px
+	&__wrap
+		padding: 150px 30px 0
+		+md
+			padding: 80px 16px 0
+		+sm
+			padding: 80px 0 0
 	&__inner
 		border: 2px solid $white
-		padding: 40px 60px
+		padding: 2.36em 4em
 		+lg
 			padding: 30px
 		+sm
 			padding: 26px 14px
-		.feedback_md &
-			padding: 40px 207px
-			+lg
-				padding: 30px
 	&__title
 		text-align: center
 		margin-bottom: 1.28em
@@ -308,8 +307,7 @@
 			margin-top: 16px
 	+sm
 		padding: 0
-	input,
-	textarea
+	input
 		color: $grayLight
 		+verdana
 		+f(15px, 400)
@@ -328,33 +326,26 @@
 			letter-spacing: 0.066em
 		+sm
 			padding: 16px 20px
-	textarea
-		resize: none
-		height: 120px
 .checkbox
 	position: relative
 	cursor: pointer
 	padding-left: 40px
-	text-align: left
-	display: block
 	+sm
 		font-size: 10px
 	&__icon
 		position: absolute
-		top: 50%
+		top: -5px
 		left: 0
 		width: 25px
 		height: 25px
 		border-radius: 4px
 		border: 1px solid $white
-		transform: translateY(-50%)
 	&__text
 		display: inline-block
-		a
-			border-bottom: 1px solid transparent
-			transition: border-color .3s
-			+hover
-				border-color: currentColor
+		border-bottom: 1px solid transparent
+		transition: border-color .3s
+		+hover
+			border-color: currentColor
 	input
 		position: absolute
 		width: 1px
@@ -370,32 +361,6 @@
 				background-size: 70%
 				background-repeat: no-repeat
 				background-position: 50% 50%
-
-.form-contacts
-	&__row
-		margin: 0 -10px
-	&__col
-		padding: 10px
-		display: flex
-		align-items: center
-		justify-content: flex-end
-		+md
-			padding: 8px
-	&__footer
-		&-btn
-			width: 100%
-	&__check
-		text-align: center
-		color: $white
-		letter-spacing: normal
-		padding-right: 20px
-		line-height: 1.5
-		+md
-			padding-right: 0
-	.form-group
-		width: 100%
-		padding: 0
-		max-width: none
 
 // 											SEMINAR
 .seminar
@@ -501,3 +466,36 @@
 	address
 		font-style: normal
 		line-height: 1.73
+
+// 										SMALL DOTS
+
+.small__dot
+	+circle(6)
+	background-color: $grayLight
+	transition: background-color .3s, width .3s, height .3s
+	position: relative
+	+ms
+		+circle(4)
+	&:after
+		content: ''
+		position: absolute
+		+vcenter
+		width: 300%
+		height: 300%
+	.slick-active &
+		background-color: $orange
+		+circle(10)
+		+ms
+			+circle(6)
+.small-dots
+	display: flex
+	width: 100%
+	justify-content: center
+	align-items: center
+	padding-top: 20px
+	li
+		line-height: 0
+		&:not(:first-child)
+			margin-left: 15px
+			+ms
+				margin-left: 6px

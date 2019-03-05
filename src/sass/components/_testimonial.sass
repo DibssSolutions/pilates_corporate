@@ -8,12 +8,22 @@
 		justify-content: space-between
 	&__list
 		padding-top: 70px
+		+sm
+			white-space: nowrap
+			overflow: hidden
+			opacity: 0
+			visibility: hidden
+			transition: opacity .3s, visibility .3s
+			&.slick-initialized
+				white-space: normal
+				overflow: visible
+				opacity: 1
+				visibility: visible
 		+md
-			padding-top: 40px
+			padding-top: 24px
 	.col-4
 		+md
-			&:not(:first-child)
-				margin-top: 16px
+			margin-top: 16px
 	&__btn
 		+md
 			display: none
@@ -25,10 +35,3 @@
 				display: block
 				text-align: center
 				margin-top: 25px
-	.slick-dots
-		display: flex
-		align-items: center
-		padding-top: 10px
-		li
-			&:not(:first-child)
-				margin-left: 6px

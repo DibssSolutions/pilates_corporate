@@ -4,7 +4,7 @@
 	background-color: $footer
 	margin-top: 140px
 	+sm
-		padding-top: 36px
+		padding: 36px 0
 		margin-top: 84px
 	a
 		border-bottom: 1px solid transparent
@@ -22,22 +22,34 @@
 		justify-content: flex-end
 		+md
 			justify-content: flex-start
-			margin-top: 20px
+			margin-top: 28px
 	&__bottom
 		// display: flex
 		// justify-content: flex-end
-		padding-top: 3.15em
+		padding-top: 48px
+		font-size: 15px
 		&-inner
 			display: flex
 			justify-content: space-between
 			flex-wrap: wrap
+		+sm
+			padding-top: 34px
 	&__info
 		display: flex
 		padding-right: 20px
 		flex-wrap: wrap
+		+ms
+			padding-right: 0
 	&__policy
+		+ms
+			width: 100%
 		&:not(:last-child)
 			margin-right: 30px
+			+sm
+				margin-bottom: 13px
+	&__studio
+		+sm
+			margin-top: 40px
 
 
 .socials
@@ -46,6 +58,8 @@
 	&__item
 		&:not(:last-child)
 			margin-right: 2em
+			+sm
+				margin-right: 16px
 		a
 			display: flex
 			justify-content: center
@@ -59,5 +73,9 @@
 			+hover
 				border-color: $blueHover
 				color: $blueHover
+			+sm
+				font-size: 16px
+				width: 35px
+				height: 35px
 	.icon-vk
 		width: 1.3em
