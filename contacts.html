@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Online-courses</title>
+    <title>Contacts</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -14,7 +14,7 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <header class="header  js-header">
+      <header class="header header_bg js-header">
         <div class="header__top">
           <div class="header__inner inner">
             <p>Обучение и повышение квалификации тренеров по пилатесу с 2001 года</p>
@@ -106,188 +106,97 @@
           </div>
         </div>
       </header>
-      <div class="top-title">
-        <div class="top-title__inner inner">
-          <h1 class="top-title__title title">Онлайн курсы</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.</p>
-        </div>
-      </div>
-      <div class="online-courses">
-        <div class="online-courses__inner inner">
-          <ul class="online-courses__main-list row js-small-slider">
-            <li class="col-4">
-              <a href="#" class="course course_img">
-                <div class="course__img">
-                  <img src="./img/course.png" alt="course">
+      <div class="contacts-page">
+        <section class="contacts-block">
+          <div class="contacts-block__inner inner">
+            <h2 class="contacts-block__title title">Контакты</h2>
+            <div class="contacts-block__map row">
+              <div class="col-6 col-md-12">
+                <div class="contacts">
+                  <div class="map" id="map"></div>
+                  <div class="contacts__info contacts-info">
+                    <h4 class="contacts-info__title title title_md">Москва</h4>
+                    <div class="contacts-info__aside">Адрес</div>
+                    <address>Метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж</address>
+                    <div class="contacts-info__aside">Телефон</div>
+                    <div class="contacts-info__phone">
+                      <a href="tel:+74952553056">+7(495)255-30-56</a>
+                    </div>
+                    <div class="contacts-info__aside">Почта</div>
+                    <div class="contacts-info__phone">
+                      <a href="mailto:contact@pilates-institute.ru">Сontact@pilates-institute.ru</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="course__top">
-                  <div class="course__aside">Пилатес</div>
-                  <h3 class="course__title title title_md">Пилатес для беременных</h3>
+              </div>
+              <div class="col-6 col-md-12">
+                <div class="contacts">
+                  <div class="map" id="map"></div>
+                  <div class="contacts__info contacts-info">
+                    <h4 class="contacts-info__title title title_md">Санкт-петербург</h4>
+                    <div class="contacts-info__aside">Адрес</div>
+                    <address>Метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж</address>
+                    <div class="contacts-info__aside">Телефон</div>
+                    <div class="contacts-info__phone">
+                      <a href="tel:+74952553056">+7(495)255-30-56</a>
+                    </div>
+                    <div class="contacts-info__aside">Почта</div>
+                    <div class="contacts-info__phone">
+                      <a href="mailto:contact@pilates-institute.ru">Сontact@pilates-institute.ru</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="course__bottom">
-                  <div class="course__time">90 мин</div>
-                  <div class="course__price">1 500 ₽</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="contacts-page__inner inner">
+          <div class="feedback feedback_md sm-hide">
+            <div class="feedback__inner">
+              <h3 class="feedback__title title title_lg">Связаться с нами</h3>
+              <form class="form-contacts">
+                <div class="form-contacts__row row">
+                  <div class="form-contacts__col col-4 col-md-12">
+                    <div class="form-group">
+                      <input type="text" placeholder="Имя">
+                    </div>
+                  </div>
+                  <div class="form-contacts__col col-4 col-md-12">
+                    <div class="form-group">
+                      <input type="text" placeholder="Телефон">
+                    </div>
+                  </div>
+                  <div class="form-contacts__col col-4 col-md-12">
+                    <div class="form-group">
+                      <input type="text" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-contacts__col col-12">
+                    <div class="form-group">
+                      <textarea placeholder="Сообщение"></textarea>
+                    </div>
+                  </div>
                 </div>
-              </a>
-            </li>
-            <li class="col-4">
-              <a href="#" class="course course_img">
-                <div class="course__img">
-                  <img src="./img/course.png" alt="course">
+                <div class="form-contacts__footer row">
+                  <div class="form-contacts__col col-8">
+                    <div class="form-contacts__check">
+                      <!-- begin input -->
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkbox" checked>
+                        <span class="checkbox__text">Я согласен с <a href="">условиями обработки персональных данных</a></span>
+                        <span class="checkbox__icon"></span>
+                      </label>
+                      <!-- end input -->
+                    </div>
+                  </div>
+                  <div class="form-contacts__col col-4">
+                    <div class="form-contacts__footer-btn">
+                      <button type="submit" class="btn btn_w100 btn_bsnone">Отправить</button>
+                    </div>
+                  </div>
                 </div>
-                <div class="course__top">
-                  <div class="course__aside">Пилатес</div>
-                  <h3 class="course__title title title_md">Пилатес для беременных</h3>
-                </div>
-                <div class="course__bottom">
-                  <div class="course__time">90 мин</div>
-                  <div class="course__price">1 500 ₽</div>
-                </div>
-              </a>
-            </li>
-            <li class="col-4">
-              <a href="#" class="course course_img">
-                <div class="course__img">
-                  <img src="./img/course.png" alt="course">
-                </div>
-                <div class="course__top">
-                  <div class="course__aside">Пилатес</div>
-                  <h3 class="course__title title title_md">Пилатес для беременных</h3>
-                </div>
-                <div class="course__bottom">
-                  <div class="course__time">90 мин</div>
-                  <div class="course__price">1 500 ₽</div>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="online-courses__wrap">
-          <div class="online-courses__inner inner">
-            <ul class="online-courses__list row">
-              <li class="col-3">
-                <a href="#" class="course course_img">
-                  <div class="course__img">
-                    <img src="./img/course.png" alt="course">
-                  </div>
-                  <div class="course__top">
-                    <div class="course__aside">Пилатес</div>
-                    <h3 class="course__title title title_md">Пилатес для беременных</h3>
-                  </div>
-                  <div class="course__bottom">
-                    <div class="course__time">90 мин</div>
-                    <div class="course__price">1 500 ₽</div>
-                  </div>
-                </a>
-              </li>
-              <li class="col-3">
-                <a href="#" class="course course_img">
-                  <div class="course__img">
-                    <img src="./img/course.png" alt="course">
-                  </div>
-                  <div class="course__top">
-                    <div class="course__aside">Пилатес</div>
-                    <h3 class="course__title title title_md">Пилатес для беременных</h3>
-                  </div>
-                  <div class="course__bottom">
-                    <div class="course__time">90 мин</div>
-                    <div class="course__price">1 500 ₽</div>
-                  </div>
-                </a>
-              </li>
-              <li class="col-3">
-                <a href="#" class="course course_img">
-                  <div class="course__img">
-                    <img src="./img/course.png" alt="course">
-                  </div>
-                  <div class="course__top">
-                    <div class="course__aside">Пилатес</div>
-                    <h3 class="course__title title title_md">Пилатес для беременных</h3>
-                  </div>
-                  <div class="course__bottom">
-                    <div class="course__time">90 мин</div>
-                    <div class="course__price">1 500 ₽</div>
-                  </div>
-                </a>
-              </li>
-              <li class="col-3">
-                <a href="#" class="course course_img">
-                  <div class="course__img">
-                    <img src="./img/course.png" alt="course">
-                  </div>
-                  <div class="course__top">
-                    <div class="course__aside">Пилатес</div>
-                    <h3 class="course__title title title_md">Пилатес для беременных</h3>
-                  </div>
-                  <div class="course__bottom">
-                    <div class="course__time">90 мин</div>
-                    <div class="course__price">1 500 ₽</div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <ul class="online-courses__list row">
-              <li class="col-3">
-                <a href="#" class="course course_img">
-                  <div class="course__img">
-                    <img src="./img/course.png" alt="course">
-                  </div>
-                  <div class="course__top">
-                    <div class="course__aside">Пилатес</div>
-                    <h3 class="course__title title title_md">Пилатес для беременных</h3>
-                  </div>
-                  <div class="course__bottom">
-                    <div class="course__time">90 мин</div>
-                    <div class="course__price">1 500 ₽</div>
-                  </div>
-                </a>
-              </li>
-              <li class="col-3">
-                <a href="#" class="course course_img">
-                  <div class="course__img">
-                    <img src="./img/course.png" alt="course">
-                  </div>
-                  <div class="course__top">
-                    <div class="course__aside">Пилатес</div>
-                    <h3 class="course__title title title_md">Пилатес для беременных</h3>
-                  </div>
-                  <div class="course__bottom">
-                    <div class="course__time">90 мин</div>
-                    <div class="course__price">1 500 ₽</div>
-                  </div>
-                </a>
-              </li>
-              <li class="col-3">
-                <a href="#" class="course course_img">
-                  <div class="course__img">
-                    <img src="./img/course.png" alt="course">
-                  </div>
-                  <div class="course__top">
-                    <div class="course__aside">Пилатес</div>
-                    <h3 class="course__title title title_md">Пилатес для беременных</h3>
-                  </div>
-                  <div class="course__bottom">
-                    <div class="course__time">90 мин</div>
-                    <div class="course__price">1 500 ₽</div>
-                  </div>
-                </a>
-              </li>
-              <li class="col-3">
-                <a href="#" class="course course_img">
-                  <div class="course__img">
-                    <img src="./img/course.png" alt="course">
-                  </div>
-                  <div class="course__top">
-                    <div class="course__aside">Пилатес</div>
-                    <h3 class="course__title title title_md">Пилатес для беременных</h3>
-                  </div>
-                  <div class="course__bottom">
-                    <div class="course__time">90 мин</div>
-                    <div class="course__price">1 500 ₽</div>
-                  </div>
-                </a>
-              </li>
-            </ul>
+              </form>
+            </div>
           </div>
         </div>
       </div>
