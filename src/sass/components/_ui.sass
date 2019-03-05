@@ -15,6 +15,8 @@
 		box-shadow: 0 5px 51px -19px rgba(0, 0, 0, 0.2)
 		+lg
 			padding: 15px
+	&.course_lg
+		min-height: 424px
 	+hover
 		background-color: $orange
 		color: $white
@@ -36,9 +38,16 @@
 	&__img
 		border-radius: 10px
 		overflow: hidden
+		.course_lg &
+			height: 235px
 		img
 			display: block
 			max-width: 100%
+			.course_lg &
+				width: 100%
+				height: 100%
+				object-fit: cover
+				object-position: center
 	&__aside
 		color: $grayLight
 		transition: color .4s
@@ -48,7 +57,7 @@
 				margin-top: 10px
 	&__bottom
 		display: flex
-		padding-top: 1em
+		padding-top: 15px
 		+f(1.2em, 700)
 		letter-spacing: normal
 		color: $black
@@ -57,6 +66,10 @@
 			font-size: 16px
 		.course_img &
 			+sm
+				padding-top: 22px
+		.course_lg &
+			padding-top: 53px
+			+ms
 				padding-top: 22px
 	&__price
 		margin-left: 30px

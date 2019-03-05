@@ -3,15 +3,61 @@
 		margin-top: 60px
 		+sm
 			margin-top: 40px
-		&.row
-			margin-left: -22px
-			margin-right: -22px
+		.personal-office &
+			margin-bottom: 25px
+	&__row
+		margin: 0 -22px
+		+lg
+			margin: 0 -15px
 	&__main-col
 		padding: 0 22px
+		+lg
+			padding: 0 15px
+		.personal-office &
+			+xs
+				&:not(:first-child)
+					margin-top: 40px
 	&__wrap
 		margin-top: 120px
 		padding-top: 80px
 		background-color: $white
+		.inner
+			+sm
+				max-width: 400px
+		+sm
+			margin-top: 80px
+			padding-top: 40px
 	&__list
 		&:not(:first-child)
 			margin-top: 30px
+	&__col
+		+sm
+			&:not(:first-child)
+				margin-top: 16px
+	.slick-list
+		+xs
+			max-width: 424px
+			margin: 0 auto
+	.small-dots
+		padding-top: 30px
+
+
+.empty
+	height: 100%
+	min-height: 288px
+	border: 3px dashed $blue
+	border-radius: 10px
+	color: $blue
+	font-size: 18px
+	font-weight: 700
+	display: flex
+	justify-content: center
+	align-items: center
+	&__inner
+		margin-top: 45px
+		+xs
+			margin-top: 0
+	&__plus
+		margin: 0 auto
+	&__title
+		margin-top: 20px
