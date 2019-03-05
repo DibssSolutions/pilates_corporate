@@ -305,14 +305,14 @@
 		+r(1023)
 			margin: 0 -8px
 			justify-content: center
-		+r(480)
-			margin: 0 auto
+		// +r(480)
+		// 	margin: 0 auto
 	[class*='col']
 		padding: 0 $padding
 		+r(1023)
 			padding: 0 8px
-		+r(480)
-			padding: 0
+		// +r(480)
+		// 	padding: 0
 	@for $i from 1 through $columns
 		$width: percentage($i / $columns)
 		.col-#{$i}
@@ -335,7 +335,7 @@
 					min-width: $width
 		@if($sizeXs)
 			.col-xs-#{$i}
-				+r(550)
+				+r(599)
 					flex: 0 0 $width
 					min-width: $width
 

@@ -30,3 +30,23 @@
 </label>
 <!-- end input -->
 {% endmacro %}
+
+{% macro pagination(smHide) %}
+	<ul class="pagination{% if smHide %} sm-hide{% endif %}">
+		<li class="pagination__prev">
+			<a href="#" class="pagination__link">
+				{{ icon('arrow-left') }}
+			</a>
+		</li>
+		{% for item in range(1, 11) %}
+			<li class="pagination__item{% if loop.first %} is-active{% endif %}">
+				<a href="#" class="pagination__link">{{ item }}</a>
+			</li>
+		{% endfor %}
+		<li class="pagination__next">
+			<a href="#" class="pagination__link">
+				{{ icon('arrow-right') }}
+			</a>
+		</li>
+	</ul>
+{% endmacro %}
