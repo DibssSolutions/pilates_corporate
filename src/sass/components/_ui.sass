@@ -181,6 +181,8 @@
 	transition: transform .15s
 	+hover
 		transform: translateY(-8px)
+	+sm
+		padding: 20px 15px 30px
 	&__top
 		display: flex
 		align-items: center
@@ -190,13 +192,22 @@
 		+cover
 		overflow: hidden
 		margin-right: 1.33em
+		+ms
+			+circle(60)
+	&__title
+		+ms
+			font-size: 14px
 	&__aside
 		color: $grayLight
 		letter-spacing: 0.033em
+		+ms
+			font-size: 11px
 	&__bottom
 		position: relative
 		margin-top: 1.6em
 		+clr
+		p
+			line-height: 1.57
 	&__quote
 		width: 54px
 		height: 38px
@@ -204,13 +215,24 @@
 		float: left
 		background-image: url(../img/quotes.svg)
 		+cover
-		top: 9px
-		left: 0
-		p
-			z-index: 1
-			position: relative
-			&:first-child
-				padding: 0 2em
+		+ms
+			width: 36px
+			height: 26px
+			margin-right: -18px
+	&__dot
+		+circle(4)
+		background-color: $grayLight
+		transition: background-color .3s, width .3s, height .3s
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			+vcenter
+			width: 200%
+			height: 200%
+		.slick-active &
+			+circle(6)
+			background-color: $orange
 
 // 										FEEDBACK
 .feedback

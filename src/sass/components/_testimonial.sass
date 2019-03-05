@@ -9,21 +9,26 @@
 	&__list
 		padding-top: 70px
 		+md
-			max-width: 400px
-			margin: 0 auto
 			padding-top: 40px
-		li
-			+md
-				&:not(:first-child)
-					margin-top: 16px
+	.col-4
+		+md
+			&:not(:first-child)
+				margin-top: 16px
 	&__btn
-		+sm
+		+md
 			display: none
 		&_mob
 			display: none
 			.btn
 				min-width: 288px
-			+sm
+			+md
 				display: block
 				text-align: center
-				margin-top: 60px
+				margin-top: 25px
+	.slick-dots
+		display: flex
+		align-items: center
+		padding-top: 10px
+		li
+			&:not(:first-child)
+				margin-left: 6px
