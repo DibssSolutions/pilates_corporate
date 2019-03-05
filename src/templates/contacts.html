@@ -1,0 +1,19 @@
+---
+title: Contacts
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    {{header.block({class: 'header_bg'})}}
+    <div class="contacts-page">
+        {{contacts.block()}}
+        <div class="contacts-page__inner inner">
+            {{ui.contactsForm({
+                title: 'Связаться с нами',
+                class: 'feedback_md sm-hide'
+                }
+            )}}
+        </div>
+    </div>
+	{{footer.block()}}
+{% endblock %}

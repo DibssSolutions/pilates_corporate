@@ -65,7 +65,7 @@
 
 {# 										FORM #}
 {% macro form(props) %}
-<div class="feedback__wrap inner">
+<!-- <div class="feedback__wrap inner"> -->
 	<div class="feedback {% if props.class %}{{props.class}}{% endif %}">
 		<div class="feedback__inner">
 			<h3 class="feedback__title title title_lg">{% if props.title %}{{props.title}}{% endif %}</h3>
@@ -82,11 +82,55 @@
 				<div class="form__btn">
 					<button type="submit" class="btn btn_md">Отправить</button>
 				</div>
+				<div class="feedback__check">
+					{{mixins.checkbox({text: 'условиями обработки персональных данных', checked: true})}}
+				</div>
 			</form>
-			<div class="feedback__check">
-				{{mixins.checkbox({text: 'условиями обработки персональных данных', checked: true})}}
-			</div>
 		</div>
+	</div>
+<!-- </div> -->
+{% endmacro %}
+
+{% macro contactsForm(props) %}
+<div class="feedback {% if props.class %}{{props.class}}{% endif %}">
+	<div class="feedback__inner">
+		<h3 class="feedback__title title title_lg">{% if props.title %}{{props.title}}{% endif %}</h3>
+		<form class="form-contacts">
+			<div class="form-contacts__row row">
+				<div class="form-contacts__col col-4 col-md-12">
+					<div class="form-group">
+						<input type="text" placeholder="Имя">
+					</div>
+				</div>
+				<div class="form-contacts__col col-4 col-md-12">
+					<div class="form-group">
+						<input type="text" placeholder="Телефон">
+					</div>
+				</div>
+				<div class="form-contacts__col col-4 col-md-12">
+					<div class="form-group">
+						<input type="text" placeholder="Email">
+					</div>
+				</div>
+				<div class="form-contacts__col col-12">
+					<div class="form-group">
+						<textarea placeholder="Сообщение"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="form-contacts__footer row">
+				<div class="form-contacts__col col-8">
+					<div class="form-contacts__check">
+						{{mixins.checkbox({text: 'условиями обработки персональных данных', checked: true})}}
+					</div>
+				</div>
+				<div class="form-contacts__col col-4">
+					<div class="form-contacts__footer-btn">
+						<button type="submit" class="btn btn_w100 btn_bsnone">Отправить</button>
+					</div>
+				</div>
+			</div>
+		</form>
 	</div>
 </div>
 {% endmacro %}

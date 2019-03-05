@@ -16,7 +16,13 @@ title: Home
 			title: 'Онлайн курсы'
 		}
 		)}}
-	{{ui.form({title: 'Получите подробную консультацию об обучении'})}}
+	<div class="main-feedback">
+		<div class="main-feedback__inner inner">
+			<div class="main-feedback__wrap">
+				{{ui.form({title: 'Получите подробную консультацию об обучении'})}}
+			</div>
+		</div>
+	</div>
 	{{event.block()}}
 	{{instructor.block()}}
 	{{testimonial.block()}}

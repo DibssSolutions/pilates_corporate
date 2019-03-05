@@ -10,7 +10,8 @@
 	+md
 		color: rgba($text,.5)
 
-	&.is-active
+	&.is-active,
+	&.header_bg
 		color: rgba($text,.5)
 		box-shadow: 0 8px 65px -45px rgba(0, 0, 0, 0.5)
 	&__top
@@ -21,7 +22,8 @@
 		transition: background-color .3s
 		+md
 			display: none
-		.header.is-active &
+		.header.is-active &,
+		.header_bg &
 			background-color: $body
 	&__inner
 		display: flex
@@ -56,7 +58,8 @@
 			display: flex
 			align-items: center
 			flex-wrap: wrap
-		.header.is-active &
+		.header.is-active &,
+		.header_bg &
 			background-color: $white
 			padding: 20px 0 27px
 			+md
@@ -116,7 +119,8 @@
 			box-shadow: none
 			+lg
 				font-size: 12px
-			.header.is-active &
+			.header.is-active &,
+			.header_bg &
 				box-shadow: 0 12px 20px -6px $orange
 		+md
 			display: none
@@ -139,7 +143,8 @@
 		position: relative
 		opacity: 1
 		transition: color .3s
-		.header.is-active &
+		.header.is-active &,
+		.header_bg &
 			color: rgba($text,.3)
 		// &:before
 		// 	content: ''

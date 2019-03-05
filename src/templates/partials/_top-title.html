@@ -2,7 +2,9 @@
 <div class="top-title">
 	<div class="top-title__inner inner">
 		<h1 class="top-title__title title">{{props.title}}</h1>
-		<p>{{props.text}}</p>
+		{% if props.text %}
+			<p>{{props.text}}</p>
+		{% endif %}
 	</div>
 </div>
 {% endmacro %}
