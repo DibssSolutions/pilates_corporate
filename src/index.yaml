@@ -11,3 +11,5 @@ PageList:
   ready: 50
 - file: contacts.html
   ready: 50
+- file: personal-ofiice.html
+  ready: 50
