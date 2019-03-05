@@ -1,7 +1,7 @@
 .testimonial-block
 	padding-top: 150px
 	+lg
-		padding-top: 60px
+		padding-top: 78px
 	&__head
 		display: flex
 		align-items: center
@@ -9,18 +9,26 @@
 	&__list
 		padding-top: 70px
 		+md
-			max-width: 400px
-			margin: 0 auto
-		li
-			+md
-				&:not(:first-child)
-					margin-top: 16px
+			padding-top: 40px
+	.col-4
+		+md
+			&:not(:first-child)
+				margin-top: 16px
 	&__btn
-		+sm
+		+md
 			display: none
 		&_mob
 			display: none
-			+sm
+			.btn
+				min-width: 288px
+			+md
 				display: block
 				text-align: center
-				margin-top: 30px
+				margin-top: 25px
+	.slick-dots
+		display: flex
+		align-items: center
+		padding-top: 10px
+		li
+			&:not(:first-child)
+				margin-left: 6px

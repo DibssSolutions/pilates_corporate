@@ -1,4 +1,5 @@
 import slick from 'slick-carousel';
+import { mediaWidth } from '../utils';
 
 import {
   BODY,
@@ -66,4 +67,47 @@ heroSlider.each((i, el) => {
         </button>`);
     }
   });
+});
+
+// 									testimonial slider
+
+const testimonialSlider = $('.js-testimonial-slider');
+const options = {
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  infinite: true,
+  dots: true,
+  arrows: false,
+  customPaging: (slider, pageIndex) => {
+    return $('<button class="testimonial__dot"></button>');
+  },
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+};
+
+const detectWindowWidth = () => {
+  const initSlider = $('.js-testimonial-slider.slick-slider');
+  if (mediaWidth(1023)) {
+    if (initSlider.length) return;
+	   testimonialSlider.slick(options);
+  }
+  else {
+    if (!initSlider.length) return;
+    testimonialSlider.slick('unslick');
+  }
+}; 
+detectWindowWidth();
+
+let timeout;
+
+WIN.resize(() => {
+  clearTimeout(timeout);
+  timeout = setTimeout(detectWindowWidth, 100);
 });

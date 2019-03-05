@@ -31,10 +31,22 @@
 		img
 			display: block
 			max-width: 100%
-			+sm
-				min-height: 255px
+			// +sm
+			// 	min-height: 255px
+			+ms
+				position: absolute
+				top: 0
+				left: 50%
+				transform: translateX(-50%)
+				max-width: none
+				width: 400px
 		+sm
 			width: 100%
+		+ms
+			width: 100%
+			position: relative
+			height: 255px
+			overflow: hidden
 	&__text
 		width: 50%
 		padding-left: 4em

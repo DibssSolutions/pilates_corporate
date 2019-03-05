@@ -2,7 +2,7 @@
 	color: $white
 	padding: 73px 0
 	background-color: $footer
-	margin-top: 120px
+	margin-top: 140px
 	+sm
 		padding-top: 36px
 		margin-top: 84px
@@ -12,11 +12,10 @@
 		+hover
 			border-color: currentColor
 	&__top
-		display: flex
 	&__list
-		width: 100%
 	&__logo
 		max-width: 223px
+		border: none
 		+sm
 			max-width: 127px
 	&__socials
@@ -37,8 +36,8 @@
 		padding-right: 20px
 		flex-wrap: wrap
 	&__policy
-		&:not(:first-child)
-			margin-left: 2em
+		&:not(:last-child)
+			margin-right: 30px
 
 
 .socials
