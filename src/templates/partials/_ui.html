@@ -176,3 +176,16 @@
 </div>
 {% endmacro %}
 {# 										MAP #}
+
+{% macro newsItem(props) %}
+	<a href="#" class="news-item">
+		<div class="news-item__content">
+			<div class="news-item__date">{{ props.date }}</div>
+			<h4 class="news-item__title title title_md">{{ props.title }}</h4>
+			<div class="news-item__img">
+				<img src="./img/{{ props.img }}" alt="news photo">
+			</div>
+			<div class="news-item__text">{{ props.text }}</div>
+		</div>
+	</a>
+{% endmacro %}

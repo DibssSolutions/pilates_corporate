@@ -3,6 +3,10 @@
     align-items: center
     justify-content: center
     flex-wrap: wrap
+    &_sm
+        display: none
+        +sm
+            display: flex
     &__item
         color: rgba($grayLight,.3)
         font-weight: 700
@@ -13,6 +17,8 @@
             color: $orange
         &.is-active
             color: $orange
+        .pagination_sm &
+            padding: 0 15px
     &__prev,
     &__next
         width: 50px
@@ -31,8 +37,12 @@
             display: block
     &__prev
         margin-right: 20px
+        .pagination_sm &
+            margin-right: 5px
     &__next
         margin-left: 20px
+        .pagination_sm &
+            margin-left: 5px
     &__link
         display: flex
         align-items: center
