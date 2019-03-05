@@ -30,14 +30,22 @@
     .slick-dots
         position: absolute
         display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+        max-width: 100%
+        width: 100%
         left: 50%
         bottom: 30px
         transform: translateX(-50%)
         +md
             bottom: 47px
         li
-            &:not(:first-child)
-                margin-left: 20px
+            padding: 10px
+            // &:not(:first-child)
+            //     margin-left: 20px
+            +xs
+                padding: 5px
     &__dot
         // display: inline-block
         position: relative
