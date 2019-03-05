@@ -3,7 +3,9 @@
 <div class="course-block {% if props.class %}{{props.class}}{% endif %}">
 	<div class="course-block__inner inner">
 		<div class="course-block__head">
+			{% if props.title %}
 			<h2 class="course-block__title title title_lg">{{props.title}}</h2>
+			{% endif %}
 			{% if props.btn %}
 			<div class="course-block__btn">
 				<a href="#" class="btn">{{props.btn}}</a>

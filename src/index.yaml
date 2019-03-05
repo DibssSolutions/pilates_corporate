@@ -7,3 +7,5 @@ PageList:
   ready: 50
 - file: seminar.html
   ready: 50
+- file: online-courses.html
+  ready: 50

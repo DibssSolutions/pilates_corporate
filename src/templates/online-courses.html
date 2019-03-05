@@ -1,0 +1,128 @@
+---
+title: Online-courses
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	{{header.block()}}
+	{{topTitle.block(
+		{
+			title: 'Онлайн курсы',
+			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.'
+		}
+	)}}
+	<div class="online-courses">
+		<div class="online-courses__inner inner">
+			<ul class="online-courses__main-list row js-small-slider">
+				<li class="col-4">
+					{{ui.course({
+						class: 'course_img',
+						img: 'course.png',
+						title: 'Пилатес для беременных',
+						time: '90 мин',
+						price: '1 500 ₽'
+					})}}
+				</li>
+				<li class="col-4">
+					{{ui.course({
+						class: 'course_img',
+						img: 'course.png',
+						title: 'Пилатес для беременных',
+						time: '90 мин',
+						price: '1 500 ₽'
+					})}}
+				</li>
+				<li class="col-4">
+					{{ui.course({
+						class: 'course_img',
+						img: 'course.png',
+						title: 'Пилатес для беременных',
+						time: '90 мин',
+						price: '1 500 ₽'
+					})}}
+				</li>
+			</ul>
+		</div>
+		<div class="online-courses__wrap">
+			<div class="online-courses__inner inner">
+				<ul class="online-courses__list row">
+					<li class="col-3">
+						{{ui.course({
+							class: 'course_img',
+							img: 'course.png',
+							title: 'Пилатес для беременных',
+							time: '90 мин',
+							price: '1 500 ₽'
+						})}}
+					</li>
+					<li class="col-3">
+						{{ui.course({
+							class: 'course_img',
+							img: 'course.png',
+							title: 'Пилатес для беременных',
+							time: '90 мин',
+							price: '1 500 ₽'
+						})}}
+					</li>
+					<li class="col-3">
+						{{ui.course({
+							class: 'course_img',
+							img: 'course.png',
+							title: 'Пилатес для беременных',
+							time: '90 мин',
+							price: '1 500 ₽'
+						})}}
+					</li>
+					<li class="col-3">
+						{{ui.course({
+							class: 'course_img',
+							img: 'course.png',
+							title: 'Пилатес для беременных',
+							time: '90 мин',
+							price: '1 500 ₽'
+						})}}
+					</li>
+				</ul>
+				<ul class="online-courses__list row">
+					<li class="col-3">
+						{{ui.course({
+							class: 'course_img',
+							img: 'course.png',
+							title: 'Пилатес для беременных',
+							time: '90 мин',
+							price: '1 500 ₽'
+						})}}
+					</li>
+					<li class="col-3">
+						{{ui.course({
+							class: 'course_img',
+							img: 'course.png',
+							title: 'Пилатес для беременных',
+							time: '90 мин',
+							price: '1 500 ₽'
+						})}}
+					</li>
+					<li class="col-3">
+						{{ui.course({
+							class: 'course_img',
+							img: 'course.png',
+							title: 'Пилатес для беременных',
+							time: '90 мин',
+							price: '1 500 ₽'
+						})}}
+					</li>
+					<li class="col-3">
+						{{ui.course({
+							class: 'course_img',
+							img: 'course.png',
+							title: 'Пилатес для беременных',
+							time: '90 мин',
+							price: '1 500 ₽'
+						})}}
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	{{footer.block()}}
+{% endblock %}
