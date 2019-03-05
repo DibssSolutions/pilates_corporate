@@ -12,6 +12,8 @@
 	transition: background-color .4s, color .4s, box-shadow .4s, transform .15s
 	&.course_img
 		padding: 30px
+		+lg
+			padding: 15px
 	+hover
 		background-color: $orange
 		color: $white
@@ -41,6 +43,8 @@
 		transition: color .4s
 		.course_img &
 			margin-top: 15px
+			+sm
+				margin-top: 10px
 	&__bottom
 		display: flex
 		padding-top: 1em
@@ -50,6 +54,9 @@
 		transition: color .3s
 		+lg
 			font-size: 16px
+		.course_img &
+			+sm
+				padding-top: 22px
 	&__price
 		margin-left: 30px
 		position: relative
@@ -71,6 +78,9 @@
 	&__title
 		margin-top: .4em
 		transition: color .4s
+		.course_img &
+			+sm
+				margin-top: 11px
 
 // 												EVENT
 .event
@@ -231,20 +241,6 @@
 			width: 36px
 			height: 26px
 			margin-right: -18px
-	&__dot
-		+circle(4)
-		background-color: $grayLight
-		transition: background-color .3s, width .3s, height .3s
-		position: relative
-		&:after
-			content: ''
-			position: absolute
-			+vcenter
-			width: 200%
-			height: 200%
-		.slick-active &
-			+circle(6)
-			background-color: $orange
 
 // 										FEEDBACK
 .feedback
@@ -469,3 +465,36 @@
 	address
 		font-style: normal
 		line-height: 1.73
+
+// 										SMALL DOTS
+
+.small__dot
+	+circle(6)
+	background-color: $grayLight
+	transition: background-color .3s, width .3s, height .3s
+	position: relative
+	+ms
+		+circle(4)
+	&:after
+		content: ''
+		position: absolute
+		+vcenter
+		width: 300%
+		height: 300%
+	.slick-active &
+		background-color: $orange
+		+circle(10)
+		+ms
+			+circle(6)
+.small-dots
+	display: flex
+	width: 100%
+	justify-content: center
+	align-items: center
+	padding-top: 20px
+	li
+		line-height: 0
+		&:not(:first-child)
+			margin-left: 15px
+			+ms
+				margin-left: 6px

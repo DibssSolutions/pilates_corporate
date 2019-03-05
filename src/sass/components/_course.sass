@@ -5,21 +5,31 @@
 	&.pilates-block
 		&:not(:first-child)
 			padding-top: 125px
+			+md
+				padding-top: 80px
 	&__head
 		display: flex
 		align-items: center
 		justify-content: space-between
+	&__title
+		.pilates-block &
+			+sm
+				font-size: 25px
 	&__list
 		padding-top: 65px
 		+md
 			padding-top: 20px
 			max-width: 610px
 			margin: 0 auto
-		li
+		.col-4
 			+md
 				margin-top: 16px
 		.pilates-block &
 			padding-top: 45px
+			+md
+				padding-top: 30px
+			.slick-list
+				max-width: 400px
 	&__btn
 		+sm
 			display: none

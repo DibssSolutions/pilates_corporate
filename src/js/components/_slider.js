@@ -71,30 +71,22 @@ heroSlider.each((i, el) => {
 
 // 									testimonial slider
 
-const testimonialSlider = $('.js-testimonial-slider');
+const testimonialSlider = $('.js-small-slider');
 const options = {
-  slidesToShow: 2,
+  slidesToShow: 1,
   slidesToScroll: 1,
   infinite: true,
   dots: true,
   arrows: false,
   customPaging: (slider, pageIndex) => {
-    return $('<button class="testimonial__dot"></button>');
+    return $('<button class="small__dot"></button>');
   },
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
+  dotsClass: 'small-dots'
 };
 
 const detectWindowWidth = () => {
-  const initSlider = $('.js-testimonial-slider.slick-slider');
-  if (mediaWidth(1023)) {
+  const initSlider = $('.js-small-slider.slick-slider');
+  if (mediaWidth(767)) {
     if (initSlider.length) return;
 	   testimonialSlider.slick(options);
   }
