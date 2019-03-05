@@ -12,6 +12,9 @@
 		<h3 class="course__title title title_md">{{props.title}}</h3>
 	</div>
 	<div class="course__bottom">
+		{% if props.course %}
+		<div class="course__time">{{props.course}}</div>
+		{% endif %}
 		<div class="course__time">{{props.time}}</div>
 		<div class="course__price">{{props.price}}</div>
 	</div>

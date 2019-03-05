@@ -3,7 +3,7 @@
 	display: block
 	padding: 1.7em 2em
 	background-color: $white
-	box-shadow: 0 20px 56px rgba($black, 0.2)
+	box-shadow: 0 20px 56px -33px rgba($black, 0.2)
 	min-height: 300px
 	display: flex
 	flex-direction: column
@@ -12,13 +12,13 @@
 	transition: background-color .4s, color .4s, box-shadow .4s, transform .15s
 	&.course_img
 		padding: 30px
-		box-shadow: 0 5px 51px rgba(0, 0, 0, 0.2)
+		box-shadow: 0 5px 51px -19px rgba(0, 0, 0, 0.2)
 		+lg
 			padding: 15px
 	+hover
 		background-color: $orange
 		color: $white
-		box-shadow: 0 25px 42px $orange
+		box-shadow: 0 25px 42px -14px $orange
 		transform: translateY(-8px)
 		.course__aside
 			color: $white
@@ -133,7 +133,7 @@
 // 										INSTRUCTOR
 .instructor
 	background-color: $white
-	box-shadow: 0 20px 56px rgba(0, 0, 0, 0.2)
+	box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
 	border-radius: 10px
 	overflow: hidden
 	transition: transform .15s
@@ -199,7 +199,7 @@
 .testimonial
 	background-color: $white
 	padding: 2em 2em 2.66em
-	box-shadow: 0 20px 56px rgba(0, 0, 0, 0.2)
+	box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
 	border-radius: 10px
 	transition: transform .15s
 	+hover
@@ -249,17 +249,19 @@
 	background-color: $blue
 	+sm
 		padding: 30px 16px
+	&__wrap
+		padding: 150px 30px 0
+		+md
+			padding: 80px 16px 0
+		+sm
+			padding: 80px 0 0
 	&__inner
 		border: 2px solid $white
-		padding: 40px 60px
+		padding: 2.36em 4em
 		+lg
 			padding: 30px
 		+sm
 			padding: 26px 14px
-		.feedback_md &
-			padding: 40px 207px
-			+lg
-				padding: 30px
 	&__title
 		text-align: center
 		margin-bottom: 1.28em
@@ -305,8 +307,7 @@
 			margin-top: 16px
 	+sm
 		padding: 0
-	input,
-	textarea
+	input
 		color: $grayLight
 		+verdana
 		+f(15px, 400)
@@ -325,33 +326,26 @@
 			letter-spacing: 0.066em
 		+sm
 			padding: 16px 20px
-	textarea
-		resize: none
-		height: 120px
 .checkbox
 	position: relative
 	cursor: pointer
 	padding-left: 40px
-	text-align: left
-	display: block
 	+sm
 		font-size: 10px
 	&__icon
 		position: absolute
-		top: 50%
+		top: -5px
 		left: 0
 		width: 25px
 		height: 25px
 		border-radius: 4px
 		border: 1px solid $white
-		transform: translateY(-50%)
 	&__text
 		display: inline-block
-		a
-			border-bottom: 1px solid transparent
-			transition: border-color .3s
-			+hover
-				border-color: currentColor
+		border-bottom: 1px solid transparent
+		transition: border-color .3s
+		+hover
+			border-color: currentColor
 	input
 		position: absolute
 		width: 1px
@@ -367,32 +361,6 @@
 				background-size: 70%
 				background-repeat: no-repeat
 				background-position: 50% 50%
-
-.form-contacts
-	&__row
-		margin: 0 -10px
-	&__col
-		padding: 10px
-		display: flex
-		align-items: center
-		justify-content: flex-end
-		+md
-			padding: 8px
-	&__footer
-		&-btn
-			width: 100%
-	&__check
-		text-align: center
-		color: $white
-		letter-spacing: normal
-		padding-right: 20px
-		line-height: 1.5
-		+md
-			padding-right: 0
-	.form-group
-		width: 100%
-		padding: 0
-		max-width: none
 
 // 											SEMINAR
 .seminar
@@ -413,7 +381,7 @@
 		left: 0
 		bottom: 0
 	&__list
-		box-shadow: 0 20px 42px rgba(0, 0, 0, 0.24)
+		box-shadow: 0 20px 42px -18px rgba(0, 0, 0, 0.24)
 		background-color: $white
 		border-radius: 10px
 		margin-top: 20px
@@ -468,7 +436,7 @@
 	width: 100%
 	padding: 2em
 	border-radius: 10px
-	box-shadow: 0 20px 56px rgba(0, 0, 0, 0.2)
+	box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
 	+xs
 		padding: 30px 15px
 	.footer &
