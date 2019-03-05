@@ -73,7 +73,7 @@ heroSlider.each((i, el) => {
 
 const testimonialSlider = $('.js-small-slider');
 const options = {
-  slidesToShow: 1,
+  slidesToShow: 2,
   slidesToScroll: 1,
   infinite: true,
   dots: true,
@@ -81,7 +81,18 @@ const options = {
   customPaging: (slider, pageIndex) => {
     return $('<button class="small__dot"></button>');
   },
-  dotsClass: 'small-dots'
+  dotsClass: 'small-dots',
+  responsive: [
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    }
+  ]
 };
 
 const detectWindowWidth = () => {

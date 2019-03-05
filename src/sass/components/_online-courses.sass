@@ -3,15 +3,34 @@
 		margin-top: 60px
 		+sm
 			margin-top: 40px
-		&.row
-			margin-left: -22px
-			margin-right: -22px
+	&__row
+		margin: 0 -22px
+		+lg
+			margin: 0 -15px
 	&__main-col
 		padding: 0 22px
+		+lg
+			padding: 0 15px
 	&__wrap
 		margin-top: 120px
 		padding-top: 80px
 		background-color: $white
+		.inner
+			+sm
+				max-width: 400px
+		+sm
+			margin-top: 80px
+			padding-top: 40px
 	&__list
 		&:not(:first-child)
 			margin-top: 30px
+	&__col
+		+sm
+			&:not(:first-child)
+				margin-top: 16px
+	.slick-list
+		+xs
+			max-width: 424px
+			margin: 0 auto
+	.small-dots
+		padding-top: 30px

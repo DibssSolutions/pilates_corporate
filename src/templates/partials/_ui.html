@@ -14,9 +14,10 @@
 	<div class="course__bottom">
 		{% if props.course %}
 		<div class="course__time">{{props.course}}</div>
-		{% endif %}
+		{% else %}
 		<div class="course__time">{{props.time}}</div>
 		<div class="course__price">{{props.price}}</div>
+		{% endif %}
 	</div>
 </a>
 {% endmacro %}
