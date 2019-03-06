@@ -4,7 +4,7 @@ title: personal-office
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	{{header.block()}}
+	{{header.block({class: 'header_bg'})}}
 	{{topTitle.block(
 		{
 			title: 'Мои курсы'
@@ -23,22 +23,57 @@ title: personal-office
 						})}}
 					</li>
 					<li class="online-courses__main-col col-4 col-md-6 col-xs-12">
-						<div class="empty">
+						<a href="#" class="empty">
 							<div class="empty__inner">
-								<a href="#" class="empty__plus plus">{{mixins.icon('plus')}}</a>
+								<button type="button" class="empty__plus plus">{{mixins.icon('plus')}}</button>
 								<div class="empty__title">Выбрать новый курс</div>
 							</div>
-						</div>
+						</a>
 					</li>
 				</ul>
 			</div>
+			<div class="personal-office__recommend">
+				<h2 class="personal-office__title title">Рекомендуем</h2>
+				<div class="personal-office__row row js-small-slider">
+					<div class="personal-office__col col-3 col-md-6 col-sm-12">
+							{{ui.course({
+								class: 'course_img',
+								img: 'course.png',
+								title: 'Пилатес для беременных',
+								time: '90 мин',
+								price: '1 500 ₽'
+							})}}
+					</div>
+					<div class="personal-office__col col-3 col-md-6 col-sm-12">
+							{{ui.course({
+								class: 'course_img',
+								img: 'course.png',
+								title: 'Пилатес для беременных',
+								time: '90 мин',
+								price: '1 500 ₽'
+							})}}
+					</div>
+					<div class="personal-office__col col-3 col-md-6 col-sm-12">
+							{{ui.course({
+								class: 'course_img',
+								img: 'course.png',
+								title: 'Пилатес для беременных',
+								time: '90 мин',
+								price: '1 500 ₽'
+							})}}
+					</div>
+					<div class="personal-office__col col-3 col-md-6 col-sm-12">
+							{{ui.course({
+								class: 'course_img',
+								img: 'course.png',
+								title: 'Пилатес для беременных',
+								time: '90 мин',
+								price: '1 500 ₽'
+							})}}
+					</div>
+				</div>
+			</div>
 		</div>
-		{{pilates.block(
-			{
-				class: 'pilates-block',
-				title: 'Рекомендуем'
-			}
-			)}}
 	</div>
 	{{footer.block()}}
 {% endblock %}
