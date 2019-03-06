@@ -8,25 +8,22 @@
 				<a href="#" class="btn">Все преподаватели</a>
 			</div>
 		</div>
-		{% if props.text %}
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-		{% endif %}
-		<ul class="instructor-block__list row">
-			<li class="col-4 col-md-6 col-sm-12">
+		<ul class="instructor-block__row row">
+			<li class="instructor-block__col col-4 col-sm-12">
 				{{ui.instructor({
 					name: 'Gussie Hammond',
 					aside: 'Стаж инструктора 10 лет',
 					text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 				})}}
 			</li>
-			<li class="col-4 col-md-6 col-sm-12">
+			<li class="instructor-block__col col-4 col-sm-12">
 				{{ui.instructor({
 					name: 'Gussie Hammond',
 					aside: 'Стаж инструктора 10 лет',
 					text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 				})}}
 			</li>
-			<li class="col-4 col-md-6 col-sm-12">
+			<li class="instructor-block__col col-4 col-sm-12">
 				{{ui.instructor({
 					name: 'Gussie Hammond',
 					aside: 'Стаж инструктора 10 лет',
@@ -34,7 +31,7 @@
 				})}}
 			</li>
 		</ul>
-		<div class="instructor-block__btn_mob">
+		<div class="instructor-block__col instructor-block__btn_mob">
 			<a href="#" class="btn">Все преподаватели</a>
 		</div>
 	</div>

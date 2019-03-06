@@ -4,18 +4,11 @@ title: Home
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	{# {{header.block({class: 'header__absolute'})}} #}
 	{{header.block()}}
 	{% include "partials/_hero.html" %}
-	{# {{header.block({index: 1})}} #}
 	{% include "partials/_about.html" %}
 	{{seminar.block()}}
-	{{course.block(
-		{
-			btn: 'Все онлайн курсы',
-			title: 'Онлайн курсы'
-		}
-		)}}
+	{{course.block()}}
 	<div class="main-feedback">
 		<div class="main-feedback__inner inner">
 			<div class="main-feedback__wrap">
@@ -27,5 +20,7 @@ title: Home
 	{{instructor.block()}}
 	{{testimonial.block()}}
 	{{contacts.block()}}
-	{{footer.block()}}
+	<div class="footer-wrap">
+		{{footer.block()}}
+	</div>
 {% endblock %}
