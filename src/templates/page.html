@@ -16,11 +16,11 @@ title: Home
 			</div>
 		</div>
 	</div>
-	{{event.block()}}
+	<div class="event-block-wrap">
+		{{event.block()}}
+	</div>
 	{{instructor.block()}}
 	{{testimonial.block()}}
 	{{contacts.block()}}
-	<div class="footer-wrap">
-		{{footer.block()}}
-	</div>
+	{{footer.block()}}
 {% endblock %}

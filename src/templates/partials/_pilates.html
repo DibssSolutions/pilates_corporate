@@ -1,19 +1,12 @@
 {% import "partials/_ui.html" as ui %}
 {% macro block(props) %}
-<div class="course-block {% if props.class %}{{props.class}}{% endif %}">
-	<div class="course-block__inner inner">
-		<div class="course-block__head">
-			{% if props.title %}
-			<h2 class="course-block__title title title_lg">{{props.title}}</h2>
-			{% endif %}
-			{% if props.btn %}
-			<div class="course-block__btn">
-				<a href="#" class="btn">{{props.btn}}</a>
-			</div>
-			{% endif %}
+<div class="pilates-block">
+	<div class="pilates-block__inner inner">
+		<div class="pilates-block__head">
+			<h2 class="pilates-block__title title-m">{{props.title}}</h2>
 		</div>
-		<ul class="course-block__list row js-small-slider">
-			<li class="col-3 col-md-6 col-xs-12">
+		<ul class="pilates-block__row row js-small-slider">
+			<li class="pilates-block__col col-3 col-md-6 col-sm-12">
 					{{ui.course({
 						class: 'course_img',
 						img: 'course.png',
@@ -22,7 +15,7 @@
 						price: '1 500 ₽'
 					})}}
 			</li>
-			<li class="col-3 col-md-6 col-xs-12">
+			<li class="pilates-block__col col-3 col-md-6 col-sm-12">
 					{{ui.course({
 						class: 'course_img',
 						img: 'course.png',
@@ -31,7 +24,7 @@
 						price: '1 500 ₽'
 					})}}
 			</li>
-			<li class="col-3 col-md-6 col-xs-12">
+			<li class="pilates-block__col col-3 col-md-6 col-sm-12">
 					{{ui.course({
 						class: 'course_img',
 						img: 'course.png',
@@ -40,7 +33,7 @@
 						price: '1 500 ₽'
 					})}}
 			</li>
-			<li class="col-3 col-md-6 col-xs-12">
+			<li class="pilates-block__col col-3 col-md-6 col-sm-12">
 					{{ui.course({
 						class: 'course_img',
 						img: 'course.png',
@@ -50,11 +43,6 @@
 					})}}
 			</li>
 		</ul>
-		{% if props.btn %}
-		<div class="course-block__btn_mob">
-			<a href="#" class="btn">{{props.btn}}</a>
-		</div>
-		{% endif %}
 	</div>
 </div>
 {% endmacro %}
