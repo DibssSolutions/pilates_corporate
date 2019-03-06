@@ -309,6 +309,7 @@
 		// 	margin: 0 auto
 	[class*='col']
 		padding: 0 $padding
+		width: 100%
 		+r(1023)
 			padding: 0 8px
 		// +r(480)
@@ -317,25 +318,25 @@
 		$width: percentage($i / $columns)
 		.col-#{$i}
 			flex: 0 0 $width
-			min-width: $width
+			max-width: $width
 		@if($sizeLg)
 			.col-lg-#{$i}
 				+r(1259)
 					flex: 0 0 $width
-					min-width: $width
+					max-width: $width
 		@if($sizeMd)
 			.col-md-#{$i}
 				+r(1023)
 					flex: 0 0 $width
-					min-width: $width
+					max-width: $width
 		@if($sizeSm)
 			.col-sm-#{$i}
 				+r(767)
 					flex: 0 0 $width
-					min-width: $width
+					max-width: $width
 		@if($sizeXs)
 			.col-xs-#{$i}
 				+r(599)
 					flex: 0 0 $width
-					min-width: $width
+					max-width: $width
 

@@ -319,8 +319,8 @@
           </ul>
         </div>
       </div>
-      <section class="event-block" data-tabs>
-        <div class="event-block__inner inner">
+      <section class="event-block">
+        <div class="event-block__inner" data-tabs>
           <div class="event-block__head">
             <h2 class="event-block__title title">Ближайшие мероприятия</h2>
             <ul class="event-block__tabs tabs">
@@ -370,7 +370,7 @@
                 </li>
               </ul>
             </div>
-            <div class="event-block__list" data-tabs-container='SaintP'>
+            <div class="event-block__list sm-hide" data-tabs-container='SaintP'>
               <ul class="event-block__row row">
                 <li class="event-block__col col-4">
                   <a href="#" class="event ">
@@ -401,7 +401,7 @@
                 </li>
               </ul>
             </div>
-            <div class="event-block__list" data-tabs-container='Other'>
+            <div class="event-block__list sm-hide" data-tabs-container='Other'>
               <ul class="event-block__row row">
                 <li class="col-4">
                   <a href="#" class="event ">
@@ -433,6 +433,8 @@
               </ul>
             </div>
           </div>
+        </div>
+        <div class="inner">
           <div class="event-block__btn_mob">
             <a href="#" class="btn">Полное рассписание</a>
           </div>
@@ -443,23 +445,33 @@
         <div class="feedback__inner">
           <h3 class="feedback__title title title_lg">Получите подробную консультацию об обучении</h3>
           <form action="/" class="form">
-            <div class="form-group">
-              <input type="text" placeholder="Имя">
-            </div>
-            <div class="form-group">
-              <input type="text" placeholder="Телефон">
-            </div>
-            <div class="form-group">
-              <input type="text" placeholder="Email">
-            </div>
-            <div class="form__btn">
-              <button type="submit" class="btn btn_md">Отправить</button>
-            </div>
+            <ul class="form__row row">
+              <li class="form__col col-3 col-lg-4 col-sm-12">
+                <div class="form-group">
+                  <input type="text" placeholder="Имя">
+                </div>
+              </li>
+              <li class="form__col col-3 col-lg-4 col-sm-12">
+                <div class="form-group">
+                  <input type="text" placeholder="Телефон">
+                </div>
+              </li>
+              <li class="form__col col-3 col-lg-4 col-sm-12">
+                <div class="form-group">
+                  <input type="text" placeholder="Email">
+                </div>
+              </li>
+              <li class="form__col col-3 col-lg-12">
+                <div class="form__btn">
+                  <button type="submit" class="btn btn_md">Отправить</button>
+                </div>
+              </li>
+            </ul>
             <div class="feedback__check">
               <!-- begin input -->
               <label class="checkbox">
                 <input type="checkbox" name="checkbox" checked>
-                <span class="checkbox__text">Я согласен с <a href="">условиями обработки персональных данных</a></span>
+                <span class="checkbox__text">Я согласен с <a href="#">условиями обработки персональных данных</a></span>
                 <span class="checkbox__icon"></span>
               </label>
               <!-- end input -->

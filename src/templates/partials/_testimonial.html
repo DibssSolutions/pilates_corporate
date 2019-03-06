@@ -2,31 +2,22 @@
 {% macro block(props) %}
 <section class="testimonial-block">
 	<div class="testimonial-block__inner inner">
-		<div class="testimonial-block__head">
-			<h2 class="testimonial-block__title title">Отзывы</h2>
-			<div class="testimonial-block__btn">
-				<a href="#" class="btn">Остальные отзывы</a>
-			</div>
-		</div>
-		{% if props.text %}
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-		{% endif %}
-		<ul class="testimonial-block__list row js-small-slider">
-			<li class="col-4 col-md-6 col-sm-12">
+		<ul class="testimonial-block__row row js-small-slider">
+			<li class="testimonial-block__col col-4 col-md-6 col-sm-12">
 				{{ui.testimonial({
 					name: 'Harold Roberts',
 					aside: 'Студентка Пилатоса',
 					text: 'Lorem ipsum dolor sit amet, outdd consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 				})}}
 			</li>
-			<li class="col-4 col-md-6 col-sm-12">
+			<li class="testimonial-block__col col-4 col-md-6 col-sm-12">
 				{{ui.testimonial({
 					name: 'Harold Roberts',
 					aside: 'Студентка Пилатоса',
 					text: 'Lorem ipsum dolor sit amet, outdd consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 					})}}
 			</li>
-			<li class="col-4 col-md-6 col-sm-12">
+			<li class="testimonial-block__col col-4 col-md-6 col-sm-12">
 				{{ui.testimonial({
 					name: 'Harold Roberts',
 					aside: 'Студентка Пилатоса',
@@ -34,7 +25,7 @@
 				})}}
 			</li>
 		</ul>
-		<div class="testimonial-block__btn_mob">
+		<div class="testimonial-block__btn">
 			<a href="#" class="btn">Остальные отзывы</a>
 		</div>
 	</div>

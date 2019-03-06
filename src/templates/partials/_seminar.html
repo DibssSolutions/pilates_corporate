@@ -2,13 +2,9 @@
 {% macro block(props) %}	
 <section class="seminar-block">
 	<div class="seminar-block__inner inner">
-		<h2 class="seminar-block__title title">Направления и семинары</h2>
-		{% if props.text %}
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-		{% endif %}
-		<div class="seminar-block__list row">
-			{{ui.seminar({
-				class: 'col-4 col-sm-8 col-xs-12',
+		<ul class="seminar-block__row row">
+			<li class="seminar-block__col col-4 col-sm-12">
+				{{ui.seminar({
 				img: 'seminar.png',
 				title: 'Пилатес',
 				items: [
@@ -20,8 +16,9 @@
 					'Функциональный пилатес'
 				]
 				})}}
-			{{ui.seminar({
-				class: 'col-4 col-sm-8 col-xs-12',
+			</li>
+			<li class="seminar-block__col col-4 col-sm-12">
+				{{ui.seminar({
 				img: 'seminar.png',
 				title: 'Пилатес',
 				items: [
@@ -33,8 +30,9 @@
 					'Функциональный пилатес'
 				]
 				})}}
-			{{ui.seminar({
-				class: 'col-4 col-sm-8 col-xs-12',
+			</li>
+			<li class="seminar-block__col col-4 col-sm-12">
+				{{ui.seminar({
 				img: 'seminar.png',
 				title: 'Пилатес',
 				items: [
@@ -46,7 +44,8 @@
 					'Функциональный пилатес'
 				]
 				})}}
-		</div>
+			</li>
+		</ul>
 	</div>
 </section>
 {% endmacro %}

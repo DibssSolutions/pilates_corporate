@@ -1,7 +1,7 @@
 {% import "partials/_ui.html" as ui %}
 {% macro block(props) %}
-<section class="event-block" data-tabs>
-	<div class="event-block__inner inner">
+<section class="event-block">
+	<div class="event-block__inner" data-tabs>
 		<div class="event-block__head">
 			<h2 class="event-block__title title">Ближайшие мероприятия</h2>
 			<ul class="event-block__tabs tabs">
@@ -48,7 +48,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="event-block__list" data-tabs-container='SaintP'>
+			<div class="event-block__list sm-hide" data-tabs-container='SaintP'>
 				<ul class="event-block__row row">
 					<li class="event-block__col col-4">
 						{{ui.event({
@@ -76,7 +76,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="event-block__list" data-tabs-container='Other'>
+			<div class="event-block__list sm-hide" data-tabs-container='Other'>
 				<ul class="event-block__row row">
 					<li class="col-4">
 						{{ui.event({
@@ -105,6 +105,8 @@
 				</ul>
 			</div>
 		</div>
+	</div>
+	<div class="inner">
 		<div class="event-block__btn_mob">
 			<a href="#" class="btn">Полное рассписание</a>
 		</div>
