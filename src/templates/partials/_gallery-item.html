@@ -1,0 +1,37 @@
+{% import "partials/_mixins.html" as mixins %}
+{% macro block(props) %}
+<div class="gallery js-gallery-slider-wrap">
+	<div class="gallery__slider js-gallery">
+		{% for item in props.list %}
+			 <div class="gallery__slide">
+				 <a data-fancybox="gallery" href="./img/{{item}}" class="gallery__item js-fancybox" style="background-image: url(./img/{{item}})"></a>
+			 </div>
+		{% endfor %}
+	</div>
+	<div class="gallery__nav-wrap">
+		<div class="gallery__prev js-arrow-prev sm-hide">
+			<button type="button" class="prev">
+				<div class="prev__link">
+					{{ mixins.icon('arrow-left') }}
+				</div>
+			</button>
+		</div>
+		<div class="gallery__next js-arrow-next sm-hide">
+			<button type="button" class="next">
+				<div class="next__link">
+					{{ mixins.icon('arrow-right') }}
+				</div>
+			</button>
+		</div>
+		<div class="gallery__nav js-gallery-nav">
+			{% for itemSmall in props.list %}
+				<div class="gallery__nav-item">
+					<div class="gallery__img-wrap">
+						<img src="./img/{{itemSmall}}">
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+{% endmacro %}

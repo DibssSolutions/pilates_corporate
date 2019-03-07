@@ -160,3 +160,39 @@ WIN.resize(() => {
   clearTimeout(timeoutM);
   timeoutM = setTimeout(detectWindowWidthMedium, 100);
 });
+
+
+// 										GALLERY SLIDER
+const gallerySlider = $('.js-gallery');
+const galleryNav = $('.js-gallery-nav');
+
+const galleryParent = gallerySlider.parents('.js-gallery-slider-wrap');
+let prev = $('.js-arrow-prev', galleryParent);
+let next = $('.js-arrow-next', galleryParent);
+
+gallerySlider.slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  asNavFor: galleryNav
+});
+galleryNav.slick({
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  asNavFor: gallerySlider,
+  // centerMode: true,
+  focusOnSelect: true,
+  prevArrow: prev,
+  nextArrow: next,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: false
+      }
+    }
+  ]
+});

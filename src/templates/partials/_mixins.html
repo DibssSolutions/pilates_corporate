@@ -33,9 +33,11 @@
 {% macro pagination(smHide) %}
 	<ul class="pagination{% if smHide %} sm-hide{% endif %}">
 		<li class="pagination__prev">
-			<a href="#" class="pagination__link">
-				{{ icon('arrow-left') }}
-			</a>
+			<div class="prev">
+				<a href="#" class="prev__link">
+					{{ icon('arrow-left') }}
+				</a>
+			</div>
 		</li>
 		{% for item in range(1, 11) %}
 			<li class="pagination__item{% if loop.first %} is-active{% endif %}">
@@ -43,9 +45,11 @@
 			</li>
 		{% endfor %}
 		<li class="pagination__next">
-			<a href="#" class="pagination__link">
-				{{ icon('arrow-right') }}
-			</a>
+			<div class="next">
+				<a href="#" class="next__link">
+					{{ icon('arrow-right') }}
+				</a>
+			</div>
 		</li>
 	</ul>
 {% endmacro %}
@@ -53,9 +57,11 @@
 {% macro paginationSM() %}
 	<ul class="pagination pagination_sm">
 		<li class="pagination__prev">
-			<a href="#" class="pagination__link">
-				{{ icon('arrow-left') }}
-			</a>
+			<div class="prev">
+				<a href="#" class="prev__link">
+					{{ icon('arrow-left') }}
+				</a>
+			</div>
 		</li>
 		<li class="pagination__item is-active">
 			<a href="#" class="pagination__link">1</a>
@@ -70,9 +76,11 @@
 			<a href="#" class="pagination__link">10</a>
 		</li>
 		<li class="pagination__next">
-			<a href="#" class="pagination__link">
-				{{ icon('arrow-right') }}
-			</a>
+			<div class="next">
+				<a href="#" class="next__link">
+					{{ icon('arrow-right') }}
+				</a>
+			</div>
 		</li>
 	</ul>
 	

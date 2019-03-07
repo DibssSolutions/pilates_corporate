@@ -1,0 +1,19 @@
+---
+title: Gallery
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{{header.block({class: 'header_bg'})}}
+	{{topTitle.block(
+		{
+			title: 'Галерея'
+		}
+	)}}
+	<section class="gallery-block">
+			<div class="gallery-block__inner inner">
+				{{gallery.block({list: ['gallery.png', 'event2.png', 'gallery.png', 'gallery.png', 'gallery.png', 'gallery.png', 'gallery.png']})}}
+			</div>
+	</section>
+	{{footer.block()}}
+{% endblock %}

@@ -21,3 +21,5 @@ PageList:
   ready: 50
 - file: direction.html
   ready: 50
+- file: gallery.html
+  ready: 50
