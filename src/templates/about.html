@@ -1,0 +1,114 @@
+---
+title: About
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{{header.block({class: 'header_bg'})}}
+	<div class="about-page">
+		<div class="about-page__inner inner">
+			<section class="about-page__main">
+				<div class="about-page__gallery">
+					{{gallery.block([
+						{
+							img: 'gallery.png'
+						},
+						{
+							video: 'event2.png',
+							img: 'event2.png'
+						},
+						{
+							img: 'gallery.png'
+						},
+						{
+							img: 'gallery.png'
+						},
+						{
+							img: 'gallery.png'
+						},
+						{
+							img: 'gallery.png'
+						},
+						{
+							img: 'gallery.png'
+						}
+						])}}
+				</div>
+				<div class="about-page__text">
+					<h2 class="about-page__title-main title-lg title_line">Об Институте <span>Пилатеса</span></h2>
+					<div class="about-page__descr">
+						<p>Компания «Институт Пилатеса Россия» (НОУ «ПИЛАТЕС Институт») была образована в 2001 г. и стала первой компанией, которая привезла пилатес в Россию. Более 15 лет Институт является ведущим учебным заведением дополнительного образования по обучению и повышению квалификации тренеров по пилатесу. За эти годы мы обучили более 5000 тренеров по всей России и СНГ. У нас работает высококвалифицированная команда преподавателей с большим опытом работы. Наши мастер-тренеры постоянно повышают свой уровень профессионализма у лучших мировых мастеров. Мы никогда не стояли на месте, развивая и усовершенствуя учебные программы. Мы ищем для Вас лучшие методики по всему миру. И, как когда -то, мы открыли для России методику Джозефа Пилатеса, так сейчас мы открываем новое направление Body&Mind - "Постуральную гимнастику - гимнастику осанки". Мы проводим регулярные семинары, а также являемся организаторами Международных конвенций Body&Mind, которые проходят два раза в год.</p>
+					</div>
+				</div>
+			</section>
+			<section class="about-page__news about-news">
+				<div class="about-page__head">
+					<h3 class="about-page__title title">Новости</h3>
+					<div class="about-page__btn sm-hide">
+						<button type="button" class="btn">Полное рассписание</button>
+					</div>
+				</div>
+				<ul class="about-news__row row">
+					{% for item in [
+						{
+							date: '01.12.2019',
+							title: 'Microwave Cooking Is The Wave Of The Future',
+							img: 'news1.jpg',
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
+						},
+						{
+							date: '01.12.2019',
+							title: '10 Easy Steps To Clearer Skin',
+							img: 'news2.jpg',
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
+						},
+						{
+							date: '01.12.2019',
+							title: '10 Easy Steps To Clearer Skin',
+							img: 'news2.jpg',
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
+						}
+					] %}
+						<div class="about-news__col col-4 col-md-6 col-sm-12">
+							{{ ui.newsItem(item) }}
+						</div>
+					{% endfor %}
+				</ul>
+				<div class="about-page__btn-mob sm-block">
+					<button type="button" class="btn">Полное рассписание</button>
+				</div>
+			</section>
+			<section class="about-page__testimonials about-testimonials">
+				<div class="about-page__head">
+					<h3 class="about-page__title title">Отзывы</h3>
+					<button class="about-page__btn btn sm-hide">Остальные отзывы</button>
+				</div>
+				<div class="about-testimonials__row row js-medium-slider">
+					{% for item in range(0, 3) %}
+					<div class="about-testimonials__col col-4 col-md-12">
+						{{ui.testimonial({
+							name: 'Harold Roberts',
+							aside: 'Студентка Пилатоса',
+							text: 'Lorem ipsum dolor sit amet, outdd consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+						})}}
+					</div>
+					{% endfor %}
+				</div>
+				<div class="about-page__btn-mob sm-block">
+					<button type="button" class="btn">Остальные отзывы</button>
+				</div>
+			</section>
+			<div class="about-page__partners about-partners">
+				<h3 class="about-page__title title">Партнеры</h3>
+				<div class="about-partners__row row js-small-slider">
+					{% for item in range(0, 4) %}
+						<div class="about-partners__col col-3 col-md-6 col-sm-12">
+							<a href="#" class="partner-item" style="background-image: url(./img/partner.png)"></a>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	{{footer.block()}}
+{% endblock %}

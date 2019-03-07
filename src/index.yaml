@@ -25,3 +25,7 @@ PageList:
   ready: 50
 - file: conventions.html
   ready: 50
+- file: about.html
+  ready: 50
+- file: single-course.html
+  ready: 50

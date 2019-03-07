@@ -30,6 +30,9 @@
 			background-color: $white
 		.course__title.title
 			color: $white
+		.course__buy
+			color: $white
+			border-color: $white
 	+lg
 		padding: 27px
 	+sm
@@ -96,6 +99,20 @@
 		.course_img &
 			+sm
 				margin-top: 11px
+	&__buy
+		display: none
+		position: relative
+		text-align: center
+		+f(15px, 700, 1.2)
+		color: $black
+		padding: 20px 0 5px
+		margin: 20px -30px 0
+		border-top: 1px solid $black
+		transition: border-color .3s, color .3s
+		+sm
+			margin: 20px -15px 0
+		.course_buy &
+			display: block
 
 // 												EVENT
 .event
@@ -570,3 +587,9 @@
 			height: 100%
 	&__text
 		margin-top: 25px
+
+// 													PARTNER
+.partner-item
+	display: block
+	+cover
+	height: 115px

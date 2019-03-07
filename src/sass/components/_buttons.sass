@@ -43,6 +43,25 @@
 			box-shadow: 0 19px 25px -12px $blue
 		// +md
 		// 	padding: 15px 20px
+	&_back
+		background-color: $white
+		box-shadow: 0 7px 36px -6px rgba($black, .5)
+		color: $text
+		padding: 16px 20px 16px 50px
+		+hover
+			color: $white
+		.icon
+			position: absolute
+			top: 50%
+			left: 15px
+			transform: translateY(-50%)
+	&_white
+		background-color: $white
+		color: $grayLight
+		box-shadow: none
+		font-weight: 700
+		+hover
+			color: $white
 	&_md
 		max-width: 280px
 		box-shadow: none

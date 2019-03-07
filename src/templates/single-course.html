@@ -1,0 +1,33 @@
+---
+title: Course
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	{{header.block({class: 'header_bg'})}}
+	<div class="single-course">
+		<div class="single-course__inner inner">
+			<div class="single-course__btn">
+				<button class="btn btn_back">
+					{{mixins.icon('back')}}
+					Все курсы
+				</button>
+			</div>
+			<div class="single-course__main">
+				<div class="single-course__left">
+					{{ui.course({
+						class: 'course_img course_buy',
+						img: 'course.png',
+						title: 'Пилатес для беременных',
+						time: '90 мин',
+						price: '1 500 ₽'
+					})}}
+					<div class="single-course__buy">
+						<button type="button" class="btn btn_white">Купить курс на диске</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{footer.block()}}
+{% endblock %}

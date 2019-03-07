@@ -10,10 +10,33 @@ title: Gallery
 			title: 'Галерея'
 		}
 	)}}
-	<section class="gallery-block">
+	<div class="gallery-block">
 			<div class="gallery-block__inner inner">
-				{{gallery.block({list: ['gallery.png', 'event2.png', 'gallery.png', 'gallery.png', 'gallery.png', 'gallery.png', 'gallery.png']})}}
+				{{gallery.block([
+					{
+						img: 'gallery.png'
+					},
+					{
+						video: 'event2.png',
+						img: 'event2.png'
+					},
+					{
+						img: 'gallery.png'
+					},
+					{
+						img: 'gallery.png'
+					},
+					{
+						img: 'gallery.png'
+					},
+					{
+						img: 'gallery.png'
+					},
+					{
+						img: 'gallery.png'
+					}
+					])}}
 			</div>
-	</section>
+	</div>
 	{{footer.block()}}
 {% endblock %}
