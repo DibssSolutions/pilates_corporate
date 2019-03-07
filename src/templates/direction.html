@@ -1,0 +1,69 @@
+---
+title: Direction
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	{{header.block({class: 'header_bg'})}}
+	{{topTitle.block(
+		{
+			title: 'Направление',
+			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.'
+		}
+	)}}
+	<div class="direction">
+		<div class="direction__inner inner">
+			<ul class="direction__row row">
+				<li class="direction__col col-4 col-sm-12">
+					{{ui.seminar({
+						img: 'seminar.png',
+						title: 'Пилатес	',
+						items: [
+							'MatWork уровень 1 - (Базовый курс)',
+							'MatWork уровень 2 + работа с малым оборудованием',
+							'Работа с большим оборудованием',
+							'Пилатес для беременных',
+							'Пилатес для беременных и людей старшего возраста',
+							'Функциональный пилатес'
+						]
+					})}}
+				</li>
+				<li class="direction__col col-4 col-sm-12">
+					{{ui.seminar({
+						img: 'seminar.png',
+						title: 'Пилатес	',
+						items: [
+							'MatWork уровень 1 - (Базовый курс)',
+							'MatWork уровень 2 + работа с малым оборудованием',
+							'Работа с большим оборудованием',
+							'Пилатес для беременных',
+							'Пилатес для беременных и людей старшего возраста',
+							'Функциональный пилатес'
+						]
+					})}}
+				</li>
+				<li class="direction__col col-4 col-sm-12">
+					{{ui.seminar({
+						img: 'seminar.png',
+						title: 'Пилатес	',
+						items: [
+							'MatWork уровень 1 - (Базовый курс)',
+							'MatWork уровень 2 + работа с малым оборудованием',
+							'Работа с большим оборудованием',
+							'Пилатес для беременных',
+							'Пилатес для беременных и людей старшего возраста',
+							'Функциональный пилатес'
+						]
+					})}}
+				</li>
+			</ul>
+		</div>
+		<div class="direction__event">
+			{{event.block()}}
+		</div>
+		<div class="direction__form inner">
+			{{ui.form({title: 'Получите подробную консультацию об обучении'})}}
+		</div>
+	</div>
+	{{footer.block()}}
+{% endblock %}

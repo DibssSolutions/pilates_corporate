@@ -8,12 +8,7 @@ title: Home
 	{% include "partials/_hero.html" %}
 	{% include "partials/_about.html" %}
 	{{seminar.block()}}
-	{{course.block(
-		{
-			btn: 'Все онлайн курсы',
-			title: 'Онлайн курсы'
-		}
-		)}}
+	{{course.block()}}
 	<div class="main-feedback">
 		<div class="main-feedback__inner inner">
 			<div class="main-feedback__wrap">
@@ -21,7 +16,9 @@ title: Home
 			</div>
 		</div>
 	</div>
-	{{event.block()}}
+	<div class="event-block-wrap">
+		{{event.block()}}
+	</div>
 	{{instructor.block()}}
 	{{testimonial.block()}}
 	{{contacts.block()}}

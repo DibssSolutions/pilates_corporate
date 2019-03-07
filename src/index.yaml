@@ -19,3 +19,5 @@ PageList:
   ready: 50
 - file: news.html
   ready: 50
+- file: direction.html
+  ready: 50
