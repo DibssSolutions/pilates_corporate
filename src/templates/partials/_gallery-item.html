@@ -2,9 +2,17 @@
 {% macro block(props) %}
 <div class="gallery js-gallery-slider-wrap">
 	<div class="gallery__slider js-gallery">
-		{% for item in props.list %}
+		{% for item in props %}
 			 <div class="gallery__slide">
-				 <a data-fancybox="gallery" href="./img/{{item}}" class="gallery__item js-fancybox" style="background-image: url(./img/{{item}})"></a>
+				 {% if item.video %}
+				 <a data-fancybox="gallery" href="./img/{{item.video}}" class="gallery__item js-fancybox" style="background-image: url(./img/{{item.img}})">
+					<button type="button" class="gallery__play play">
+						{{mixins.icon('play')}}
+					</button>
+				</a>
+				 {% else %}
+				 <a data-fancybox="gallery" href="./img/{{item.img}}" class="gallery__item js-fancybox" style="background-image: url(./img/{{item.img}})"></a>
+				 {% endif %}
 			 </div>
 		{% endfor %}
 	</div>
@@ -24,10 +32,10 @@
 			</button>
 		</div>
 		<div class="gallery__nav js-gallery-nav">
-			{% for itemSmall in props.list %}
+			{% for item in props %}
 				<div class="gallery__nav-item">
 					<div class="gallery__img-wrap">
-						<img src="./img/{{itemSmall}}">
+						<img src="./img/{{item.img}}">
 					</div>
 				</div>
 			{% endfor %}

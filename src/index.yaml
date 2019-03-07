@@ -23,3 +23,5 @@ PageList:
   ready: 50
 - file: gallery.html
   ready: 50
+- file: conventions.html
+  ready: 50

@@ -7,8 +7,6 @@
 			padding: 0
 
 
-
-
 .gallery
 	line-height: 0
 	&__slider
@@ -20,6 +18,11 @@
 			white-space: normal
 			opacity: 1
 			visibility: visible
+	&__slide
+		position: relative
+		+hover
+			.play
+				transform: translate(-50%, -50%) scale(1.2)
 	&__item
 		// height: 0
 		// padding-bottom: 37.1%
@@ -34,9 +37,6 @@
 			padding-bottom: 0
 			border-radius: 0
 	&__nav
-		padding: 15px 80px
-		background-color: $white
-		border-radius: 10px
 		display: flex
 		justify-content: center
 		&-item
@@ -44,14 +44,17 @@
 			+sm
 				padding: 0 8px
 		&-wrap
+			padding: 15px 80px
 			max-width: 610px
+			border-radius: 10px
+			background-color: $white
 			position: relative
 			margin: -50px auto 0
+			box-shadow: 0 20px 56px rgba($black, .2)
 			+sm
+				padding: 15px 12px
 				max-width: 288px
 				margin-top: -40px
-		+sm
-			padding: 15px 12px
 	&__img-wrap
 		cursor: pointer
 		border-radius: 10px
@@ -79,3 +82,5 @@
 		left: 20px
 	&__next
 		right: 20px
+	&__play
+		+vcenter
