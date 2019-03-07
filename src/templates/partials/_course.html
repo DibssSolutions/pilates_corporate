@@ -2,6 +2,12 @@
 {% macro block(props) %}
 <section class="course-block">
 	<div class="course-block__inner inner">
+		<div class="course-block__head">
+			<h2 class="course-block__title title">Онлайн курсы</h2>
+			<div class="course-block__btn">
+				<a href="#" class="btn">Все онлайн курсы</a>
+			</div>
+		</div>
 		<ul class="course-block__row row">
 			<li class="course-block__col col-3 col-md-6 col-xs-12">
 				{{ui.course({
@@ -32,11 +38,9 @@
 				})}}
 			</li>
 		</ul>
-		{% if props.btn %}
-		<div class="course-block__btn">
-			<a href="#" class="btn">{{props.btn}}</a>
+		<div class="course-block__btn_mob">
+			<a href="#" class="btn">Все онлайн курсы</a>
 		</div>
-		{% endif %}
 	</div>
 </section>
 {% endmacro %}

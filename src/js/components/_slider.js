@@ -69,7 +69,7 @@ heroSlider.each((i, el) => {
   });
 });
 
-// 									testimonial slider
+// 									small slider
 
 const testimonialSlider = $('.js-small-slider');
 const options = {
@@ -113,4 +113,50 @@ let timeout;
 WIN.resize(() => {
   clearTimeout(timeout);
   timeout = setTimeout(detectWindowWidth, 100);
+});
+
+// 									MEDIUM SLIDER
+
+const mediumSlider = $('.js-medium-slider');
+const optionsM = {
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  infinite: true,
+  dots: true,
+  arrows: false,
+  customPaging: (slider, pageIndex) => {
+    return $('<button class="small__dot"></button>');
+  },
+  dotsClass: 'small-dots',
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    }
+  ]
+};
+
+const detectWindowWidthMedium = () => {
+  const initSlider = $('.js-medium-slider.slick-slider');
+  if (mediaWidth(1023)) {
+    if (initSlider.length) return;
+	   mediumSlider.slick(optionsM);
+  }
+  else {
+    if (!initSlider.length) return;
+    mediumSlider.slick('unslick');
+  }
+}; 
+detectWindowWidthMedium();
+
+let timeoutM;
+
+WIN.resize(() => {
+  clearTimeout(timeoutM);
+  timeoutM = setTimeout(detectWindowWidthMedium, 100);
 });

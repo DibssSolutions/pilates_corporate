@@ -11,25 +11,24 @@ title: Seminar
 			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.'
 		}
 	)}}
-	{{pilates.block(
-		{
-			class: 'pilates-block',
-			title: 'Пилатес'
-		}
-		)}}
-	{{pilates.block(
-		{
-			class: 'pilates-block',
-			title: 'Постуральная гимнастика'
-		}
-		)}}
-	{{pilates.block(
-		{
-			class: 'pilates-block',
-			title: 'Разное'
-		}
-		)}}
-	{{event.block()}}
-	{{ui.form({title: 'Получите подробную консультацию об обучении'})}}
+	<div class="seminar">
+		<div class="seminar__wrap-sm">
+			{{pilates.block({title: 'Пилатес'})}}
+		</div>
+		<div class="seminar__wrap">
+			{{pilates.block({title: 'Постуральная гимнастика'})}}
+		</div>
+		<div class="seminar__wrap">
+			{{pilates.block({title: 'Разное'})}}
+		</div>
+		<div class="seminar__wrap-lg">
+			{{event.block()}}
+		</div>
+		<div class="seminar__wrap">
+			<div class="seminar__inner inner">
+				{{ui.form({title: 'Получите подробную консультацию об обучении'})}}
+			</div>
+		</div>
+	</div>
 	{{footer.block()}}
 {% endblock %}

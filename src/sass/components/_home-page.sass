@@ -1,19 +1,95 @@
-.home
+.about
+	padding: 144px 0 154px
+	position: relative
+	min-height: 650px
+	+sm
+		padding: 60px 0 0
+	&:before
+		content: ''
+		position: absolute
+		top: 50px
+		left: 0
+		background-color: $blue
+		width: 42.4%
+		// padding-bottom: 37.4%
+		height: 84.6%
+		border: 2px solid $white
+		border-left: none
+		box-shadow: 0 0 0px 50px $blue
+		z-index: -1
+		+sm
+			display: none
 	&__inner
+		max-width: 1162px
 		display: flex
-		flex-wrap: wrap
-		justify-content: space-between
+		justify-content: center
 		align-items: center
-		padding-top: 150px
+		position: relative
+		+sm
+			flex-wrap: wrap
+	&__img
+		width: 50%
+		img
+			display: block
+			max-width: 100%
+			// +sm
+			// 	min-height: 255px
+			+ms
+				position: absolute
+				top: 0
+				left: 50%
+				transform: translateX(-50%)
+				max-width: none
+				width: 400px
+		+sm
+			width: 100%
+		+ms
+			width: 100%
+			position: relative
+			height: 255px
+			overflow: hidden
+	&__text
+		width: 50%
+		padding-left: 4em
 		+md
-			padding-top: 78px
-		.home__wrap &
-			+xs
-				padding: 78px 0 0
+			padding-left: 2em
+		+sm
+			padding-left: 0
+			width: 100%
+	&__title
+		padding-bottom: 0.5em
+		margin-top: -20px
+		+sm
+			margin-top: 50px
+		&.title
+			+md
+				font-size: 30px
+	&__dots
+		position: absolute
+		right: 28px
+		bottom: -107px
+// 											DOTS
+.dots
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: center
+	max-width: 54px
+	width: 100%
+	&__item
+		width: 8px
+		height: 8px
+		margin: 4px 5px
+		background-color: $black
+	+sm
+		display: none
 
-// 										SEMINAR
+// 												SEMINAR
 .seminar-block
-	.home &
+	padding-top: 150px
+	+md
+		padding-top: 78px
+	&__row
 		padding-top: 70px
 		+md
 			padding-top: 37px
@@ -22,54 +98,38 @@
 			&:not(:first-child)
 				margin-top: 30px
 
-//  									COURSES
+// 											COURSE
 .course-block
-	.home &
-		padding-top: 68px
+	padding-top: 155px
+	+md
+		padding-top: 80px
+	&__head
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__title
+	&__row
+		padding-top: 65px
 		+md
 			padding-top: 20px
-	&.pilates-block
-		&:not(:first-child)
-			padding-top: 125px
-			+md
-				padding-top: 80px
-			.personal-office &
-				+xs
-					padding-top: 52px
-	&__title
-		.pilates-block &
-			+sm
-				font-size: 25px
-		.personal-office &
-			margin-bottom: 20px
-			font-size: 44px
-			+md
-				font-size: 25px
-	&__row
-		// 	// max-width: 610px
-		// 	margin: 0 auto
+			margin: 0 auto
 	&__col
 		+md
 			margin-top: 16px
-	.pilates-block &
-		padding-top: 45px
-		+md
-			padding-top: 30px
-		.personal-office &
-			+xs
-				padding-top: 0
-		.slick-list
-			+xs
-				max-width: 400px
 	&__btn
-		display: none
-		text-align: center
-		margin-top: 34px
 		+sm
-			display: block
+			display: none
+		&_mob
+			display: none
 			.btn
 				min-width: 288px
-// 											FORM
+			+sm
+				display: block
+				text-align: center
+				margin-top: 34px
+
+
+// 										FORM
 .main-feedback
 	&__inner
 		+md
@@ -79,14 +139,25 @@
 		+md
 			padding-top: 80px
 
-//  										EVENT
+// 											EVENT
 .event-block
+	&-wrap
+		padding-top: 150px
+		+md
+			padding-top: 60px
+	&__inner
+		+ms
+			padding: 0
+	&__head
+		display: flex
+		align-items: center
+		flex-wrap: wrap
 	&__title
 		max-width: 33%
 		+md
 			max-width: none
 			width: 100%
-		+xs
+		+ms
 			padding: 0 16px
 	&__list
 		padding-top: 60px
@@ -94,6 +165,8 @@
 			// max-width: 400px
 			// margin: 0 auto
 			padding-top: 30px
+			// &.row
+			// 	margin: 0
 	&__col
 		+sm
 			&:not(:first-child)
@@ -120,52 +193,88 @@
 
 // 											INSTRUCTOR
 .instructor-block
-	.home &
+	padding-top: 150px
+	+lg
+		padding-top: 78px
+	&__head
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__row
 		padding-top: 70px
 		+md
+			margin: 0 auto
 			padding-top: 39px
-	&__row
 	&__col
-		+md
-			margin-top: 16px
+		margin-top: 16px
 	&__btn
-		display: none
 		+sm
-			display: block
-			text-align: center
-			margin-top: 30px
+			display: none
+		&_mob
+			display: none
 			.btn
 				min-width: 288px
-
-// 											TESTIMONIAL
+			+sm
+				display: block
+				text-align: center
+				margin-top: 30px
+	
+// 											testimonial
 .testimonial-block
-	.home &
-		padding-top: 70px
-		+sm
-			padding-top: 40px
+	padding-top: 150px
+	+lg
+		padding-top: 78px
+	&__head
+		display: flex
+		align-items: center
+		justify-content: space-between
 	&__row
+		padding-top: 70px
 		+sm
 			white-space: nowrap
 			overflow: hidden
 			opacity: 0
 			visibility: hidden
 			transition: opacity .3s, visibility .3s
-			display: block
 			&.slick-initialized
 				white-space: normal
 				overflow: visible
 				opacity: 1
 				visibility: visible
+		+md
+			padding-top: 24px
 	&__col
 		+md
 			margin-top: 16px
-		+sm
-			margin-top: 0
 	&__btn
-		display: none
-		+sm
-			display: block
-			text-align: center
-			margin-top: 30px
+		+md
+			display: none
+		&_mob
+			display: none
 			.btn
 				min-width: 288px
+			+md
+				display: block
+				text-align: center
+				margin-top: 25px
+
+// 										CONTACTS
+.contacts-block
+	padding: 160px 0 128px
+	overflow: hidden
+	+md
+		padding: 78px 0 0
+	.contacts-page &
+		padding: 239px 0
+		+md
+			padding: 101px 0 0
+	&__inner
+		+sm
+			padding: 0
+	&__title
+		+sm
+			padding: 0 16px 16px
+	&__map
+		padding-top: 70px
+		+md
+			padding-top: 0	

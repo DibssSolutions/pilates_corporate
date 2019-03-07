@@ -1,0 +1,33 @@
+.personal-office
+	&__recommend
+		margin-top: 150px
+		+md
+			margin-top: 80px
+	&__row
+		margin-top: 70px
+	&__col
+		+md
+			margin-top: 30px
+
+.empty
+	height: 100%
+	min-height: 288px
+	border: 3px dashed $blue
+	border-radius: 10px
+	color: $blue
+	font-size: 18px
+	font-weight: 700
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: transform .15s
+	&__inner
+		margin-top: 45px
+		+xs
+			margin-top: 0
+	&__plus
+		margin: 0 auto
+	&__title
+		margin-top: 20px
+	+hover
+		transform: translateY(-8px)
