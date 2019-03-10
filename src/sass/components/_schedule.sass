@@ -1,0 +1,85 @@
+.schedule-page
+  padding-top: 240px
+  &__inner
+    +ms
+      padding: 0
+  &__head
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+  &__title
+    max-width: 33%
+    margin-right: auto
+    +md
+      max-width: none
+      width: 100%
+    +ms
+      padding: 0 16px
+  &__list
+    padding-top: 60px
+
+
+.schedule-group
+  @extend %cardShadow
+  display: flex
+  flex-wrap: wrap
+  &__title
+    padding: 24px 20px
+    +flex-size(100%)
+  &__item
+    +flex-size(100%)
+    +md 
+      +flex-size(50%)
+
+.schedule
+  display: flex
+  border-top: 2px solid $grayBorder
+  +lg 
+    font-size: 13px
+  +md 
+    flex-direction: column
+  &__block-title
+    display: none
+    +sm 
+      display: block
+  & > *
+    padding: 30px 20px
+    &:not(:last-child)
+      border-right: 2px solid #f0f0f3
+  &__title
+    margin-bottom: 14px
+    color: $grayLight
+    letter-spacing: 0.033em
+  &__content
+    font-weight: 700
+    &_price
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+  &__date
+    +flex-size(11%)
+    span 
+      display: block
+  &__city
+      +flex-size(14%)
+  &__direction
+    +flex-size(11%)
+  &__instructors
+    +flex-size(17%)
+    flex-grow: 1
+    .instructor-preview
+      &:not(:last-child)
+        margin-bottom: 15px
+  &__adress
+    +flex-size(21%)
+  &__price
+    flex-grow: 1
+
+.instructor-preview
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  &__image
+    +circle(40)
+    +cover
+    margin-right: 10px
