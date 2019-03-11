@@ -17,6 +17,8 @@ PageList:
   ready: 50
 - file: instructors.html
   ready: 50
+- file: instructor-page.html
+  ready: 50
 - file: reviews.html
   ready: 50
 - file: news.html

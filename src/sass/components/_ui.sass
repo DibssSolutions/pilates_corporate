@@ -617,12 +617,28 @@
 .social-card
 	&__img
 		height: 400px
+		display: block
 		+cover
 		border-radius: 10px
 		+ms
 			border-radius: 0
 	&__socials
 		margin: -40px auto 0
+	&__slider
+		white-space: nowrap
+		opacity: 0
+		visibility: hidden
+		transition: opacity .3s, visibility .3s
+		&.slick-initialized
+			white-space: normal
+			opacity: 1
+			visibility: visible
+	&__nav
+		margin: -40px auto 0
+		&-slide
+			padding: 0 10px
+			+ms
+				padding: 0 8px
 
 .white-block
 	padding: 15px 30px
@@ -633,9 +649,13 @@
 	max-width: 270px
 	align-items: center
 	justify-content: space-between
+	box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
 	+ms
 		max-width: 200px
 		padding: 10px 23px
+	&.white-block_slider
+		padding: 15px 10px
+		max-width: 290px
 	&__item
 		background-color: $body
 		border-radius: 10px
@@ -654,3 +674,11 @@
 				font-size: 15px
 				+ms
 					font-size: 11px
+		.white-block_slider &
+			display: block
+			+cover
+			width: 70px
+			height: 70px
+			+ms
+				width: 50px
+				height: 50px

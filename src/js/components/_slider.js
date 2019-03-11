@@ -196,3 +196,33 @@ galleryNav.slick({
     }
   ]
 });
+
+// 										INSTRUCTOR slider
+const instructorSlider = $('.js-instructor-slider');
+const instructorNav = $('.js-instructor-slider-nav');
+
+instructorSlider.slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  asNavFor: instructorNav
+});
+instructorNav.slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: instructorSlider,
+  // centerMode: true,
+  focusOnSelect: true,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 430,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: false
+      }
+    }
+  ]
+});
