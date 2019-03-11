@@ -65,12 +65,28 @@ title: Course
 							]
 						}
 					] %}
-					<h3 class="single-course__list-title title title_sm">{{item.title}}</h3>
-					<ul class="single-course__list list">
+					<h3 class="single-course__list-title title title_sm sm-hide">{{item.title}}</h3>
+					<ul class="single-course__list list sm-hide">
 						{% for listItem in item.list %}
 							<li class="list__item">{{listItem}}</li>
 						{% endfor %}
 					</ul>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="single-course__recommend single-recommend">
+				<h2 class="single-recommend__title title">Рекомендуем</h2>
+				<div class="single-recommend__row row js-small-slider">
+					{% for item in range(0, 4) %}
+					<div class="single-recommend__col col-3 col-md-6 col-sm-12">
+						{{ui.course({
+							class: 'course_img',
+							img: 'course.png',
+							title: 'Пилатес для беременных',
+							time: '90 мин',
+							price: '1 500 ₽'
+						})}}
+					</div>
 					{% endfor %}
 				</div>
 			</div>
