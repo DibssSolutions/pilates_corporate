@@ -29,3 +29,5 @@ PageList:
   ready: 50
 - file: single-course.html
   ready: 50
+- file: schedule.html
+  ready: 50
