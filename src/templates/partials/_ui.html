@@ -205,3 +205,20 @@
 {% endmacro %}
 
 {#  #}
+
+{# 									SOCIAL CARD #}
+{% macro socialCard(props) %}
+<div class="social-card {% if props.class %}{{props.class}}{% endif %}">
+	<div class="social-card__img" style="background-image: url(./img/{{props.img}})"></div>
+	<ul class="social-card__socials white-block">
+		{% if props.socials %}
+			{% for item in props.socials %}
+			<li class="white-block__item">
+				<a href="{{item.path}}">{{mixins.icon(item.icon)}}</a>
+			</li>
+			{% endfor %}
+		{% endif %}
+	</ul>
+</div>
+{% endmacro %}
+{# 									SOCIAL CARD #}

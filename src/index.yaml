@@ -9,6 +9,8 @@ PageList:
   ready: 50
 - file: online-courses.html
   ready: 50
+- file: single-course.html
+  ready: 50
 - file: contacts.html
   ready: 50
 - file: personal-ofiice.html
@@ -19,6 +21,8 @@ PageList:
   ready: 50
 - file: news.html
   ready: 50
+- file: news-one.html
+  ready: 50
 - file: direction.html
   ready: 50
 - file: gallery.html
@@ -26,8 +30,6 @@ PageList:
 - file: conventions.html
   ready: 50
 - file: about.html
-  ready: 50
-- file: single-course.html
   ready: 50
 - file: schedule.html
   ready: 50

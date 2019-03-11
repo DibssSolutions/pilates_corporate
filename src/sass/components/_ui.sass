@@ -611,3 +611,46 @@
 	display: block
 	+cover
 	height: 115px
+
+// 														SOCIAL CARD
+
+.social-card
+	&__img
+		height: 400px
+		+cover
+		border-radius: 10px
+		+ms
+			border-radius: 0
+	&__socials
+		margin: -40px auto 0
+
+.white-block
+	padding: 15px 30px
+	background-color: $white
+	border-radius: 10px
+	display: flex
+	flex-wrap: wrap
+	max-width: 270px
+	align-items: center
+	justify-content: space-between
+	+ms
+		max-width: 200px
+		padding: 10px 23px
+	&__item
+		background-color: $body
+		border-radius: 10px
+		a
+			width: 50px
+			height: 50px
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 22px
+			+ms
+				font-size: 16.5px
+				width: 37.5px
+				height: 37.5px
+			.icon-vk
+				font-size: 15px
+				+ms
+					font-size: 11px
