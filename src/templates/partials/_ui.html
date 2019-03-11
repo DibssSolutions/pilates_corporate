@@ -294,3 +294,20 @@
   </div>
 {% endmacro %}
 {# 										SCHEDULE #}
+
+{# 										CERTIFICATE #}
+{% macro certificate(props) %}
+<div class="certificate">
+	<div class="certificate__img">
+		<img src="./img/{{props.img}}" alt="certificate">
+	</div>
+	<div class="certificate__descr">
+		<h2 class="certificate__title title-lg">{{props.title}}</h2>
+		<div class="certificate__text">
+			<p>{{props.text}}</p>
+		</div>
+	</div>
+</div>
+{% endmacro %}
+{# 										CERTIFICATE #}
+

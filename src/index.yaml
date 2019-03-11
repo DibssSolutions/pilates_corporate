@@ -35,3 +35,5 @@ PageList:
   ready: 50
 - file: schedule.html
   ready: 50
+- file: education.html
+  ready: 50
