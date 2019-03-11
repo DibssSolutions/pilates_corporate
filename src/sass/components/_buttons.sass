@@ -18,6 +18,8 @@
 	line-height: 1.4
 	cursor: pointer
 	box-shadow: 0 12px 20px -6px $orange
+	+sm 
+		padding: 15px 20px
 	+hover
 		background-color: $orangeHover
 		box-shadow: none
@@ -72,7 +74,13 @@
 		width: 100%
 	&_bsnone
 		box-shadow: none
-
+	&_small
+		padding: 1em 1.8em
+		letter-spacing: 0.062em
+		+lg
+			font-size: 12px
+		+hover 
+			box-shadow: 0 12px 20px -6px $orange
 
 .plus
 	display: block
