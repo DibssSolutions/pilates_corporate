@@ -1,2 +1,41 @@
 .single-course
 	margin-top: 178px
+	+sm
+		margin-top: 90px
+	&__main
+		margin-top: 50px
+		display: flex
+		flex-wrap: wrap
+		+sm
+			margin-top: 40px
+	&__left
+		max-width: 423px
+	&__right
+		max-width: 700px
+		padding-left: 50px
+	&__buy
+		margin-top: 14px
+	&__text
+		margin-top: 20px
+		line-height: 2
+		letter-spacing: 0.003em
+		p
+			&:not(:first-child)
+				margin-top: 18px
+	&__list-title
+		margin-top: 20px
+	&__list
+		margin-top: 11px
+
+.list
+	&__item
+		padding: 9px 0 9px 30px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			background-color: $text
+			left: 0
+			top: 50%
+			height: 1px
+			width: 15px
