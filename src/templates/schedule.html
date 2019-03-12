@@ -145,14 +145,14 @@ title: Schedule
           {% for item in [0,1,2] %}
               {% for item in schedules1 %}
                 <li class="schedule-page__item">
-                  {{ block(item) }}
+					{{ ui.schedule(item) }}
                 </li>
               {% endfor %}
           {% endfor %}
         </ul>
         <ul class="schedule-page__list" data-tabs-container='cities'>
           <li class="schedule-page__item">
-            {{ block(schedules[0]) }}
+            {{ ui.schedule(schedules[0]) }}
           </li>
         </ul>
     </div>
