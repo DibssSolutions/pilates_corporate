@@ -27,11 +27,13 @@ smWrap: true
 					})}}
 				</div>
 				<div class="instructor-page__right">
-					<h2 class="instructor-page__title title title_xl">Постуральная гимнастика — гимнастика осанки</h2>
-					<div class="instructor-page__text">
-						<p>Ведущая - Жанна Комлева, мастер-тренер Пилатес Институт Россия, одна из самых опытных тренеров нашей страны по пилатесу и постуральной гимнастике.</p>
-						<p>Осанка обеспечивается балансом силы и эластичности мышц, действующих на сустав. Боль, волнение, тревога обычно сопровождаются напряжением скелетных мышц. Также ежедневное принятие неправильных поз и движений приводит к мышечным дисбалансам, которые меняют нормальное положение сустава. Как следствие - сустав теряет двигательный объём, а тело приобретает некорректную осанку.</p>
-					</div>
+					<article class="article">
+						<h2 class="title">Beatriz Brito</h2>
+						<div class="subtitle">Стаж инструктора 10 лет</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+						<p class="sm-hide">Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+						<p class="sm-hide">Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. </p>
+					</article>
 					<div class="instructor-page__btn">
 						<a href="#" class="btn">Полное расписание</a>
 					</div>
@@ -77,7 +79,7 @@ smWrap: true
 					}
 					] %}
 			{% for item in schedules %}
-			<div class="instructor-page__schedule">
+			<div class="section-sm">
 				  {{ui.schedule(item)}}
 			</div>
 			{% endfor %}
@@ -121,7 +123,7 @@ smWrap: true
 					}
 					] %}
 			{% for itemSecond in schedulesSecond %}
-			<div class="instructor-page__schedule">
+			<div class="section-sm">
 				  {{ui.schedule(itemSecond)}}
 			</div>
 			{% endfor %}
