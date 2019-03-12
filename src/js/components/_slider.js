@@ -186,7 +186,7 @@ $('.js-schedule-slider').each((index, el) => {
   let timeoutS;
 
   WIN.resize(() => {
-    clearTimeout(timeoutM);
+    clearTimeout(timeoutS);
     timeoutS = setTimeout(detectScheduleSlider, 100);
   });
 });

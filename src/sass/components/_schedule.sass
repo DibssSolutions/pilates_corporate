@@ -32,6 +32,7 @@
 	&__items
 		display: flex
 		flex-wrap: wrap
+		align-items: stretch
 		&.slick-slider
 			display: block
 	&__title
@@ -40,21 +41,28 @@
 			display: none
 	&__item
 		width: 100%
+		height: 100%
 		+md
 			padding: 0 3px
 			width: 50%
+			.schedule
+				height: 100%
 			.slick-slide &
 				width: 100%
 	.slick-list
 		+md 
 			overflow: visible
+	.slick-track
+		display: flex
+	.slick-slide > div
+		height: 100%
 
 .schedule
 	display: flex
 	border-top: 2px solid $grayBorder
 	+lg
 		font-size: 13px
-	+md 
+	+md
 		flex-direction: column
 		font-size: 15px
 		border-top: none
@@ -69,6 +77,9 @@
 			padding: 30px 15px
 		+lg 
 			padding: 20px 10px
+		+md 
+			max-width: 100%	
+			flex: 0 0 auto
 		+sm 
 			padding: 20px 12px 22px
 		&:not(:last-child)
@@ -76,7 +87,6 @@
 			border-bottom: 2px solid #f0f0f3
 			+md 
 				border-right: none
-				+flex-size(100%)
 		&.schedule__block-title
 			padding: 30px 12px
 	&__block-title
@@ -92,7 +102,7 @@
 		margin-bottom: 17px
 		color: $grayLight
 		letter-spacing: 0.033em
-		+sm 
+		+sm
 			margin-bottom: 2px
 	&__content
 		font-weight: 700
@@ -121,7 +131,7 @@
 		// 	flex-grow: 1
 	&__instructors
 		+flex-size(16.3%)
-		+xl 
+		+xl
 			+flex-size(20%)
 		.instructor-preview
 			&:not(:last-child)
@@ -133,6 +143,8 @@
 		+flex-size(21%)
 	&__price
 		flex-grow: 1
+		+md
+			margin-top: auto
 
 .instructor-preview
 	display: flex

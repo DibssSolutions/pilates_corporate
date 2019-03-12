@@ -39,3 +39,7 @@ PageList:
   ready: 50
 - file: internal-directions.html
   ready: 100
+- file: basket.html
+  ready: 100
+- file: success-modal.html
+  ready: 100

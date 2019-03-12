@@ -395,6 +395,7 @@
 	position: relative
 	cursor: pointer
 	padding-left: 40px
+  user-select: none
 	+sm
 		font-size: 10px
 	&__icon
@@ -421,7 +422,6 @@
 		border: 0
 		clip: rect(0 0 0 0)
 		overflow: hidden
-		user-select: none
 		&:checked
 			~ .checkbox__icon
 				background-image: url(../img/check.svg)
