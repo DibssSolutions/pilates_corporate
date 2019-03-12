@@ -107,9 +107,8 @@
 		color: $black
 		padding-top: 40px
 		transition: color .3s
-		+sm
-			margin: 0
-			padding-top: 10px
+		+lg
+			padding-bottom: 5px
 		.course_buy &
 			display: block
 
@@ -124,8 +123,10 @@
 		height: 1px
 		background-color: $black
 		transition: background-color .3s
-		+sm
-			bottom: 50px
+		+lg
+			bottom: 60px
+		// +sm
+		// 	bottom: 50px
 	+hover
 		&:before
 			background-color: $white
@@ -573,7 +574,7 @@
 .small__dot
 	+circle(6)
 	background-color: $grayLight
-	transition: background-color .3s, width .3s, height .3s
+	transition: background-color .3s, transform .3s
 	position: relative
 	+ms
 		+circle(4)
@@ -581,13 +582,11 @@
 		content: ''
 		position: absolute
 		+vcenter
-		width: 300%
-		height: 300%
+		width: 200%
+		height: 200%
 	.slick-active &
 		background-color: $orange
-		+circle(10)
-		+ms
-			+circle(6)
+		transform: scale(2)
 .small-dots
 	display: flex
 	width: 100%
@@ -649,10 +648,12 @@
 		display: block
 		+cover
 		border-radius: 10px
-		+ms
+		+sm
 			border-radius: 0
 	&__socials
 		margin: -40px auto 0
+		+ms
+			margin: -30px auto 0
 	&__slider
 		white-space: nowrap
 		opacity: 0
@@ -681,7 +682,7 @@
 	box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
 	+ms
 		max-width: 200px
-		padding: 10px 23px
+		padding: 11px 23px
 	&.white-block_slider
 		padding: 15px 10px
 		max-width: 290px
