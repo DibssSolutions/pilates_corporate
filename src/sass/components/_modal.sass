@@ -1,0 +1,115 @@
+[data-modal],
+.reload-message
+  position: fixed
+  z-index: -1
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  opacity: 0
+  visibility: hidden
+  min-width: 320px
+  +vertical
+  +gpu
+  overflow: auto
+  transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
+
+[data-modal]
+  background-color: rgba(#262b31, 0.95)
+  &.is-open
+    opacity: 1
+    visibility: visible
+    z-index: 100
+
+.reload-message
+  background-color: $white
+  .is-mob-state &
+    opacity: 1
+    visibility: visible
+    z-index: 100
+  &__message
+    padding: 30px
+
+[data-modal-container],
+.reload-message__container
+  position: relative
+  z-index: 1
+  vertical-align: middle
+  display: inline-block
+
+[data-modal-close]
+  position: absolute
+  background-color: transparent
+  // background-color: $blue
+  font-size: 0
+  right: 32px
+  top: 24px
+  .icon
+    font-size: 16px
+    color: #b4b4b4
+
+.modal
+  &__container
+    background-color: $white
+    border-radius: $radius
+    max-width: 764px
+    color: $text
+    +md 
+      max-width: 650px
+    +sm
+      max-width: 400px
+  &__inner
+    display: flex
+    +sm
+      flex-direction: column
+  &__bg
+    +flex-size(298px)
+    padding: 0 40px 0 15px
+    margin-top: auto
+    +md 
+      +flex-size(240px)
+    +sm 
+      padding: 0 50px 
+      max-width: 300px
+    img
+      max-width: 100%
+    // background-position: center bottom
+    // background-repeat: no-repeat
+    // background-size: contain
+  &__content
+    text-align: left
+    font-size: 21px
+    padding: 50px 84px 35px 0
+    flex-grow: 1
+    +md
+      padding: 20px
+    +sm 
+      order: -1
+  &__title
+    margin-bottom: 30px
+    margin-left: -4px
+    line-height: 1
+    +md 
+      margin-bottom: 20px
+  &__name
+    margin-bottom: 10px
+    line-height: 1
+  &__position
+    font-weight: 700
+    line-height: 1
+    margin-bottom: 27px
+  &__splitter
+    height: 1px
+    width: 100%
+    background-color: $text
+  &__connections
+    margin-top: 36px
+    +sm 
+      margin-top: 16px
+    .connection
+      &:not(:last-child)
+        margin-bottom: 22px
+        +sm 
+          margin-bottom: 16px
+
+  
