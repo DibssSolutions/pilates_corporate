@@ -1,6 +1,6 @@
 {% import "partials/_ui.html" as ui %}
 {% macro block(props) %}
-<section class="contacts-block">
+<div class="contacts-block">
 	<div class="contacts-block__inner inner">
 		<h2 class="contacts-block__title title">Контакты</h2>
 		{% if props.text %}
@@ -21,5 +21,5 @@
 			</div>
 		</div>
 	</div>
-</section>
+</div>
 {% endmacro %}
