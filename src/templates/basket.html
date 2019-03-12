@@ -1,0 +1,55 @@
+---
+title: Basket
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+		{{header.block({class: 'header_bg'})}}
+		<div class="basket-page">
+			<div class="basket-page__inner inner">
+				<h2 class="basket-page__title title">Корзина</h2>
+				<div class="basket-page__basket">
+					<div class="basket row">
+						<div class="basket__info col-9 col-sm-12">
+							<div class="basket-info">
+								<div class="basket-info__name">
+									<div class="basket-info__title">Курс</div>
+									<div class="basket-info__text">Microwave Cooking Is The Wave Of The Future</div>
+								</div>
+								<div class="basket-info__duration">
+									<div class="basket-info__title">Длительность</div>
+									<div class="basket-info__text">90 минут</div>
+								</div>
+								<div class="basket-info__price">
+									<div class="basket-info__title">Стоимость</div>
+									<div class="basket-info__text">1500 ₽</div>
+								</div>
+								<div class="basket-info__delete">
+									<button type="button" class="delete-btn">
+										{{  mixins.icon('close') }}
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="basket__total col-3  col-sm-12">
+							<div class="basket-total">
+								<span class="basket-total__title">Итого:</span>
+								<span class="basket-total__number">1500 ₽</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="basket-page__descr section-sm">
+					<p>Чтобы оформить заказ, введите ниже свой e-mail.</p>
+					<p>Если вы еще не зарегистрированы на сайте, вам автоматически будет создан аккаунт для этого e-mail’а.</p>
+					<p>Пожалуйста, сразу активируйте ссылку, которая придёт на почту, после чего вы получите пароль для входа.</p>
+				</div>
+				<div class="basket-page__checkout-wrapper row">
+					<div class="basket-page__checkout col-6 col-sm-12">
+						{% include "partials/_checkout-form.html" %}
+					</div>
+				</div>
+			</div>
+		</div>
+	{{footer.block()}}
+{% endblock %}

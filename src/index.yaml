@@ -39,6 +39,10 @@ PageList:
   ready: 100
 - file: internal-directions.html
   ready: 100
+- file: basket.html
+  ready: 100
+- file: success-modal.html
+  ready: 100
 - file: my-course.html
   ready: 100
 - file: UI.html
