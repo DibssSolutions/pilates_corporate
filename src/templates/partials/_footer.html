@@ -1,6 +1,6 @@
 {% import "partials/_mixins.html" as mixins %}
 {% macro block(props) %}
-<footer class="footer">
+<footer class="footer {% if props.class %} {{ props.class }}{% endif %}">
 	<div class="footer__inner inner">
 		<div class="footer__top">
 			<div class="footer__row row">
