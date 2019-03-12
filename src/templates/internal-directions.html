@@ -4,7 +4,7 @@ title: Internal directions
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-    {{header.block({class: 'header_bg'})}}
-    
-    {{footer.block()}}
+    {{ header.block({class: 'header_bg'}) }}
+    {{ ui.form({title: 'Получите подробную консультацию об обучении'}) }}
+    {{ footer.block() }}
 {% endblock %}
