@@ -5,14 +5,14 @@ title: Education
 
 {% block content %}
 	{{header.block({class: 'header_bg'})}}
-	{{topic.block(
-		{
-			title: 'Обучение',
-			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.'
-		}
-	)}}
 	<div class="education">
 		<div class="education__inner inner">
+			{{topic.block(
+				{
+					title: 'Обучение',
+					text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.'
+				}
+			)}}
 			<div class="education__seminar">
 				<h2 class="education__title title">Направления и семинары</h2>
 				<ul class="education__row row">
@@ -34,9 +34,7 @@ title: Education
 					{% endfor %}
 				</ul>
 			</div>
-		</div>
-		<div class="education__convention conventions">
-			<div class="conventions__inner inner">
+			<div class="education__convention conventions">
 				<div class="conventions__main">
 					<div class="conventions__gallery">
 						{{gallery.block([
@@ -72,68 +70,40 @@ title: Education
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="education__form inner inner_wideMd">
-			{{ui.form({title: 'Получите подробную консультацию об обучении'})}}
-		</div>
-		<div class="education__certificate">
-			<div class="education__inner inner">
+			<div class="education__form">
+				{{ui.form({title: 'Получите подробную консультацию об обучении'})}}
+			</div>
+			<div class="education__certificate">
 				{% set item = {
 					img: 'certificate.png',
 					title: 'Сертификат по окончании',
 					text: 'После прохождения любого семинара мы предоставстим вам сертификат'
 				} %}
 				{{ui.certificate(item)}}
-
 			</div>
-		</div>
-		<div class="education__event">
-			{{event.block()}}
-		</div>
-		<div class="education__instructors">
-			<div class="education__inner inner">
-				<div class="education__head">
-					<h2 class="education__title title">Преподаватели</h2>
-					<div class="education__btn sm-hide">
-						<a href="#" class="btn">Все преподаватели</a>
-					</div>
-				</div>
-				<ul class="education__row row">
-					{% for item in range(0, 3) %}
-						<li class="education__col col-4 col-sm-12">
-							{{ui.instructor({
-								name: 'Gussie Hammond',
-								aside: 'Стаж инструктора 10 лет',
-								text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-							})}}
-						</li>
-					{% endfor %}
-				</ul>
-				<div class="education__btn sm-block">
-					<a href="#" class="btn">Все преподаватели</a>
-				</div>
+			<div class="education__event">
+				{{event.block()}}
 			</div>
-		</div>
-		<div class="education__testimonials">
-			<div class="education__inner inner">
-				<div class="education__head">
-					<h2 class="education__title title">Отзывы</h2>
-					<div class="education__btn sm-hide">
+			{{instructor.block()}}
+			<div class="section">
+				<div class="head">
+					<h2 class="head__title title">Отзывы</h2>
+					<div class="sm-hide">
 						<a href="#" class="btn">Остальные отзывы</a>
 					</div>
 				</div>
-				<div class="education__row row js-medium-slider">
+				<div class="row">
 					{% for item in range(0, 3) %}
-						<div class="education__col col-4 col-md-12">
-							{{ui.instructor({
-								name: 'Gussie Hammond',
-								aside: 'Стаж инструктора 10 лет',
-								text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-							})}}
-						</div>
+					<div class="col-sm-mt col-4 col-sm-12">
+						{{ui.instructor({
+							name: 'Gussie Hammond',
+							aside: 'Стаж инструктора 10 лет',
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+						})}}
+					</div>
 					{% endfor %}
 				</div>
-				<div class="education__btn sm-block">
+				<div class="sm-block">
 					<a href="#" class="btn">Остальные отзывы</a>
 				</div>
 			</div>
