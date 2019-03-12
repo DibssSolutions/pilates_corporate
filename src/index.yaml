@@ -43,3 +43,5 @@ PageList:
   ready: 100
 - file: success-modal.html
   ready: 100
+- file: my-course.html
+  ready: 100

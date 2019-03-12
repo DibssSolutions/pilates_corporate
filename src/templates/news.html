@@ -6,83 +6,77 @@ title: News
 {% block content %}
     {{header.block({class: 'header_bg'})}}
     <div class="news-page">
-        {{topic.block(
-            {
-                title: 'Новости'
-            }
-        )}}
-        <div class="news-page__list">
-            <div class="news-page__inner inner">
-                <div class="news-page__row row">
-                    {% for item in [
-                        {
-                            date: '01.12.2019',
-                            title: 'Microwave Cooking Is The Wave Of The Future',
-                            img: 'news1.jpg',
-                            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
-                        },
-                        {
-                            date: '01.12.2019',
-                            title: '10 Easy Steps To Clearer Skin',
-                            img: 'news2.jpg',
-                            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
-                        },
-                        {
-                            date: '01.12.2019',
-                            title: 'Cosmetic Surgery Abroad Making The Right Choice',
-                            img: 'news3.jpg',
-                            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
-                        },
-                        {
-                            date: '01.12.2019',
-                            title: 'Hoop Earrings A Style From History',
-                            img: 'news4.jpg',
-                            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
-                        },
-                        {
-                            date: '01.12.2019',
-                            title: 'The Art Of The Smile',
-                            img: 'news5.jpg',
-                            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
-                        },
-                        {
-                            date: '01.12.2019',
-                            title: '10 Easy Steps To Clearer Skin',
-                            img: 'news6.jpg',
-                            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
-                        },
-                        {
-                            date: '01.12.2019',
-                            title: 'Luxury Watches Jewelry Made For Everyday Attire',
-                            img: 'news7.jpg',
-                            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
-                        },
-                        {
-                            date: '01.12.2019',
-                            title: 'Restorative Dentist New York',
-                            img: 'news8.jpg',
-                            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
-                        },
-                        {
-                            date: '01.12.2019',
-                            title: 'Breast Enhancement Erotic And Beautiful',
-                            img: 'news9.jpg',
-                            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
-                        }
-                    ] %}
+		<div class="news-page__inner inner">
+			<div class="head">
+				<h1 class="title">Новости</h1>
+			</div>
+				<div class="news-page__row row">
+					{% for item in [
+						{
+							date: '01.12.2019',
+							title: 'Microwave Cooking Is The Wave Of The Future',
+							img: 'news1.jpg',
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
+						},
+						{
+							date: '01.12.2019',
+							title: '10 Easy Steps To Clearer Skin',
+							img: 'news2.jpg',
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
+						},
+						{
+							date: '01.12.2019',
+							title: 'Cosmetic Surgery Abroad Making The Right Choice',
+							img: 'news3.jpg',
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
+						},
+						{
+							date: '01.12.2019',
+							title: 'Hoop Earrings A Style From History',
+							img: 'news4.jpg',
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
+						},
+						{
+							date: '01.12.2019',
+							title: 'The Art Of The Smile',
+							img: 'news5.jpg',
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
+						},
+						{
+							date: '01.12.2019',
+							title: '10 Easy Steps To Clearer Skin',
+							img: 'news6.jpg',
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
+						},
+						{
+							date: '01.12.2019',
+							title: 'Luxury Watches Jewelry Made For Everyday Attire',
+							img: 'news7.jpg',
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
+						},
+						{
+							date: '01.12.2019',
+							title: 'Restorative Dentist New York',
+							img: 'news8.jpg',
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
+						},
+						{
+							date: '01.12.2019',
+							title: 'Breast Enhancement Erotic And Beautiful',
+							img: 'news9.jpg',
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet …'
+						}
+					] %}
 
-                        <div class="news-page__col col-4 col-md-6 col-sm-12">
-                            {{ ui.newsItem(item) }}
-                        </div>
-                        
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-        <div class="news-page__inner inner">
-            {{ mixins.pagination(true) }}
-            {{ mixins.paginationSM() }}
-        </div>
+						<div class="news-page__col col-4 col-md-6 col-sm-12">
+							{{ ui.newsItem(item) }}
+						</div>
+						
+					{% endfor %}
+				</div>
+			{{ mixins.pagination(true) }}
+			{{ mixins.paginationSM() }}
+		</div>
     </div>
     {{footer.block()}}
 {% endblock %}

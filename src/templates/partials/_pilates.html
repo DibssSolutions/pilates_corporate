@@ -1,47 +1,45 @@
 {% import "partials/_ui.html" as ui %}
 {% macro block(props) %}
 <div class="pilates-block">
-	<div class="pilates-block__inner inner">
-		<div class="pilates-block__head">
-			<h2 class="pilates-block__title title-m">{{props.title}}</h2>
+	<div class="pilates-block__head">
+		<h2 class="pilates-block__title title-m">{{props.title}}</h2>
+	</div>
+	<div class="pilates-block__row row js-small-slider">
+		<div class="pilates-block__col col-3 col-md-12">
+			{{ui.course({
+				class: 'course_img',
+				img: 'course.png',
+				title: 'Пилатес для беременных',
+				time: '90 мин',
+				price: '1 500 ₽'
+			})}}
 		</div>
-		<div class="pilates-block__row row js-small-slider">
-			<div class="pilates-block__col col-3 col-md-6 col-sm-12">
-					{{ui.course({
-						class: 'course_img',
-						img: 'course.png',
-						title: 'Пилатес для беременных',
-						time: '90 мин',
-						price: '1 500 ₽'
-					})}}
-			</div>
-			<div class="pilates-block__col col-3 col-md-6 col-sm-12">
-					{{ui.course({
-						class: 'course_img',
-						img: 'course.png',
-						title: 'Пилатес для беременных',
-						time: '90 мин',
-						price: '1 500 ₽'
-					})}}
-			</div>
-			<div class="pilates-block__col col-3 col-md-6 col-sm-12">
-					{{ui.course({
-						class: 'course_img',
-						img: 'course.png',
-						title: 'Пилатес для беременных',
-						time: '90 мин',
-						price: '1 500 ₽'
-					})}}
-			</div>
-			<div class="pilates-block__col col-3 col-md-6 col-sm-12">
-					{{ui.course({
-						class: 'course_img',
-						img: 'course.png',
-						title: 'Пилатес для беременных',
-						time: '90 мин',
-						price: '1 500 ₽'
-					})}}
-			</div>
+		<div class="pilates-block__col col-3 col-md-12">
+			{{ui.course({
+				class: 'course_img',
+				img: 'course.png',
+				title: 'Пилатес для беременных',
+				time: '90 мин',
+				price: '1 500 ₽'
+			})}}
+		</div>
+		<div class="pilates-block__col col-3 col-md-12">
+			{{ui.course({
+				class: 'course_img',
+				img: 'course.png',
+				title: 'Пилатес для беременных',
+				time: '90 мин',
+				price: '1 500 ₽'
+			})}}
+		</div>
+		<div class="pilates-block__col col-3 col-md-12">
+			{{ui.course({
+				class: 'course_img',
+				img: 'course.png',
+				title: 'Пилатес для беременных',
+				time: '90 мин',
+				price: '1 500 ₽'
+			})}}
 		</div>
 	</div>
 </div>

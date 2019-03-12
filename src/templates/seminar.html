@@ -5,27 +5,27 @@ title: Seminar
 
 {% block content %}
 	{{header.block({class: 'header_bg'})}}
-	{{topic.block(
-		{
-			title: 'Семинары',
-			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.'
-		}
-	)}}
 	<div class="seminar">
-		<div class="seminar__wrap-sm">
-			{{pilates.block({title: 'Пилатес'})}}
-		</div>
-		<div class="seminar__wrap">
-			{{pilates.block({title: 'Постуральная гимнастика'})}}
-		</div>
-		<div class="seminar__wrap">
-			{{pilates.block({title: 'Разное'})}}
-		</div>
-		<div class="seminar__wrap-lg">
-			{{event.block()}}
-		</div>
-		<div class="seminar__wrap">
-			<div class="seminar__inner inner">
+		<div class="seminar__inner inner">
+			{{topic.block(
+				{
+					title: 'Семинары',
+					text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.'
+				}
+			)}}
+			<div class="section-sm">
+				{{pilates.block({title: 'Пилатес'})}}
+			</div>
+			<div class="section-md">
+				{{pilates.block({title: 'Постуральная гимнастика'})}}
+			</div>
+			<div class="section-md">
+				{{pilates.block({title: 'Разное'})}}
+			</div>
+			<div class="section">
+				{{event.block()}}
+			</div>
+			<div class="section-md">
 				{{ui.form({title: 'Получите подробную консультацию об обучении'})}}
 			</div>
 		</div>

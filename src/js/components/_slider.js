@@ -13,8 +13,6 @@ import {
 
 const heroSlider = $('.js-hero-slider');
 const duration = heroSlider.data('duration');
-// console.log(dots);
-// dots.css('animation-duration',duration);
 
 heroSlider.each((i, el) => {
   let slider = $(el);
@@ -23,14 +21,7 @@ heroSlider.each((i, el) => {
     sliderParent.addClass(INIT);
     let dots = slider.find('.js-dot svg circle');
     $(dots[0]).css('animation-duration', duration + 'ms');
-    // console.log(dots);
-    // dots.each((i, el) => {
-    //   $(el).css('animation-duration', duration);
-    //   console.log($(el).css('animation-duration'));
-    //   });
-    //   console.log(duration);
   });
-  //   });
   slider.on('beforeChange', (event, slick, currentSlide, nextSlide) => {
     let dots = slider.find('.js-dot svg circle');
     dots.each((i, el) => {
@@ -55,7 +46,6 @@ heroSlider.each((i, el) => {
         index = pageIndex + 1;
       }
 
-      // console.log(index);
       return $(`<button class="hero-slider__dot js-dot">${index}
         <svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"> 
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -81,8 +71,17 @@ const options = {
   },
   dotsClass: 'small-dots',
   responsive: [
+    // {
+    //   breakpoint: 1023,
+    //   settings: {
+    //     slidesToShow: 2,
+    //     slidesToScroll: 1,
+    //     infinite: true,
+    //     dots: true
+    //   }
+    // },
     {
-      breakpoint: 600,
+      breakpoint: 767,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -95,7 +94,7 @@ const options = {
 
 const detectWindowWidth = () => {
   const initSlider = $('.js-small-slider.slick-slider');
-  if (mediaWidth(767)) {
+  if (mediaWidth(1023)) {
     if (initSlider.length) return;
     testimonialSlider.slick(options);
   } else {
@@ -160,35 +159,43 @@ WIN.resize(() => {
 });
 
 // SCHEDULE
-
-$('.js-schedule-slider').each((index, el) => {
-  const detectScheduleSlider = () => {
+const detectScheduleSlider = () => {
+  const scheduleSliders = $('.js-schedule-slider');
+  scheduleSliders.each((index, el) => {
     const schedulesSlider = $(el);
-    const schedules = schedulesSlider.children().length;
+    const schedules = $(schedulesSlider.find('.schedule')).length;
     const initedSliderClass = schedulesSlider.hasClass('slick-slider');
-
-    if (mediaWidth(768)) {
-      if (schedules < 2) return;
-      if (initedSliderClass.length) return;
-      schedulesSlider.not('.slick-initialized').slick(optionsM);
+    if (mediaWidth(767)) {
+      if (schedules < 2 || initedSliderClass) return;
+      schedulesSlider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        arrows: false,
+        customPaging: (slider, pageIndex) => {
+          return $('<button class="small__dot"></button>');
+        },
+        dotsClass: 'small-dots'
+      });
     } else if (mediaWidth(1023)) {
-      if (schedules < 3) return;
-      if (initedSliderClass.length) return;
-      schedulesSlider.not('.slick-initialized').slick(optionsM);
+      if (schedules > 2 && !initedSliderClass) {
+        schedulesSlider.slick(optionsM);
+      }
+      if (schedules === 2 && initedSliderClass) {
+        schedulesSlider.slick('unslick');
+      }
     } else {
       if (!initedSliderClass) return;
       schedulesSlider.slick('unslick');
     }
-  };
-
-  detectScheduleSlider();
-
-  let timeoutS;
-
-  WIN.resize(() => {
-    clearTimeout(timeoutS);
-    timeoutS = setTimeout(detectScheduleSlider, 100);
   });
+};
+let timeoutS;
+detectScheduleSlider();
+WIN.resize(() => {
+  clearTimeout(timeoutS);
+  timeoutS = setTimeout(detectScheduleSlider, 100);
 });
 
 // 										GALLERY SLIDER

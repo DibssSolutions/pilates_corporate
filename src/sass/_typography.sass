@@ -65,21 +65,13 @@
 .article,
 article
 	max-width: 900px
-	&__title,
-	h1
-		&:not(:last-child)
-			margin-bottom: 30px
-	h1, h4
-		@extend .title
-		&:not(:first-child)
-			margin-top: 18px
-	h4
-		@extend .title_sm
 	p
 		line-height: 1.95
 		letter-spacing: -.003em
 		&:not(:first-child)
 			margin-top: 18px
+		&:not(:last-child)
+			margin-bottom: 18px
 	ul
 		&:not(:first-child)
 			margin-top: 10px
@@ -94,6 +86,38 @@ article
 				top: 50%
 				height: 1px
 				width: 15px
+	&__title,
+	h1
+		&:not(:last-child)
+			margin-bottom: 30px
+	h1, h4, h5
+		@extend .title
+		&:not(:first-child)
+			margin-top: 18px
+	h1
+		@extend .title_xl
+	h4
+		@extend .title_sm
+	h5
+		font-size: 18px
+		+md
+			font-size: 18px
+		&:not(:first-child)
+			margin-top: 30px
+		&:not(:last-child)
+			margin-bottom: 12px
+			+sm
+				margin-bottom: 6px
+		& + p:not(:first-child)
+			margin-top: 0
+		span
+			border-bottom: 3px solid #FF833E 
+
+.subtitle
+	+verdana
+	+f(18px, 700, 1.23)
+	color: $text
+	letter-spacing: normal
 
 .user-agreement
 	color: rgba($black, 0.4)

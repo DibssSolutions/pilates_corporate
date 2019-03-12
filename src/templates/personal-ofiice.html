@@ -5,37 +5,37 @@ title: personal-office
 
 {% block content %}
 	{{header.block({class: 'header_bg'})}}
-	{{topic.block(
-		{
-			title: 'Мои курсы'
-		}
-	)}}
 	<div class="personal-office online-courses">
 		<div class="personal-office__inner inner">
+			{{topic.block(
+				{
+					title: 'Мои курсы'
+				}
+			)}}
 			<div class="online-courses__main-list">
-				<ul class="online-courses__row row">
-					<li class="online-courses__main-col col-4 col-md-6 col-xs-12">
+				<div class="online-courses__row row">
+					<div class="online-courses__main-col col-4 col-md-6 col-xs-12">
 						{{ui.course({
 							class: 'course_img course_lg',
 							img: 'course.png',
 							title: 'Пилатес для беременных',
 							single: '90 мин'
 						})}}
-					</li>
-					<li class="online-courses__main-col col-4 col-md-6 col-xs-12">
+					</div>
+					<div class="online-courses__main-col col-4 col-md-6 col-xs-12">
 						<a href="#" class="empty">
 							<div class="empty__inner">
 								<button type="button" class="empty__plus plus">{{mixins.icon('plus')}}</button>
 								<div class="empty__title">Выбрать новый курс</div>
 							</div>
 						</a>
-					</li>
-				</ul>
+					</div>
+				</div>
 			</div>
 			<div class="personal-office__recommend">
 				<h2 class="personal-office__title title">Рекомендуем</h2>
 				<div class="personal-office__row row js-small-slider">
-					<div class="personal-office__col col-3 col-md-6 col-sm-12">
+					<div class="personal-office__col col-3 col-md-12">
 							{{ui.course({
 								class: 'course_img',
 								img: 'course.png',
@@ -44,7 +44,7 @@ title: personal-office
 								price: '1 500 ₽'
 							})}}
 					</div>
-					<div class="personal-office__col col-3 col-md-6 col-sm-12">
+					<div class="personal-office__col col-3 col-md-12">
 							{{ui.course({
 								class: 'course_img',
 								img: 'course.png',
@@ -53,7 +53,7 @@ title: personal-office
 								price: '1 500 ₽'
 							})}}
 					</div>
-					<div class="personal-office__col col-3 col-md-6 col-sm-12">
+					<div class="personal-office__col col-3 col-md-12">
 							{{ui.course({
 								class: 'course_img',
 								img: 'course.png',
@@ -62,7 +62,7 @@ title: personal-office
 								price: '1 500 ₽'
 							})}}
 					</div>
-					<div class="personal-office__col col-3 col-md-6 col-sm-12">
+					<div class="personal-office__col col-3 col-md-12">
 							{{ui.course({
 								class: 'course_img',
 								img: 'course.png',
