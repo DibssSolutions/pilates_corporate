@@ -93,33 +93,12 @@
 
 // COURSE
 .course-block
-	padding-top: 155px
-	+md
-		padding-top: 80px
-	&__head
-		display: flex
-		align-items: center
-		justify-content: space-between
-	&__title
-	&__row
-		padding-top: 65px
-		+md
-			padding-top: 20px
-			margin: 0 auto
 	&__col
 		+md
-			margin-top: 16px
+			margin-bottom: 16px
 	&__btn
 		+sm
-			display: none
-		&_mob
-			display: none
-			.btn
-				min-width: 288px
-			+sm
-				display: block
-				text-align: center
-				margin-top: 34px
+			margin-top: 18px
 
 // FORM
 .main-feedback
@@ -188,32 +167,9 @@
 
 // INSTRUCTOR
 .instructor-block
-	padding-top: 150px
-	+lg
-		padding-top: 78px
-	&__head
-		display: flex
-		align-items: center
-		justify-content: space-between
-	&__row
-		padding-top: 70px
-		+md
-			margin: 0 auto
-			padding-top: 39px
 	&__col
-		margin-top: 16px
-	&__btn
-		+sm
-			display: none
-		&_mob
-			display: none
-			.btn
-				min-width: 288px
-			+sm
-				display: block
-				text-align: center
-				margin-top: 30px
-	
+		&:not(:last-child)
+			margin-bottom: 16px
 // testimonial
 .testimonial-block
 	&__row
@@ -228,9 +184,6 @@
 				overflow: visible
 				opacity: 1
 				visibility: visible
-	&__col
-		+md
-			margin-bottom: 16px
 
 // CONTACTS
 .contacts-block
