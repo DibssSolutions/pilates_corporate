@@ -1,0 +1,149 @@
+[data-modal]
+	position: fixed
+	z-index: -1
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	opacity: 0
+	visibility: hidden
+	min-width: 320px
+	font-size: 0
+	+vertical
+	+gpu
+	overflow: auto
+	transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
+
+[data-modal]
+	background-color: rgba($black, 0.6)
+	&.is-open
+		opacity: 1
+		visibility: visible
+		z-index: 100
+
+[data-modal-container]
+	position: relative
+	z-index: 1
+	vertical-align: middle
+	display: inline-block
+
+[data-modal-close]
+	position: absolute
+	background-color: transparent
+	font-size: 0
+	right: 30px
+	top: 32px
+	+sm
+		right: 15px
+		top: 15px
+	.icon
+		font-size: 27px
+		color: rgba($black, 0.3)
+		+sm
+			font-size: 18px
+
+.modal
+	&__container
+		background-color: $white
+		border-radius: $radius
+		padding: 59px 15px 50px
+		color: $text
+		text-align: center
+		margin: 0 auto
+		max-width: 640px
+		width: 99.7%
+		max-height: 660px
+		height: 100%
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		+md
+			max-height: initial
+			height: auto
+		+sm 
+			border-radius: 0
+			padding: 50px 15px
+			height: 100vh
+	&__title
+		margin-bottom: 28px
+		+verdana
+		+f(30px, 700, 1.233)
+		color: $black
+		letter-spacing: normal
+		+md 
+			font-size: 18px
+	&__subtitle
+		margin-bottom: 10px
+		+verdana
+		+f(21px, 700, 1.48)
+		color: $black
+		letter-spacing: normal
+		+md 
+			font-size: 15px
+		+sm 
+			line-height: 1.8667
+	&__date
+		margin-bottom: 35px
+	&__form-wrapper
+		display: inline-block
+		max-width: 350px
+		width: 100%
+	&__icon
+		text-align: center
+		margin-bottom: 30px
+	&__text
+		color: $text
+		font-family: Verdana
+		font-size: 18px
+		line-height: 1.722
+
+.success-mark
+	display: inline-block
+	+circle(90)
+	background-color: $orange
+	+vertical
+	box-shadow: 0 19px 24px -7px $orange
+	+md 
+		+circle(76)
+	.icon
+		display: inline-block
+		vertical-align: middle
+		font-size: 36px
+		color: $white
+		+md 
+			font-size: 30px
+
+
+.registration-form
+	.help-block.form-error
+		position: absolute
+		top: 100%
+		left: 0
+		color: $errorRed
+	.form-group
+		+ .form-group
+			margin-top: 21px
+	&__submit
+		margin-top: 30px
+		margin-bottom: 16px
+		+sm 
+			margin-top: 20px
+		.btn
+			width: 100%
+	&__agreement
+		color: rgba($black, 0.4)
+		font-family: Verdana
+		font-size: 13px
+		letter-spacing: 0.028em
+		line-height: 1.384
+		+sm 
+			font-size: 11px
+// *
+// 	box-shadow: 0 0 1px 1px red
+
+html.is-overflow-hidden
+	overflow-x: hidden
+	overflow-y: scroll
+	body 
+		overflow: hidden
+		height: 100vh
