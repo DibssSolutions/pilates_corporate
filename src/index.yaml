@@ -35,5 +35,7 @@ PageList:
   ready: 50
 - file: schedule.html
   ready: 50
+- file: internal-directions.html
+  ready: 100
 - file: education.html
   ready: 50

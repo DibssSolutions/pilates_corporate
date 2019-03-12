@@ -1,11 +1,7 @@
 .schedule-page
-	padding-top: 245px
 	&__inner
 		+ms
 			padding: 0
-		// &[data-tabs]
-		// 	+sm 
-		// 		overflow: visible
 	&__head
 		display: flex
 		align-items: center
@@ -22,9 +18,9 @@
 	&__item
 		+ .schedule-page__item
 			margin-top: 80px
-  &__tabs
-    +sm 
-      margin-top: 30px
+	&__tabs
+		+md
+			padding-top: 30px
 
 .schedule-group
 	@extend %cardShadow

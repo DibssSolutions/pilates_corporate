@@ -287,56 +287,56 @@
 
 {# 										SCHEDULE #}
 {% macro schedule(props) %}
-  <div class="schedule-group">
-    <h3 class="schedule-group__title title title_md">{{ props.title }}</h3>
-    <div class="schedule-group__items js-schedule-slider">
-      {% for item in props.blocks %}
-        <div class="schedule-group__item">
-          <div class="schedule">
-            <h3 class="schedule__block-title">{{ props.title }}</h3>
-            <div class="schedule__date">
-              <div class="schedule__title">Дата</div>
-              <div class="schedule__content">
-                <span>{{ item.dayStart }}</span>
-                <span>—</span>
-                <span>{{ item.dayEnd }}</span>
-              </div>
-            </div>
-            <div class="schedule__city">
-              <div class="schedule__title">Город</div>
-              <div class="schedule__content">{{ item.city }}</div>
-            </div>
-            <div class="schedule__direction">
-              <div class="schedule__title">Направление</div>
-              <div class="schedule__content">{{ item.direction }}</div>
-            </div>
-            <div class="schedule__instructors">
-              <div class="schedule__title">Преподователи</div>
-              <div class="schedule__content">
-                {% for trener in item.treners %}
-                  <div class="instructor-preview">
-                    <div class="instructor-preview__image" style="background-image: url(./img/{{ trener.image or 'trener@2x.png' }})"></div>
-                    <div class="instructor-preview__name">{{ trener.name }}</div>
-                  </div>
-                {% endfor %}
-              </div>
-            </div>
-            <div class="schedule__adress">
-              <div class="schedule__title">Адрес</div>
-              <div class="schedule__content">{{ item.adress }}</div>
-            </div>
-            <div class="schedule__price">
-              <div class="schedule__title">Стоимость</div>
-              <div class="schedule__content schedule__content_price">
-                {{ item.price }}
-                <a href="#" class="btn btn_small">Регистрация</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
+	<div class="schedule-group">
+		<h3 class="schedule-group__title title title_md">{{ props.title }}</h3>
+		<div class="schedule-group__items js-schedule-slider">
+			{% for item in props.blocks %}
+				<div class="schedule-group__item">
+					<div class="schedule">
+						<h3 class="schedule__block-title">{{ props.title }}</h3>
+						<div class="schedule__date">
+							<div class="schedule__title">Дата</div>
+							<div class="schedule__content">
+								<span>{{ item.dayStart }}</span>
+								<span>—</span>
+								<span>{{ item.dayEnd }}</span>
+							</div>
+						</div>
+						<div class="schedule__city">
+							<div class="schedule__title">Город</div>
+							<div class="schedule__content">{{ item.city }}</div>
+						</div>
+						<div class="schedule__direction">
+							<div class="schedule__title">Направление</div>
+							<div class="schedule__content">{{ item.direction }}</div>
+						</div>
+						<div class="schedule__instructors">
+							<div class="schedule__title">Преподователи</div>
+							<div class="schedule__content">
+								{% for trener in item.treners %}
+									<div class="instructor-preview">
+										<div class="instructor-preview__image" style="background-image: url(./img/{{ trener.image or 'trener@2x.png' }})"></div>
+										<div class="instructor-preview__name">{{ trener.name }}</div>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+						<div class="schedule__adress">
+							<div class="schedule__title">Адрес</div>
+							<div class="schedule__content">{{ item.adress }}</div>
+						</div>
+						<div class="schedule__price">
+							<div class="schedule__title">Стоимость</div>
+							<div class="schedule__content schedule__content_price">
+								{{ item.price }}
+								<a href="#" class="btn btn_small">Регистрация</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
 {% endmacro %}
 {# 										SCHEDULE #}
 

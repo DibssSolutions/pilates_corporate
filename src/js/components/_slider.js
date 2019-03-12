@@ -170,7 +170,7 @@ $('.js-schedule-slider').each((index, el) => {
     if (mediaWidth(768)) {
       if (schedules < 2) return;
       if (initedSliderClass.length) return;
-      schedulesSlider.not('.slick-initialized').slick(optionsM);
+      schedulesSlider.not('.slick-initialized').slick(options);
     } else if (mediaWidth(1023)) {
       if (schedules < 3) return;
       if (initedSliderClass.length) return;
