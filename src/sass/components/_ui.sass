@@ -374,10 +374,13 @@
 		+verdana
 		+f(15px, 400)
 		letter-spacing: 0.066em
-		padding: 20px
+		padding: 18px
 		background-color: $white
 		border-radius: 10px
 		width: 100%
+		border: 2px solid transparent
+		&.error
+			border: 2px solid $orange
 		&:focus
 			&::placeholder
 				font-size: 0
@@ -427,12 +430,16 @@
 		border: 0
 		clip: rect(0 0 0 0)
 		overflow: hidden
+		user-select: none
 		&:checked
 			~ .checkbox__icon
 				background-image: url(../img/check.svg)
 				background-size: 70%
 				background-repeat: no-repeat
 				background-position: 50% 50%
+		&.error
+			~ .checkbox__icon
+				border: 1px solid darken($orange, 20%)
 
 .form-contacts
 	max-width: 880px

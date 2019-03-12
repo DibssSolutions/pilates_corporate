@@ -166,22 +166,18 @@ $('.js-schedule-slider').each((index, el) => {
     const schedulesSlider = $(el);
     const schedules = schedulesSlider.children().length;
     const initedSliderClass = schedulesSlider.hasClass('slick-slider');
-    console.log(initedSliderClass);
-    // const initSlider = $('.js-schedules-slider.slick-slider');
 
     if (mediaWidth(768)) {
       if (schedules < 2) return;
       if (initedSliderClass.length) return;
-      schedulesSlider.not('.slick-initialized').slick(options);
+      schedulesSlider.not('.slick-initialized').slick(optionsM);
     } else if (mediaWidth(1023)) {
       if (schedules < 3) return;
       if (initedSliderClass.length) return;
       schedulesSlider.not('.slick-initialized').slick(optionsM);
     } else {
-      console.log(initedSliderClass.length);
       if (!initedSliderClass) return;
       schedulesSlider.slick('unslick');
-      // schedulesSlider.is('.slick-initialized').slick(unslick);
     }
   };
 
@@ -191,7 +187,7 @@ $('.js-schedule-slider').each((index, el) => {
 
   WIN.resize(() => {
     clearTimeout(timeoutM);
-    timeoutS = setTimeout(detectScheduleSlider, 250);
+    timeoutS = setTimeout(detectScheduleSlider, 100);
   });
 });
 
