@@ -1,26 +1,28 @@
 .schedule-page
 	&__inner
-		+ms
-			padding: 0
+		// +ms
+		// 	padding: 0
 	&__head
 		display: flex
 		align-items: center
 		flex-wrap: wrap
 		padding-bottom: 76px
+		+sm
+			padding-bottom: 38px
 	&__title
 		max-width: 33%
 		margin-right: auto
 		+md
 			max-width: none
 			width: 100%
-		+ms
-			padding: 0 16px
+		// +ms
+		// 	padding: 0 16px
 	&__item
 		+ .schedule-page__item
 			margin-top: 80px
 	&__tabs
 		+md
-			padding-top: 30px
+			padding-top: 18px
 
 .schedule-group
 	@extend %cardShadow
@@ -53,32 +55,45 @@
 	+lg
 		font-size: 13px
 	+md 
+		flex-direction: column
+		font-size: 15px
 		border-top: none
 		box-shadow: $shadow
 		border-radius: 10px
 		background-color: $white
-	+md
-		flex-direction: column
-	&__block-title
-		display: none
-		+md
-			display: block
+	+sm 
+		padding-bottom: 8px
 	& > *
 		padding: 30px 20px
 		+xl 
 			padding: 30px 15px
 		+lg 
 			padding: 20px 10px
+		+sm 
+			padding: 20px 12px 22px
 		&:not(:last-child)
 			border-right: 2px solid #f0f0f3
 			border-bottom: 2px solid #f0f0f3
 			+md 
 				border-right: none
 				+flex-size(100%)
+		&.schedule__block-title
+			padding: 30px 12px
+	&__block-title
+		display: none
+		+md
+			display: block
+			color: #000000
+			font-size: 15px
+			font-weight: 700
+			line-height: 1.667
+			letter-spacing: 0
 	&__title
 		margin-bottom: 17px
 		color: $grayLight
 		letter-spacing: 0.033em
+		+sm 
+			margin-bottom: 2px
 	&__content
 		font-weight: 700
 		letter-spacing: 0
@@ -91,11 +106,13 @@
 				flex-direction: column
 				.btn
 					width: 100%
-					margin-top: 27px
+					margin-top: 31px
 	&__date
 		+flex-size(10.9%)
 		span
 			display: block
+			+sm 
+				display: inline
 	&__city
 			+flex-size(14%)
 	&__direction
@@ -109,6 +126,9 @@
 		.instructor-preview
 			&:not(:last-child)
 				margin-bottom: 15px
+			+sm 
+				&:first-child
+					margin-top: 8px
 	&__adress
 		+flex-size(21%)
 	&__price

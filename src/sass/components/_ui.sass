@@ -358,13 +358,18 @@
 		+verdana
 		+f(15px, 400)
 		letter-spacing: 0.066em
-		padding: 18px
+		padding: 19px
 		background-color: $white
 		border-radius: 10px
 		width: 100%
-		border: 2px solid transparent
+		border: 1px solid transparent
+		&.form-group__border-input
+			border: 1px solid rgba($black, 0.6)
+			padding: 17px 19px
+			&.error
+				border: 1px solid $errorRed !important
 		&.error
-			border: 2px solid $orange
+			border: 1px solid $orange !important
 		&:focus
 			&::placeholder
 				font-size: 0
@@ -380,7 +385,7 @@
 		padding: 41px 20px
 		display: block
 	&.has-error
-		+sm 
+		+sm
 			margin-bottom: 16px
 
 .checkbox

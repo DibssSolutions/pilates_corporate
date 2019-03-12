@@ -285,6 +285,57 @@
           </div>
         </div>
       </footer>
+      <div class="modal" data-modal="registration">
+        <div class="modal__container" data-modal-container>
+          <button class="modal__close" data-modal-close>
+            <svg class="icon icon-close">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="modal__content">
+            <h2 class="modal__title"> Регистрация на семинар </h2>
+            <div class="modal__form-wrapper">
+              <h4 class="modal__subtitle"> Microwave Cooking Is The Wave Of The Future </h4>
+              <h4 class="modal__date title title_sm">01.12.2018 — 03.12.2018</h4>
+              <form action="/" class="registration-form js-validation">
+                <div class="form-group">
+                  <input class="form-group__border-input" type="text" placeholder="Имя" data-validation="length" data-validation-length="min2" data-validation-error-msg="Имя должно быть не менее двух символов" />
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-group__border-input" placeholder="Телефон" data-validation="custom" data-validation-regexp="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" data-validation-error-msg="Пожалуйста, введите правильный номер телефона" />
+                </div>
+                <div class="form-group">
+                  <input class="form-group__border-input" type="text" placeholder="Email" data-validation="email" data-validation-error-msg="Пожалуйста, введите правильный адрес" />
+                </div>
+                <div class="registration-form__submit">
+                  <button type="submit" class="btn">Записаться на курс</button>
+                </div>
+                <div class="registration-form__agreement"> Я согласен с условиями обработки персональных данных </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" data-modal="registration-success">
+        <div class="modal__container" data-modal-container>
+          <button class="modal__close" data-modal-close>
+            <svg class="icon icon-close">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="modal__content">
+            <div class="modal__icon">
+              <div class="success-mark">
+                <svg class="icon icon-check">
+                  <use xlink:href="img/sprite.svg#icon-check"></use>
+                </svg>
+              </div>
+            </div>
+            <h2 class="modal__title"> Регистрация на семинар </h2>
+            <div class="modal__text"> Мы свяжемся с Вами в течении N часов для подтвреждения регистрации </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
