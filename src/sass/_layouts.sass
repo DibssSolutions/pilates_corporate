@@ -63,6 +63,14 @@
 	&:not(:first-child)
 		padding-top: 70px
 		
+.section,
+.section-md,
+.section-sm
+	&__title
+		&:not(:last-child)
+			margin-bottom: 70px
+			+sm
+				margin-bottom: 37px
 .head
 	display: flex
 	align-items: center
