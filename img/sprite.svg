@@ -44,7 +44,7 @@
     <title>
         Group 17
     </title>
-    <g transform="translate(-1 -1)" fill-rule="evenodd" opacity=".3">
+    <g transform="translate(-1 -1)">
         <rect transform="rotate(45 14.102 14.102)" x="12.102" y="-3.398" width="4" height="35" rx="2"/>
         <rect transform="rotate(135 14.102 14.102)" x="12.102" y="-3.398" width="4" height="35" rx="2"/>
     </g>
