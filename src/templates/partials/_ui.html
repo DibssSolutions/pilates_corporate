@@ -76,21 +76,36 @@
 	<div class="feedback {% if props.class %}{{props.class}}{% endif %}">
 		<div class="feedback__inner">
 			<h3 class="feedback__title title title_lg">{% if props.title %}{{props.title}}{% endif %}</h3>
-			<form action="/" class="form">
+			<form action="/" class="form js-validation">
 				<ul class="form__row row">
 					<li class="form__col col-3 col-lg-4 col-sm-12">
 						<div class="form-group">
-							<input type="text" placeholder="Имя">
+							<input
+								type="text"
+								placeholder="Имя"
+								data-validation="length"
+								data-validation-length="min2"
+								data-validation-error-msg="Имя должно быть не менее двух символов">
 						</div>
 					</li>
 					<li class="form__col col-3 col-lg-4 col-sm-12">
 						<div class="form-group">
-							<input type="text" placeholder="Телефон">
+							<input type="text" 
+								placeholder="Телефон" 
+								data-validation="custom"
+								data-validation-regexp="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$"
+								data-validation-error-msg="Пожалуйста, введите правильный номер телефона"
+							/>
 						</div>
 					</li>
 					<li class="form__col col-3 col-lg-4 col-sm-12">
 						<div class="form-group">
-							<input type="text" placeholder="Email">
+							<input
+								type="text"
+								placeholder="Email"
+								data-validation="email"
+								data-validation-error-msg="Пожалуйста, введите правильный адрес"
+							/>
 						</div>
 					</li>
 					<li class="form__col col-3 col-lg-12">
@@ -100,7 +115,11 @@
 					</li>
 				</ul>
 				<div class="feedback__check">
-					{{mixins.checkbox({text: 'условиями обработки персональных данных', checked: true})}}
+					{{mixins.checkbox({
+						text: 'условиями обработки персональных данных',
+						checked: true,
+						validation: true
+					})}}
 				</div>
 			</form>
 		</div>
@@ -112,33 +131,57 @@
 <div class="feedback {% if props.class %}{{props.class}}{% endif %}">
 	<div class="feedback__inner">
 		<h3 class="feedback__title title title_lg">{% if props.title %}{{props.title}}{% endif %}</h3>
-		<form class="form-contacts">
+		<form class="form-contacts js-validation">
 			<div class="form-contacts__row row">
 				<div class="form-contacts__col col-4 col-md-12">
 					<div class="form-group">
-						<input type="text" placeholder="Имя">
+						<input
+							type="text"
+							placeholder="Имя"
+							data-validation="length"
+							data-validation-length="min2"
+							data-validation-error-msg="Имя должно быть не менее двух символов"
+						/>
 					</div>
 				</div>
 				<div class="form-contacts__col col-4 col-md-12">
 					<div class="form-group">
-						<input type="text" placeholder="Телефон">
+						<input type="text" 
+							placeholder="Телефон"
+							data-validation="custom"
+							data-validation-regexp="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$"
+							data-validation-error-msg="Пожалуйста, введите правильный номер телефона"
+						/>
 					</div>
 				</div>
 				<div class="form-contacts__col col-4 col-md-12">
 					<div class="form-group">
-						<input type="text" placeholder="Email">
+						<input 
+							type="text"
+							placeholder="Email"
+							data-validation="email"
+							data-validation-error-msg="Пожалуйста, введите правильный адрес"
+						/>
 					</div>
 				</div>
 				<div class="form-contacts__col col-12">
 					<div class="form-group">
-						<textarea placeholder="Сообщение"></textarea>
+						<textarea 
+							placeholder="Сообщение"
+							data-validation="required"
+							data-validation-error-msg="Пожалуйста, введите сообщение"
+						></textarea>
 					</div>
 				</div>
 			</div>
 			<div class="form-contacts__footer row">
 				<div class="form-contacts__col col-8">
 					<div class="form-contacts__check">
-						{{mixins.checkbox({text: 'условиями обработки персональных данных', checked: true})}}
+						{{mixins.checkbox({
+							text: 'условиями обработки персональных данных',
+							checked: true,
+							validation: true
+						})}}
 					</div>
 				</div>
 				<div class="form-contacts__col col-4">

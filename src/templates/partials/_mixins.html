@@ -23,7 +23,16 @@
 {% macro checkbox(props) %}
 <!-- begin input -->
 <label class="{% if props.radio %}radio{% else %}checkbox{% endif %}{% if props.class %} {{ props.class }}{% endif %}">
-	<input type="{% if props.radio %}radio{% else %}checkbox{% endif %}" name="{{ props.name or 'checkbox' }}"{% if props.checked %} checked{% endif %}>
+  <input 
+    type="{% if props.radio %}radio{% else %}checkbox{% endif %}" 
+    name="{{ props.name or 'checkbox' }}"
+    {% if props.checked %} checked{% endif %}
+    {% if props.validation %}
+      data-validation="required"
+      data-validation-event="keyup change"
+      data-validation-error-msg="Пожалуйста, примите условия обработки персональных данных"
+    {% endif %}
+  />
 	<span class="{% if props.radio %}radio{% else %}checkbox{% endif %}__text">Я согласен с <a href="#">{{ props.text or 'checkbox' }}</a></span>
 	<span class="{% if props.radio %}radio{% else %}checkbox{% endif %}__icon"></span>
 </label>

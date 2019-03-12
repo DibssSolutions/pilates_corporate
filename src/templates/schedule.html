@@ -1,6 +1,7 @@
 ---
 title: Schedule
 ---
+
 {% extends "layouts/_layout.html" %}
 
 
@@ -59,6 +60,38 @@ title: Schedule
                   ],
                   adress: 'метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж',
                   price: '17900'
+                },
+                {
+                  dayStart: '01.12.2018',
+                  dayEnd: '03.12.2018',
+                  city: 'Курск',
+                  direction: 'Пилатес',
+                  treners: [
+                    {
+                      name: 'Deva Premal'
+                    },
+                    {
+                      name: 'Otmar Doležal'
+                    }
+                  ],
+                  adress: 'метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж',
+                  price: '17900'
+                },
+                {
+                  dayStart: '01.12.2018',
+                  dayEnd: '03.12.2018',
+                  city: 'Санкт-Петербург',
+                  direction: 'Пилатес',
+                  treners: [
+                    {
+                      name: 'Otmar Doležal'
+                    },
+                    {
+                      name: 'Otmar Doležal'
+                    }
+                  ],
+                  adress: 'метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж',
+                  price: '17900'
                 }
               ]
             }
@@ -70,13 +103,56 @@ title: Schedule
           {% endfor %}
         </ul>
         <ul class="schedule-page__list" data-tabs-container='directions'>
-          <li class="schedule-page__item">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam voluptatum nam animi quo dolorem ea! Repellat quia, optio dolor quas omnis animi reprehenderit provident quidem esse amet quibusdam quisquam. Dolor, possimus dolorem aperiam officiis aspernatur facere voluptatum vero enim ex ab sint porro commodi, culpa dolorum accusamus eligendi corporis? Eveniet?
-          </li>
+          {% set schedules1 = [
+            {
+              title: 'Постуральная гимнастика уровень 1 (Групповые программы) часть 1',
+              blocks: [
+                { 
+                  dayStart: '01.12.2018',
+                  dayEnd: '03.12.2018',
+                  city: 'Москва',
+                  direction: 'Пилатес',
+                  treners: [
+                    {
+                      name: 'Otmar Doležal'
+                    },
+                    {
+                      name: 'Otmar Doležal'
+                    }
+                  ],
+                  adress: 'метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж',
+                  price: '17900'
+                },
+                {
+                  dayStart: '01.12.2018',
+                  dayEnd: '03.12.2018',
+                  city: 'Москва',
+                  direction: 'Пилатес',
+                  treners: [
+                    {
+                      name: 'Otmar Doležal'
+                    },
+                    {
+                      name: 'Otmar Doležal'
+                    }
+                  ],
+                  adress: 'метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж',
+                  price: '17900'
+                }
+              ]
+            }
+          ] %}
+          {% for item in [0,1,2] %}
+              {% for item in schedules1 %}
+                <li class="schedule-page__item">
+                  {{ block(item) }}
+                </li>
+              {% endfor %}
+          {% endfor %}
         </ul>
         <ul class="schedule-page__list" data-tabs-container='cities'>
           <li class="schedule-page__item">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem quo at eveniet, possimus numquam voluptate eaque rerum blanditiis id ratione omnis cum distinctio dolore quibusdam? Adipisci repellat autem nihil officiis.
+            {{ block(schedules[0]) }}
           </li>
         </ul>
     </div>

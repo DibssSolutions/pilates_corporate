@@ -325,11 +325,21 @@
 			text-align: left
 			margin-bottom: 28px
 	&__check
+		position: relative
 		margin-top: 2.66em
 		color: $white
 		letter-spacing: normal
 		+sm
 			margin-top: 22px
+		.feedback &
+			.help-block.form-error
+				position: absolute
+				top: 100%
+				left: 30px
+	.help-block.form-error
+		position: absolute
+		top: 100%
+		left: 0
 
 // 										FORM
 .form
@@ -356,7 +366,9 @@
 				margin-top: 16px
 		+xs
 			padding: 0
+
 .form-group
+	position: relative
 	input, textarea
 		color: $grayLight
 		+verdana
@@ -379,6 +391,11 @@
 	textarea
 		resize: none
 		padding: 41px 20px
+		display: block
+	&.has-error
+		+sm 
+			margin-bottom: 16px
+
 .checkbox
 	display: inline-block
 	position: relative
@@ -417,7 +434,6 @@
 				background-repeat: no-repeat
 				background-position: 50% 50%
 
-
 .form-contacts
 	max-width: 880px
 	margin: 0 auto
@@ -432,7 +448,25 @@
 		margin-top: 20px
 		align-items: center
 		color: $white
+	&__check
+		position: relative
+		.form-contacts &
+			.help-block.form-error
+				position: absolute
+				top: 100%
+				left: 30px
+	.form-group.has-error
+		margin-bottom: 12px
 
+// VALIDATION ERROR STYLE
+.help-block.form-error
+	padding: 2px 10px
+	// color: $errorRed
+	// color: darken($orange, 20%)
+	color: $white
+	+f(10px, 500)
+	line-height: 1.15
+	// text-transform: uppercase
 
 // 											SEMINAR
 .seminar
