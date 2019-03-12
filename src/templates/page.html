@@ -6,22 +6,26 @@ main: true
 
 {% block content %}
 	{{header.block()}}
-	{% include "partials/_hero.html" %}
-	{% include "partials/_about.html" %}
-	{{seminar.block()}}
-	{{course.block()}}
-	<div class="main-feedback">
-		<div class="main-feedback__inner inner">
-			<div class="main-feedback__wrap">
-				{{ui.form({title: 'Получите подробную консультацию об обучении'})}}
+	<div class="inner">
+		{% include "partials/_hero.html" %}
+		{% include "partials/_about.html" %}
+		{{seminar.block()}}
+		{{course.block()}}
+		<div class="main-feedback">
+			<div class="main-feedback__inner inner">
+				<div class="main-feedback__wrap">
+					{{ui.form({title: 'Получите подробную консультацию об обучении'})}}
+				</div>
 			</div>
 		</div>
+		<div class="event-block-wrap">
+			{{event.block()}}
+		</div>
+		{{instructor.block()}}
+		{{testimonial.block()}}
+		<div class="section">
+			{{contacts.block()}}
+		</div>
 	</div>
-	<div class="event-block-wrap">
-		{{event.block()}}
-	</div>
-	{{instructor.block()}}
-	{{testimonial.block()}}
-	{{contacts.block()}}
 	{{footer.block()}}
 {% endblock %}

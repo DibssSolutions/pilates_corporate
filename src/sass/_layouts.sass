@@ -24,10 +24,12 @@
 
 .out
 	padding-top: 254px
-	+sm 
+	+md
 		padding-top: 100px
 	&_sm
 		padding-top: 178px
+		+md
+			padding-top: 90px
 	&_main
 		padding-top: 0
 .inner
@@ -50,6 +52,35 @@
 		padding-top: 150px 
 		+sm
 			padding-top: 80px
+
+.section-sm
+	&:not(:first-child)
+		padding-top: 125px
+		+sm
+			padding-top: 80px
+
+.section-sm
+	&:not(:first-child)
+		padding-top: 70px
+		
+.section,
+.section-md,
+.section-sm
+	&__title
+		&:not(:last-child)
+			margin-bottom: 70px
+			+sm
+				margin-bottom: 37px
+.head
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	&:not(:last-child)
+		margin-bottom: 70px
+	&__title
+		padding-right: 15px
+		+sm
+			padding-right: 0
 
 .visually-hidden
 	position: absolute
