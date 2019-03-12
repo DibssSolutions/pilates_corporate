@@ -31,3 +31,5 @@ PageList:
   ready: 50
 - file: schedule.html
   ready: 50
+- file: internal-directions.html
+  ready: 10и0
