@@ -26,7 +26,7 @@
   <body>
 
     <!-- BEGIN content -->
-    <div class="out">
+    <div class="out{% if smWrap %}out_sm{% endif %}{% if main %}out_main{% endif %}">
       {% block content %}{% endblock %}
     </div>
     <!-- END content -->
