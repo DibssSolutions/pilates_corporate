@@ -1,8 +1,8 @@
 {% macro block(props) %}
-<div class="topic">
-	<h1 class="topic__title title">{{props.title}}</h1>
+<article class="article">
+	<h1 class="article__title title">{{props.title}}</h1>
 	{% if props.text %}
 		<p>{{props.text}}</p>
 	{% endif %}
-</div>
+</article>
 {% endmacro %}
