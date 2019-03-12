@@ -293,21 +293,21 @@
           <div class="feedback ">
             <div class="feedback__inner">
               <h3 class="feedback__title title title_lg">Получите подробную консультацию об обучении</h3>
-              <form action="/" class="form">
+              <form action="/" class="form js-validation">
                 <ul class="form__row row">
                   <li class="form__col col-3 col-lg-4 col-sm-12">
                     <div class="form-group">
-                      <input type="text" placeholder="Имя">
+                      <input type="text" placeholder="Имя" data-validation="length" data-validation-length="min2" data-validation-error-msg="Имя должно быть не менее двух символов">
                     </div>
                   </li>
                   <li class="form__col col-3 col-lg-4 col-sm-12">
                     <div class="form-group">
-                      <input type="text" placeholder="Телефон">
+                      <input type="text" placeholder="Телефон" data-validation="custom" data-validation-regexp="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" data-validation-error-msg="Пожалуйста, введите правильный номер телефона" />
                     </div>
                   </li>
                   <li class="form__col col-3 col-lg-4 col-sm-12">
                     <div class="form-group">
-                      <input type="text" placeholder="Email">
+                      <input type="text" placeholder="Email" data-validation="email" data-validation-error-msg="Пожалуйста, введите правильный адрес" />
                     </div>
                   </li>
                   <li class="form__col col-3 col-lg-12">
@@ -319,7 +319,7 @@
                 <div class="feedback__check">
                   <!-- begin input -->
                   <label class="checkbox">
-                    <input type="checkbox" name="checkbox" checked>
+                    <input type="checkbox" name="checkbox" checked data-validation="required" data-validation-event="keyup change" data-validation-error-msg="Пожалуйста, примите условия обработки персональных данных" />
                     <span class="checkbox__text">Я согласен с <a href="#">условиями обработки персональных данных</a></span>
                     <span class="checkbox__icon"></span>
                   </label>

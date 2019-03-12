@@ -22,7 +22,7 @@ heroSlider.each((i, el) => {
   slider.on('init', () => {
     sliderParent.addClass(INIT);
     let dots = slider.find('.js-dot svg circle');
-    $(dots[0]).css('animation-duration', (duration + 'ms'));
+    $(dots[0]).css('animation-duration', duration + 'ms');
     // console.log(dots);
     // dots.each((i, el) => {
     //   $(el).css('animation-duration', duration);
@@ -31,13 +31,13 @@ heroSlider.each((i, el) => {
     //   console.log(duration);
   });
   //   });
-  slider.on('beforeChange', (event,slick, currentSlide, nextSlide) => {
+  slider.on('beforeChange', (event, slick, currentSlide, nextSlide) => {
     let dots = slider.find('.js-dot svg circle');
     dots.each((i, el) => {
       $(el).css('animation-duration', '.8s');
     });
     const dot = dots[nextSlide];
-    $(dot).css('animation-duration', (duration + 'ms'));
+    $(dot).css('animation-duration', duration + 'ms');
   });
   slider.slick({
     dots: true,
@@ -51,12 +51,10 @@ heroSlider.each((i, el) => {
       let index;
       if (pageIndex < 9) {
         index = '0' + (pageIndex + 1);
-      }
-      else 
-      { 
+      } else {
         index = pageIndex + 1;
       }
-          
+
       // console.log(index);
       return $(`<button class="hero-slider__dot js-dot">${index}
         <svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"> 
@@ -99,13 +97,12 @@ const detectWindowWidth = () => {
   const initSlider = $('.js-small-slider.slick-slider');
   if (mediaWidth(767)) {
     if (initSlider.length) return;
-	   testimonialSlider.slick(options);
-  }
-  else {
+    testimonialSlider.slick(options);
+  } else {
     if (!initSlider.length) return;
     testimonialSlider.slick('unslick');
   }
-}; 
+};
 detectWindowWidth();
 
 let timeout;
@@ -144,14 +141,15 @@ const optionsM = {
 const detectWindowWidthMedium = () => {
   const initSlider = $('.js-medium-slider.slick-slider');
   if (mediaWidth(1023)) {
-    if (initSlider.length) return;
-	   mediumSlider.slick(optionsM);
-  }
-  else {
+    if (initSlider.length) {
+      return;
+    }
+    mediumSlider.slick(optionsM);
+  } else {
     if (!initSlider.length) return;
     mediumSlider.slick('unslick');
   }
-}; 
+};
 detectWindowWidthMedium();
 
 let timeoutM;
@@ -161,6 +159,41 @@ WIN.resize(() => {
   timeoutM = setTimeout(detectWindowWidthMedium, 100);
 });
 
+// SCHEDULE
+
+$('.js-schedule-slider').each((index, el) => {
+  const detectScheduleSlider = () => {
+    const schedulesSlider = $(el);
+    const schedules = schedulesSlider.children().length;
+    const initedSliderClass = schedulesSlider.hasClass('slick-slider');
+    console.log(initedSliderClass);
+    // const initSlider = $('.js-schedules-slider.slick-slider');
+
+    if (mediaWidth(768)) {
+      if (schedules < 2) return;
+      if (initedSliderClass.length) return;
+      schedulesSlider.not('.slick-initialized').slick(options);
+    } else if (mediaWidth(1023)) {
+      if (schedules < 3) return;
+      if (initedSliderClass.length) return;
+      schedulesSlider.not('.slick-initialized').slick(optionsM);
+    } else {
+      console.log(initedSliderClass.length);
+      if (!initedSliderClass) return;
+      schedulesSlider.slick('unslick');
+      // schedulesSlider.is('.slick-initialized').slick(unslick);
+    }
+  };
+
+  detectScheduleSlider();
+
+  let timeoutS;
+
+  WIN.resize(() => {
+    clearTimeout(timeoutM);
+    timeoutS = setTimeout(detectScheduleSlider, 250);
+  });
+});
 
 // 										GALLERY SLIDER
 const gallerySlider = $('.js-gallery');

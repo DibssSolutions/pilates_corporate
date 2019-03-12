@@ -1,5 +1,8 @@
 .tabs
 	display: flex
 	align-items: center
+	overflow: auto
 	&__item
-		margin-right: 2.1em
+		flex-shrink: 0
+		&:not(:last-child)
+			margin-right: 30px

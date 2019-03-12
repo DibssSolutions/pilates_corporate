@@ -1,56 +1,59 @@
 ---
 title: Schedule
 ---
+
 {% extends "layouts/_layout.html" %}
 
 {% macro block(props) %}
   <div class="schedule-group">
     <h3 class="schedule-group__title title title_md">{{ props.title }}</h3>
-    {% for item in props.blocks %}
-      <div class="schedule-group__item">
-        <div class="schedule">
-          <h3 class="schedule__block-title">{{ props.title }}</h3>
-          <div class="schedule__date">
-            <div class="schedule__title">Дата</div>
-            <div class="schedule__content">
-              <span>{{ item.dayStart }}</span>
-              <span>—</span>
-              <span>{{ item.dayEnd }}</span>
+    <div class="schedule-group__items js-schedule-slider">
+      {% for item in props.blocks %}
+        <div class="schedule-group__item">
+          <div class="schedule">
+            <h3 class="schedule__block-title">{{ props.title }}</h3>
+            <div class="schedule__date">
+              <div class="schedule__title">Дата</div>
+              <div class="schedule__content">
+                <span>{{ item.dayStart }}</span>
+                <span>—</span>
+                <span>{{ item.dayEnd }}</span>
+              </div>
             </div>
-          </div>
-          <div class="schedule__city">
-            <div class="schedule__title">Город</div>
-            <div class="schedule__content">{{ item.city }}</div>
-          </div>
-          <div class="schedule__direction">
-            <div class="schedule__title">Направление</div>
-            <div class="schedule__content">{{ item.direction }}</div>
-          </div>
-          <div class="schedule__instructors">
-            <div class="schedule__title">Преподователи</div>
-            <div class="schedule__content">
-              {% for trener in item.treners %}
-                <div class="instructor-preview">
-                  <div class="instructor-preview__image" style="background-image: url(./img/{{ trener.image or 'trener@2x.png' }})"></div>
-                  <div class="instructor-preview__name">{{ trener.name }}</div>
-                </div>
-              {% endfor %}
+            <div class="schedule__city">
+              <div class="schedule__title">Город</div>
+              <div class="schedule__content">{{ item.city }}</div>
             </div>
-          </div>
-          <div class="schedule__adress">
-            <div class="schedule__title">Адрес</div>
-            <div class="schedule__content">{{ item.adress }}</div>
-          </div>
-          <div class="schedule__price">
-            <div class="schedule__title">Стоимость</div>
-            <div class="schedule__content schedule__content_price">
-              {{ item.price }}
-              <a href="#" class="btn">Регистрация</a>
+            <div class="schedule__direction">
+              <div class="schedule__title">Направление</div>
+              <div class="schedule__content">{{ item.direction }}</div>
+            </div>
+            <div class="schedule__instructors">
+              <div class="schedule__title">Преподователи</div>
+              <div class="schedule__content">
+                {% for trener in item.treners %}
+                  <div class="instructor-preview">
+                    <div class="instructor-preview__image" style="background-image: url(./img/{{ trener.image or 'trener@2x.png' }})"></div>
+                    <div class="instructor-preview__name">{{ trener.name }}</div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="schedule__adress">
+              <div class="schedule__title">Адрес</div>
+              <div class="schedule__content">{{ item.adress }}</div>
+            </div>
+            <div class="schedule__price">
+              <div class="schedule__title">Стоимость</div>
+              <div class="schedule__content schedule__content_price">
+                {{ item.price }}
+                <a href="#" class="btn btn_small">Регистрация</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 {% endmacro %}
 
@@ -109,6 +112,38 @@ title: Schedule
                   ],
                   adress: 'метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж',
                   price: '17900'
+                },
+                {
+                  dayStart: '01.12.2018',
+                  dayEnd: '03.12.2018',
+                  city: 'Курск',
+                  direction: 'Пилатес',
+                  treners: [
+                    {
+                      name: 'Deva Premal'
+                    },
+                    {
+                      name: 'Otmar Doležal'
+                    }
+                  ],
+                  adress: 'метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж',
+                  price: '17900'
+                },
+                {
+                  dayStart: '01.12.2018',
+                  dayEnd: '03.12.2018',
+                  city: 'Санкт-Петербург',
+                  direction: 'Пилатес',
+                  treners: [
+                    {
+                      name: 'Otmar Doležal'
+                    },
+                    {
+                      name: 'Otmar Doležal'
+                    }
+                  ],
+                  adress: 'метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж',
+                  price: '17900'
                 }
               ]
             }
@@ -120,13 +155,56 @@ title: Schedule
           {% endfor %}
         </ul>
         <ul class="schedule-page__list" data-tabs-container='directions'>
-          <li class="schedule-page__item">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam voluptatum nam animi quo dolorem ea! Repellat quia, optio dolor quas omnis animi reprehenderit provident quidem esse amet quibusdam quisquam. Dolor, possimus dolorem aperiam officiis aspernatur facere voluptatum vero enim ex ab sint porro commodi, culpa dolorum accusamus eligendi corporis? Eveniet?
-          </li>
+          {% set schedules1 = [
+            {
+              title: 'Постуральная гимнастика уровень 1 (Групповые программы) часть 1',
+              blocks: [
+                { 
+                  dayStart: '01.12.2018',
+                  dayEnd: '03.12.2018',
+                  city: 'Москва',
+                  direction: 'Пилатес',
+                  treners: [
+                    {
+                      name: 'Otmar Doležal'
+                    },
+                    {
+                      name: 'Otmar Doležal'
+                    }
+                  ],
+                  adress: 'метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж',
+                  price: '17900'
+                },
+                {
+                  dayStart: '01.12.2018',
+                  dayEnd: '03.12.2018',
+                  city: 'Москва',
+                  direction: 'Пилатес',
+                  treners: [
+                    {
+                      name: 'Otmar Doležal'
+                    },
+                    {
+                      name: 'Otmar Doležal'
+                    }
+                  ],
+                  adress: 'метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж',
+                  price: '17900'
+                }
+              ]
+            }
+          ] %}
+          {% for item in [0,1,2] %}
+              {% for item in schedules1 %}
+                <li class="schedule-page__item">
+                  {{ block(item) }}
+                </li>
+              {% endfor %}
+          {% endfor %}
         </ul>
         <ul class="schedule-page__list" data-tabs-container='cities'>
           <li class="schedule-page__item">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem quo at eveniet, possimus numquam voluptate eaque rerum blanditiis id ratione omnis cum distinctio dolore quibusdam? Adipisci repellat autem nihil officiis.
+            {{ block(schedules[0]) }}
           </li>
         </ul>
     </div>
