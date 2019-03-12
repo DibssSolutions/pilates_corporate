@@ -1,0 +1,360 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>UI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <a href="#" class="course ">
+        <div class="course__top">
+          <div class="course__aside">Пилатес</div>
+          <h3 class="course__title title title_md">Пилатес для беременных</h3>
+        </div>
+        <div class="course__bottom">
+          <div class="course__time">90 мин</div>
+          <div class="course__price">1 500 ₽</div>
+        </div>
+        <div class="course__buy"> Купить курс </div>
+      </a>
+      <br>
+      <a href="#" class="course course_img">
+        <div class="course__img">
+          <img src="./img/course.png" alt="course">
+        </div>
+        <div class="course__top">
+          <div class="course__aside">Пилатес</div>
+          <h3 class="course__title title title_md">Пилатес для беременных</h3>
+        </div>
+        <div class="course__bottom">
+          <div class="course__time">90 мин</div>
+          <div class="course__price">1 500 ₽</div>
+        </div>
+        <div class="course__buy"> Купить курс </div>
+      </a>
+      <br>
+      <a href="#" class="course course_img course_buy">
+        <div class="course__img">
+          <img src="./img/course.png" alt="course">
+        </div>
+        <div class="course__top">
+          <div class="course__aside">Пилатес</div>
+          <h3 class="course__title title title_md">Пилатес для беременных</h3>
+        </div>
+        <div class="course__bottom">
+          <div class="course__time">90 мин</div>
+          <div class="course__price">1 500 ₽</div>
+        </div>
+        <div class="course__buy"> Купить курс </div>
+      </a>
+      <br>
+      <a href="#" class="event ">
+        <div class="event__img">
+          <img src="./img/event1.jpg" alt="event">
+        </div>
+        <div class="event__date"><span>Пилатес</span> / 01.12.2019</div>
+        <h4 class="event__title title title_md">MATWORK УРОВЕНЬ 1 - (БАЗОВЫЙ КУРС)</h4>
+      </a>
+      <br>
+      <div class="instructor ">
+        <div class="instructor__top"></div>
+        <div class="instructor__bottom">
+          <div class="instructor__img" style="background-image: url(./img/instructor.png)"></div>
+          <h4 class="instructor__title title title_md">Gussie Hammond</h4>
+          <div class="instructor__aside">Стаж инструктора 10 лет</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <br>
+      <div class="testimonial ">
+        <div class="testimonial__top">
+          <div class="testimonial__img" style="background-image: url(./img/testimonial.png)"></div>
+          <div class="testimonial__main">
+            <h4 class="testimonial__title title title_md">Harold Roberts</h4>
+            <div class="testimonial__aside">Студентка Пилатоса</div>
+          </div>
+        </div>
+        <div class="testimonial__bottom">
+          <div class="testimonial__quote"></div>
+          <p>Lorem ipsum dolor sit amet, outdd consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <br>
+      <!-- <div class="feedback__wrap inner"> -->
+      <div class="feedback ">
+        <div class="feedback__inner">
+          <h3 class="feedback__title title title_lg">Получите подробную консультацию об обучении</h3>
+          <form action="/" class="form js-validation">
+            <ul class="form__row row">
+              <li class="form__col col-3 col-lg-4 col-sm-12">
+                <div class="form-group">
+                  <input type="text" placeholder="Имя" data-validation="length" data-validation-length="min2" data-validation-error-msg="Имя должно быть не менее двух символов">
+                </div>
+              </li>
+              <li class="form__col col-3 col-lg-4 col-sm-12">
+                <div class="form-group">
+                  <input type="text" placeholder="Телефон" data-validation="custom" data-validation-regexp="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" data-validation-error-msg="Пожалуйста, введите правильный номер телефона" />
+                </div>
+              </li>
+              <li class="form__col col-3 col-lg-4 col-sm-12">
+                <div class="form-group">
+                  <input type="text" placeholder="Email" data-validation="email" data-validation-error-msg="Пожалуйста, введите правильный адрес" />
+                </div>
+              </li>
+              <li class="form__col col-3 col-lg-12">
+                <div class="form__btn">
+                  <button type="submit" class="btn btn_md">Отправить</button>
+                </div>
+              </li>
+            </ul>
+            <div class="feedback__check">
+              <!-- begin input -->
+              <label class="checkbox">
+                <input type="checkbox" name="checkbox" checked data-validation="required" data-validation-event="keyup change" data-validation-error-msg="Пожалуйста, примите условия обработки персональных данных" />
+                <span class="checkbox__text">Я согласен с <a href="#">условиями обработки персональных данных</a></span>
+                <span class="checkbox__icon"></span>
+              </label>
+              <!-- end input -->
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- </div> -->
+      <br>
+      <div class="seminar ">
+        <a href="#" class="seminar__top" style="background-image: url(./img/seminar.png)">
+          <div class="seminar__btn">
+            <button type="button" class="btn btn_bold">Пилатес </div>
+        </a>
+        <ul class="seminar__list">
+          <li class="seminar__item"><a href="#">MatWork уровень 1 - (Базовый курс)</a></li>
+          <li class="seminar__item"><a href="#">MatWork уровень 2 + работа с малым оборудованием</a></li>
+          <li class="seminar__item"><a href="#">Работа с большим оборудованием</a></li>
+          <li class="seminar__item"><a href="#">Пилатес для беременных</a></li>
+          <li class="seminar__item"><a href="#">Пилатес для беременных и людей старшего возраста</a></li>
+          <li class="seminar__item"><a href="#">Функциональный пилатес</a></li>
+        </ul>
+      </div>
+      <br>
+      <div class="contacts">
+        <div class="map" id="map"></div>
+        <div class="contacts__info contacts-info">
+          <h4 class="contacts-info__title title title_md">Москва</h4>
+          <div class="contacts-info__aside">Адрес</div>
+          <address>Метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж</address>
+          <div class="contacts-info__aside">Телефон</div>
+          <div class="contacts-info__phone">
+            <a href="tel:+74952553056">+7(495)255-30-56</a>
+          </div>
+          <div class="contacts-info__aside">Почта</div>
+          <div class="contacts-info__phone">
+            <a href="mailto:contact@pilates-institute.ru">Сontact@pilates-institute.ru</a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="gallery js-gallery-slider-wrap">
+        <div class="gallery__slider js-gallery">
+          <div class="gallery__slide">
+            <a data-fancybox="gallery" href="./img/gallery.png" class="gallery__item js-fancybox" style="background-image: url(./img/gallery.png)"></a>
+          </div>
+          <div class="gallery__slide">
+            <a data-fancybox="gallery" href="./img/event2.png" class="gallery__item js-fancybox" style="background-image: url(./img/event2.png)">
+              <button type="button" class="gallery__play play">
+                <svg class="icon icon-play">
+                  <use xlink:href="img/sprite.svg#icon-play"></use>
+                </svg>
+              </button>
+            </a>
+          </div>
+          <div class="gallery__slide">
+            <a data-fancybox="gallery" href="./img/gallery.png" class="gallery__item js-fancybox" style="background-image: url(./img/gallery.png)"></a>
+          </div>
+          <div class="gallery__slide">
+            <a data-fancybox="gallery" href="./img/gallery.png" class="gallery__item js-fancybox" style="background-image: url(./img/gallery.png)"></a>
+          </div>
+          <div class="gallery__slide">
+            <a data-fancybox="gallery" href="./img/gallery.png" class="gallery__item js-fancybox" style="background-image: url(./img/gallery.png)"></a>
+          </div>
+          <div class="gallery__slide">
+            <a data-fancybox="gallery" href="./img/gallery.png" class="gallery__item js-fancybox" style="background-image: url(./img/gallery.png)"></a>
+          </div>
+          <div class="gallery__slide">
+            <a data-fancybox="gallery" href="./img/gallery.png" class="gallery__item js-fancybox" style="background-image: url(./img/gallery.png)"></a>
+          </div>
+        </div>
+        <div class="gallery__nav-wrap">
+          <div class="gallery__prev js-arrow-prev sm-hide">
+            <button type="button" class="prev">
+              <div class="prev__link">
+                <svg class="icon icon-arrow-left">
+                  <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div class="gallery__next js-arrow-next sm-hide">
+            <button type="button" class="next">
+              <div class="next__link">
+                <svg class="icon icon-arrow-right">
+                  <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div class="gallery__nav js-gallery-nav">
+            <div class="gallery__nav-item">
+              <div class="gallery__img-wrap">
+                <img src="./img/gallery.png">
+              </div>
+            </div>
+            <div class="gallery__nav-item">
+              <div class="gallery__img-wrap">
+                <img src="./img/event2.png">
+              </div>
+            </div>
+            <div class="gallery__nav-item">
+              <div class="gallery__img-wrap">
+                <img src="./img/gallery.png">
+              </div>
+            </div>
+            <div class="gallery__nav-item">
+              <div class="gallery__img-wrap">
+                <img src="./img/gallery.png">
+              </div>
+            </div>
+            <div class="gallery__nav-item">
+              <div class="gallery__img-wrap">
+                <img src="./img/gallery.png">
+              </div>
+            </div>
+            <div class="gallery__nav-item">
+              <div class="gallery__img-wrap">
+                <img src="./img/gallery.png">
+              </div>
+            </div>
+            <div class="gallery__nav-item">
+              <div class="gallery__img-wrap">
+                <img src="./img/gallery.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="social-card ">
+        <div class="social-card__img" style="background-image: url(./img/event1.jpg)"></div>
+        <ul class="social-card__socials white-block">
+          <li class="white-block__item">
+            <a href="#">
+              <svg class="icon icon-insta">
+                <use xlink:href="img/sprite.svg#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="white-block__item">
+            <a href="#">
+              <svg class="icon icon-vk">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="white-block__item">
+            <a href="#">
+              <svg class="icon icon-facebook">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="modal" data-modal="registration">
+        <div class="modal__container" data-modal-container>
+          <button class="modal__close" data-modal-close>
+            <svg class="icon icon-close">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="modal__content">
+            <h2 class="modal__title"> Регистрация на семинар </h2>
+            <div class="modal__form-wrapper">
+              <h4 class="modal__subtitle"> Microwave Cooking Is The Wave Of The Future </h4>
+              <h4 class="modal__date title title_sm">01.12.2018 — 03.12.2018</h4>
+              <form action="/" class="registration-form js-validation">
+                <div class="form-group">
+                  <input class="form-group__border-input" type="text" placeholder="Имя" data-validation="length" data-validation-length="min2" data-validation-error-msg="Имя должно быть не менее двух символов" />
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-group__border-input" placeholder="Телефон" data-validation="custom" data-validation-regexp="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" data-validation-error-msg="Пожалуйста, введите правильный номер телефона" />
+                </div>
+                <div class="form-group">
+                  <input class="form-group__border-input" type="text" placeholder="Email" data-validation="email" data-validation-error-msg="Пожалуйста, введите правильный адрес" />
+                </div>
+                <div class="registration-form__submit">
+                  <button type="submit" class="btn">Записаться на курс</button>
+                </div>
+                <div class="registration-form__agreement"> Я согласен с условиями обработки персональных данных </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" data-modal="registration-success">
+        <div class="modal__container" data-modal-container>
+          <button class="modal__close" data-modal-close>
+            <svg class="icon icon-close">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="modal__content">
+            <div class="modal__icon">
+              <div class="success-mark">
+                <svg class="icon icon-check">
+                  <use xlink:href="img/sprite.svg#icon-check"></use>
+                </svg>
+              </div>
+            </div>
+            <h2 class="modal__title"> Регистрация на семинар </h2>
+            <div class="modal__text"> Мы свяжемся с Вами в течении N часов для подтвреждения регистрации </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=7a9648bf-398b-4673-ad66-512ef28875ce&lang=ru_RU" type="text/javascript"></script> -->
+    <!-- <script>
+		const map = document.querySelectorAll('.map');
+		if (map) {
+      if(ymaps) {
+			map.forEach(function(el) {
+				ymaps.ready(function() {
+				  var map = new ymaps.Map(el, {
+					center: [55.76, 37.64], 
+					zoom: 10
+				  });
+				  map.behaviors.disable('scrollZoom');
+				  map.controls.remove('smallMapDefaultSet');
+				  map.controls.remove('trafficControl');
+				  map.controls.remove('rulerControl');
+				  map.container.fitToViewport();
+				});
+      });
+    }
+			}
+        
+    </script> -->
+    <!-- END scripts -->
+  </body>
+
+</html>
