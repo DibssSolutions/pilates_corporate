@@ -62,15 +62,33 @@
 
 .article,
 article
+	max-width: 900px
 	&__title,
 	h1
 		&:not(:last-child)
 			margin-bottom: 30px
-	h1
+	h1, h4
 		@extend .title
+		&:not(:first-child)
+			margin-top: 18px
+	h4
+		@extend .title_sm
 	p
-		margin-top: 30px
-		max-width: 900px
-		+ms
-			line-height: 1.8
-			padding-top: 20px
+		line-height: 1.95
+		letter-spacing: -.003em
+		&:not(:first-child)
+			margin-top: 18px
+	ul
+		&:not(:first-child)
+			margin-top: 10px
+		li
+			padding: 9px 0 9px 30px
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				background-color: $text
+				left: 0
+				top: 50%
+				height: 1px
+				width: 15px
