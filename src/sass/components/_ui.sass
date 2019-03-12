@@ -132,31 +132,23 @@
 		&:before
 			background-color: $white
 
-// 												EVENT
+// EVENT
 .event
 	display: block
 	color: $black
 	transition: transform .15s
+	+sm
+		margin: 0 -16px
 	+hover
 		transform: translateY(-8px)
 	&__img
-		+ms
-			width: 100%
-			position: relative
-			height: 300px
-			overflow: hidden
+		height: 300px
 		img
-			max-width: 100%
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
 			display: block
-			+sm
-				min-height: 300px
-			+ms
-				position: absolute
-				top: 0
-				left: 50%
-				transform: translateX(-50%)
-				max-width: none
-				width: 500px
 	&__date
 		font-size: 16px
 		line-height: 1.75
@@ -181,7 +173,7 @@
 			padding: 0 16px
 			margin: 0
 
-// 										INSTRUCTOR
+// INSTRUCTOR
 .instructor
 	background-color: $white
 	box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
@@ -299,6 +291,7 @@
 	padding: 30px
 	background-color: $blue
 	+sm
+		margin: 0 -16px
 		padding: 30px 16px
 	&_md
 		+md

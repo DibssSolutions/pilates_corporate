@@ -95,28 +95,12 @@
 		+md
 			margin-bottom: 16px
 	&__btn
-		+sm
-			margin-top: 18px
-
-// FORM
-.main-feedback
-	&__inner
-		+md
-			padding: 0
-	&__wrap
-		padding-top: 150px
-		+md
-			padding-top: 80px
-
+		margin-top: 18px
+		
 // EVENT
 .event-block
-	&-wrap
-		padding-top: 150px
-		+md
-			padding-top: 60px
-	&__inner
-		+ms
-			padding: 0
+	+sm
+		overflow: visible
 	&__head
 		display: flex
 		align-items: center
@@ -131,11 +115,7 @@
 	&__list
 		padding-top: 60px
 		+sm
-			// max-width: 400px
-			// margin: 0 auto
 			padding-top: 30px
-			// &.row
-			// 	margin: 0
 	&__col
 		+sm
 			&:not(:first-child)
@@ -154,43 +134,12 @@
 		margin-top: 30px
 		+lg
 			display: none
-		&_mob
-			display: none
-			.btn
-				min-width: 288px
-			+lg
-				display: block
-				text-align: center
-				margin-top: 40px
+	&__btn-mob
+		+lg
+			display: block
+			text-align: center
+			margin-top: 37px
 
-// INSTRUCTOR
-.instructor-block
-	padding-top: 150px
-	+lg
-		padding-top: 78px
-	&__head
-		display: flex
-		align-items: center
-		justify-content: space-between
-	&__row
-		padding-top: 70px
-		+md
-			margin: 0 auto
-			padding-top: 39px
-	&__col
-		margin-top: 16px
-	&__btn
-		+sm
-			display: none
-		&_mob
-			display: none
-			.btn
-				min-width: 288px
-			+sm
-				display: block
-				text-align: center
-				margin-top: 30px
-	
 // testimonial
 .testimonial-block
 	padding-top: 150px
