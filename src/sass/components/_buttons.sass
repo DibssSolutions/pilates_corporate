@@ -47,18 +47,6 @@
 			box-shadow: 0 19px 25px -12px $blue
 		// +md
 		// 	padding: 15px 20px
-	&_back
-		background-color: $white
-		box-shadow: 0 7px 36px -18px rgba(0, 0, 0, 0.5)
-		color: $text
-		padding: 15px 15px 15px 50px
-		+hover
-			color: $white
-		.icon
-			position: absolute
-			top: 50%
-			left: 15px
-			transform: translateY(-50%)
 	&_white
 		background-color: $white
 		color: $grayLight
@@ -86,6 +74,35 @@
 		+hover
 			box-shadow: 0 12px 20px -6px $orange
 
+
+.btn-back
+	background-color: $white
+	box-shadow: 0 7px 36px -18px rgba(0, 0, 0, 0.5)
+	color: $text
+	padding: 15px 20px 15px 50px
+	display: inline-block
+	border: none
+	text-decoration: none
+	font-size: 15px
+	+verdana
+	font-weight: 400
+	letter-spacing: 0.003em
+	border-radius: 10px
+	text-align: center
+	vertical-align: top
+	position: relative
+	outline: none
+	transition: background-color .3s, box-shadow .3s, color .3s
+	line-height: 1.4
+	cursor: pointer
+	+hover
+		color: $white
+		background-color: $orange
+	.icon
+		position: absolute
+		top: 50%
+		left: 15px
+		transform: translateY(-50%)
 .plus
 	display: block
 	+circle(80)
