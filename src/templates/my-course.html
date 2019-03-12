@@ -1,0 +1,43 @@
+---
+title: My course
+smWrap: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	{{header.block({class: 'header_bg'})}}
+	<div class="my-course">
+		<div class="my-course__inner inner">
+			<div class="my-course__btn">
+				<button class="btn-back">
+					{{mixins.icon('back')}}
+					Все курсы
+				</button>
+			</div>
+			<div class="my-course__main">
+				<div class="my-course__left">
+					{{ui.course({
+						class: 'course_img course_lg',
+						img: 'course.png',
+						title: 'Постуральная гимнастика — гимнастика осанки',
+						single: '90 мин'
+					})}}
+				</div>
+				<div class="my-course__right">
+					<article class="article">
+						<h2 class="title title_xl">Постуральная гимнастика — гимнастика осанки</h2>
+						<p>Ведущая - Жанна Комлева, мастер-тренер Пилатес Институт Россия, одна из самых опытных тренеров нашей страны по пилатесу и постуральной гимнастике.</p>
+						<p>Осанка обеспечивается балансом силы и эластичности мышц, действующих на сустав. Боль, волнение, тревога обычно сопровождаются напряжением скелетных мышц. Также ежедневное принятие неправильных поз и движений приводит к мышечным дисбалансам, которые меняют нормальное положение сустава. Как следствие - сустав теряет двигательный объём, а тело приобретает некорректную осанку.</p>
+					</article>
+					<div class="my-course__video video">
+						<a data-fancybox="gallery" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="video__item js-fancybox" style="background-image: url(./img/gallery.png)"></a>
+						<button type="button" class="video__play play">
+							{{mixins.icon('play')}}
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{footer.block()}}
+{% endblock %}

@@ -39,3 +39,5 @@ PageList:
   ready: 50
 - file: internal-directions.html
   ready: 100
+- file: my-course.html
+  ready: 100

@@ -1,0 +1,18 @@
+.video
+	position: relative
+	+hover
+		.play
+			transform: translate(-50%, -50%) scale(1.2)
+	&__play
+		+vcenter
+	&__item
+		display: block
+		+cover
+		border-radius: 10px
+		overflow: hidden
+		height: 450px
+		.my-course &
+			+sm
+				border-radius: 0
+		+xs
+			height: 260px

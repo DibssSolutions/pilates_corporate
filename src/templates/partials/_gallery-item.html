@@ -3,10 +3,10 @@
 <div class="gallery js-gallery-slider-wrap">
 	<div class="gallery__slider js-gallery">
 		{% for item in props %}
-			 <div class="gallery__slide">
+			 <div class="gallery__slide video">
 				 {% if item.video %}
 				 <a data-fancybox="gallery" href="{{item.video}}" class="gallery__item js-fancybox" style="background-image: url(./img/{{item.img}})">
-					<button type="button" class="gallery__play play">
+					<button type="button" class="video__play play">
 						{{mixins.icon('play')}}
 					</button>
 				</a>

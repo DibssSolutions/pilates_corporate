@@ -71,15 +71,15 @@ const options = {
   },
   dotsClass: 'small-dots',
   responsive: [
-    {
-      breakpoint: 1023,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    },
+    // {
+    //   breakpoint: 1023,
+    //   settings: {
+    //     slidesToShow: 2,
+    //     slidesToScroll: 1,
+    //     infinite: true,
+    //     dots: true
+    //   }
+    // },
     {
       breakpoint: 767,
       settings: {
