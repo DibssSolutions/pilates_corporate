@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>personal-office</title>
+    <title>Basket</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -106,109 +106,86 @@
           </div>
         </div>
       </header>
-      <article class="article">
-        <h1 class="article__title title">Мои курсы</h1>
-      </article>
-      <div class="personal-office online-courses">
-        <div class="personal-office__inner inner">
-          <div class="online-courses__main-list">
-            <ul class="online-courses__row row">
-              <li class="online-courses__main-col col-4 col-md-6 col-xs-12">
-                <a href="#" class="course course_img course_lg">
-                  <div class="course__img">
-                    <img src="./img/course.png" alt="course">
+      <div class="basket-page">
+        <div class="basket-page__inner inner">
+          <h2 class="basket-page__title title">Корзина</h2>
+          <div class="basket-page__basket">
+            <div class="basket row">
+              <div class="basket__info col-9 col-sm-12">
+                <div class="basket-info">
+                  <div class="basket-info__name">
+                    <div class="basket-info__title">Курс</div>
+                    <div class="basket-info__text">Microwave Cooking Is The Wave Of The Future</div>
                   </div>
-                  <div class="course__top">
-                    <div class="course__aside">Пилатес</div>
-                    <h3 class="course__title title title_md">Пилатес для беременных</h3>
+                  <div class="basket-info__duration">
+                    <div class="basket-info__title">Длительность</div>
+                    <div class="basket-info__text">90 минут</div>
                   </div>
-                  <div class="course__bottom">
-                    <div class="course__time">90 мин</div>
+                  <div class="basket-info__price">
+                    <div class="basket-info__title">Стоимость</div>
+                    <div class="basket-info__text">1500 ₽</div>
                   </div>
-                  <div class="course__buy"> Купить курс </div>
-                </a>
-              </li>
-              <li class="online-courses__main-col col-4 col-md-6 col-xs-12">
-                <a href="#" class="empty">
-                  <div class="empty__inner">
-                    <button type="button" class="empty__plus plus">
-                      <svg class="icon icon-plus">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                  <div class="basket-info__delete">
+                    <button type="button" class="delete-btn">
+                      <svg class="icon icon-close">
+                        <use xlink:href="img/sprite.svg#icon-close"></use>
                       </svg>
                     </button>
-                    <div class="empty__title">Выбрать новый курс</div>
                   </div>
-                </a>
-              </li>
-            </ul>
+                </div>
+              </div>
+              <div class="basket__total col-3  col-sm-12">
+                <div class="basket-total">
+                  <span class="basket-total__title">Итого:</span>
+                  <span class="basket-total__number">1500 ₽</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="personal-office__recommend">
-            <h2 class="personal-office__title title">Рекомендуем</h2>
-            <div class="personal-office__row row js-small-slider">
-              <div class="personal-office__col col-3 col-md-6 col-sm-12">
-                <a href="#" class="course course_img">
-                  <div class="course__img">
-                    <img src="./img/course.png" alt="course">
+          <div class="basket-page__descr section-sm">
+            <p>Чтобы оформить заказ, введите ниже свой e-mail.</p>
+            <p>Если вы еще не зарегистрированы на сайте, вам автоматически будет создан аккаунт для этого e-mail’а.</p>
+            <p>Пожалуйста, сразу активируйте ссылку, которая придёт на почту, после чего вы получите пароль для входа.</p>
+          </div>
+          <div class="basket-page__checkout-wrapper row">
+            <div class="basket-page__checkout col-6 col-sm-12">
+              <form action="/" class="checkout-form js-validation">
+                <div class="checkout-form__inputs row">
+                  <div class="col-6 col-sm-12">
+                    <div class="form-group">
+                      <input class="form-group__border-input" type="text" placeholder="Имя" data-validation="required length" data-validation-length="min2" data-validation-error-msg="Пожалуйста, введите ваше имя" />
+                    </div>
                   </div>
-                  <div class="course__top">
-                    <div class="course__aside">Пилатес</div>
-                    <h3 class="course__title title title_md">Пилатес для беременных</h3>
+                  <div class="col-6 col-sm12">
+                    <div class="form-group">
+                      <input class="form-group__border-input" type="text" placeholder="Фамилия" data-validation="required length" data-validation-length="min2" data-validation-error-msg="Пожалуйста, введите вашу фамилию" />
+                    </div>
                   </div>
-                  <div class="course__bottom">
-                    <div class="course__time">90 мин</div>
-                    <div class="course__price">1 500 ₽</div>
+                </div>
+                <h4 class="checkout-form__title title title_md">Способ оплаты</h4>
+                <div class="checkout-form__payment row">
+                  <div class="col-6 col-sm-12">
+                    <label class="btn-checkbox">
+                      <input type="radio" name="payment" checked />
+                      <span class="btn-checkbox__text">Банковская карта</span>
+                      <span class="btn-checkbox__bg"></span>
+                    </label>
                   </div>
-                  <div class="course__buy"> Купить курс </div>
-                </a>
-              </div>
-              <div class="personal-office__col col-3 col-md-6 col-sm-12">
-                <a href="#" class="course course_img">
-                  <div class="course__img">
-                    <img src="./img/course.png" alt="course">
+                  <div class="col-6 col-sm-12">
+                    <label class="btn-checkbox">
+                      <input type="radio" name="payment" />
+                      <span class="btn-checkbox__text">Электронные деньги</span>
+                      <span class="btn-checkbox__bg"></span>
+                    </label>
                   </div>
-                  <div class="course__top">
-                    <div class="course__aside">Пилатес</div>
-                    <h3 class="course__title title title_md">Пилатес для беременных</h3>
+                </div>
+                <div class="checkout-form__agreement user-agreement"> Нажимая кнопку «Оплатить», я принимаю условия Договора публичной оферты и даю своё согласие НОУ «ПИЛАТЕС Институт» на обработку моих персональных данных, в соответствии с ФЗ от 27.07.2006 года №152-ФЗ «О персональных данных». </div>
+                <div class="checkout-form__submit-wrapper row">
+                  <div class="col-6 checkout-form__submit">
+                    <button type='submit' class='btn btn_w100'>Оплатить</button>
                   </div>
-                  <div class="course__bottom">
-                    <div class="course__time">90 мин</div>
-                    <div class="course__price">1 500 ₽</div>
-                  </div>
-                  <div class="course__buy"> Купить курс </div>
-                </a>
-              </div>
-              <div class="personal-office__col col-3 col-md-6 col-sm-12">
-                <a href="#" class="course course_img">
-                  <div class="course__img">
-                    <img src="./img/course.png" alt="course">
-                  </div>
-                  <div class="course__top">
-                    <div class="course__aside">Пилатес</div>
-                    <h3 class="course__title title title_md">Пилатес для беременных</h3>
-                  </div>
-                  <div class="course__bottom">
-                    <div class="course__time">90 мин</div>
-                    <div class="course__price">1 500 ₽</div>
-                  </div>
-                  <div class="course__buy"> Купить курс </div>
-                </a>
-              </div>
-              <div class="personal-office__col col-3 col-md-6 col-sm-12">
-                <a href="#" class="course course_img">
-                  <div class="course__img">
-                    <img src="./img/course.png" alt="course">
-                  </div>
-                  <div class="course__top">
-                    <div class="course__aside">Пилатес</div>
-                    <h3 class="course__title title title_md">Пилатес для беременных</h3>
-                  </div>
-                  <div class="course__bottom">
-                    <div class="course__time">90 мин</div>
-                    <div class="course__price">1 500 ₽</div>
-                  </div>
-                  <div class="course__buy"> Купить курс </div>
-                </a>
-              </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
