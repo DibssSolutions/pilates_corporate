@@ -166,22 +166,18 @@ $('.js-schedule-slider').each((index, el) => {
     const schedulesSlider = $(el);
     const schedules = schedulesSlider.children().length;
     const initedSliderClass = schedulesSlider.hasClass('slick-slider');
-    console.log(initedSliderClass);
-    // const initSlider = $('.js-schedules-slider.slick-slider');
 
     if (mediaWidth(768)) {
       if (schedules < 2) return;
       if (initedSliderClass.length) return;
-      schedulesSlider.not('.slick-initialized').slick(options);
+      schedulesSlider.not('.slick-initialized').slick(optionsM);
     } else if (mediaWidth(1023)) {
       if (schedules < 3) return;
       if (initedSliderClass.length) return;
       schedulesSlider.not('.slick-initialized').slick(optionsM);
     } else {
-      console.log(initedSliderClass.length);
       if (!initedSliderClass) return;
       schedulesSlider.slick('unslick');
-      // schedulesSlider.is('.slick-initialized').slick(unslick);
     }
   };
 
@@ -220,6 +216,36 @@ galleryNav.slick({
   responsive: [
     {
       breakpoint: 768,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: false
+      }
+    }
+  ]
+});
+
+// 										INSTRUCTOR slider
+const instructorSlider = $('.js-instructor-slider');
+const instructorNav = $('.js-instructor-slider-nav');
+
+instructorSlider.slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  asNavFor: instructorNav
+});
+instructorNav.slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: instructorSlider,
+  // centerMode: true,
+  focusOnSelect: true,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 430,
       settings: {
         slidesToShow: 4,
         slidesToScroll: 1,

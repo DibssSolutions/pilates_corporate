@@ -1,0 +1,130 @@
+---
+title: Instructor
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	{{header.block({class: 'header_bg'})}}
+	<div class="instructor-page">
+		<div class="instructor-page__inner inner">
+			<div class="instructor-page__btn">
+				<button class="btn btn_back">
+					{{mixins.icon('back')}}
+					Преподователи
+				</button>
+			</div>
+			<div class="instructor-page__main">
+				<div class="instructor-page__left">
+					{{ui.socialCard({
+						slider: true,
+						img: [
+							'beatriz.png',
+							'beatriz.png',
+							'beatriz.png',
+							'beatriz.png'
+						]
+					})}}
+				</div>
+				<div class="instructor-page__right">
+					<h2 class="instructor-page__title title title_xl">Постуральная гимнастика — гимнастика осанки</h2>
+					<div class="instructor-page__text">
+						<p>Ведущая - Жанна Комлева, мастер-тренер Пилатес Институт Россия, одна из самых опытных тренеров нашей страны по пилатесу и постуральной гимнастике.</p>
+						<p>Осанка обеспечивается балансом силы и эластичности мышц, действующих на сустав. Боль, волнение, тревога обычно сопровождаются напряжением скелетных мышц. Также ежедневное принятие неправильных поз и движений приводит к мышечным дисбалансам, которые меняют нормальное положение сустава. Как следствие - сустав теряет двигательный объём, а тело приобретает некорректную осанку.</p>
+					</div>
+					<div class="instructor-page__btn">
+						<a href="#" class="btn">Полное расписание</a>
+					</div>
+				</div>
+			</div>
+			{% set schedules = [
+				{
+					  title: 'Microwave Cooking Is The Wave Of The Future',
+					  blocks: [
+						{ 
+						  dayStart: '01.12.2018',
+						  dayEnd: '03.12.2018',
+						  city: 'Москва',
+						  direction: 'Пилатес',
+						  treners: [
+							  {
+								  name: 'Otmar Doležal'
+								},
+								{
+									name: 'Otmar Doležal'
+								}
+								],
+								adress: 'метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж',
+								price: '17900'
+							},
+							{
+								dayStart: '01.12.2018',
+								dayEnd: '03.12.2018',
+						  city: 'Санкт-Петербург',
+						  direction: 'Пилатес',
+						  treners: [
+							  {
+							  name: 'Otmar Doležal'
+							},
+							{
+								name: 'Otmar Doležal'
+							}
+						  ],
+						  adress: 'метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж',
+						  price: '17900'
+						}
+						]
+					}
+					] %}
+			{% for item in schedules %}
+			<div class="instructor-page__schedule">
+				  {{ui.schedule(item)}}
+			</div>
+			{% endfor %}
+			{% set schedulesSecond = [
+				{
+					  title: 'Microwave Cooking Is The Wave Of The Future',
+					  blocks: [
+						{ 
+						  dayStart: '01.12.2018',
+						  dayEnd: '03.12.2018',
+						  city: 'Москва',
+						  direction: 'Пилатес',
+						  treners: [
+							  {
+								  name: 'Otmar Doležal'
+								},
+								{
+									name: 'Otmar Doležal'
+								}
+								],
+								adress: 'метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж',
+								price: '17900'
+							},
+							{
+								dayStart: '01.12.2018',
+								dayEnd: '03.12.2018',
+						  city: 'Санкт-Петербург',
+						  direction: 'Пилатес',
+						  treners: [
+							  {
+							  name: 'Otmar Doležal'
+							},
+							{
+								name: 'Otmar Doležal'
+							}
+						  ],
+						  adress: 'метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж',
+						  price: '17900'
+						}
+						]
+					}
+					] %}
+			{% for itemSecond in schedulesSecond %}
+			<div class="instructor-page__schedule">
+				  {{ui.schedule(itemSecond)}}
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	{{footer.block()}}
+{% endblock %}

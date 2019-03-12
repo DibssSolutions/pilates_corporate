@@ -110,7 +110,8 @@
 		padding-top: 40px
 		transition: color .3s
 		+sm
-			margin: 20px -15px 0
+			margin: 0
+			padding-top: 10px
 		.course_buy &
 			display: block
 
@@ -125,6 +126,8 @@
 		height: 1px
 		background-color: $black
 		transition: background-color .3s
+		+sm
+			bottom: 50px
 	+hover
 		&:before
 			background-color: $white
@@ -371,10 +374,13 @@
 		+verdana
 		+f(15px, 400)
 		letter-spacing: 0.066em
-		padding: 20px
+		padding: 18px
 		background-color: $white
 		border-radius: 10px
 		width: 100%
+		border: 2px solid transparent
+		&.error
+			border: 2px solid $orange
 		&:focus
 			&::placeholder
 				font-size: 0
@@ -424,12 +430,16 @@
 		border: 0
 		clip: rect(0 0 0 0)
 		overflow: hidden
+		user-select: none
 		&:checked
 			~ .checkbox__icon
 				background-image: url(../img/check.svg)
 				background-size: 70%
 				background-repeat: no-repeat
 				background-position: 50% 50%
+		&.error
+			~ .checkbox__icon
+				border: 1px solid darken($orange, 20%)
 
 .form-contacts
 	max-width: 880px
@@ -642,3 +652,101 @@
 	display: block
 	+cover
 	height: 115px
+
+// 														SOCIAL CARD
+
+.social-card
+	&__img
+		height: 400px
+		display: block
+		+cover
+		border-radius: 10px
+		+ms
+			border-radius: 0
+	&__socials
+		margin: -40px auto 0
+	&__slider
+		white-space: nowrap
+		opacity: 0
+		visibility: hidden
+		transition: opacity .3s, visibility .3s
+		&.slick-initialized
+			white-space: normal
+			opacity: 1
+			visibility: visible
+	&__nav
+		margin: -40px auto 0
+		&-slide
+			padding: 0 10px
+			+ms
+				padding: 0 8px
+
+.white-block
+	padding: 15px 30px
+	background-color: $white
+	border-radius: 10px
+	display: flex
+	flex-wrap: wrap
+	max-width: 270px
+	align-items: center
+	justify-content: space-between
+	box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
+	+ms
+		max-width: 200px
+		padding: 10px 23px
+	&.white-block_slider
+		padding: 15px 10px
+		max-width: 290px
+	&__item
+		background-color: $body
+		border-radius: 10px
+		a
+			width: 50px
+			height: 50px
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 22px
+			+ms
+				font-size: 16.5px
+				width: 37.5px
+				height: 37.5px
+			.icon-vk
+				font-size: 15px
+				+ms
+					font-size: 11px
+		.white-block_slider &
+			display: block
+			+cover
+			width: 70px
+			height: 70px
+			+ms
+				width: 50px
+				height: 50px
+
+//											CERTIFICATE
+.certificate
+	display: flex
+	align-items: center
+	justify-content: center
+	+md
+		flex-wrap: wrap
+	&__img
+		img
+			display: block
+			max-width: 100%
+			+sm
+				max-height: 412px
+	&__descr
+		max-width: 355px
+		margin-left: 160px
+		+lg
+			margin-left: 60px
+		+md
+			margin-left: 30px
+		+md
+			margin-left: 0
+			margin-top: 70px
+			max-width: none
+	&__text
+		margin-top: 20px

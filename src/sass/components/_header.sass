@@ -15,7 +15,7 @@
 		color: rgba($text,.5)
 		box-shadow: 0 8px 65px -45px rgba(0, 0, 0, 0.5)
 	&__top
-		padding: 19px 0
+		padding: 16px 0 15px
 		text-transform: uppercase
 		font-size: 10px
 		letter-spacing: 0.025em
@@ -30,16 +30,18 @@
 		justify-content: center
 		align-items: center
 		flex-wrap: wrap
-		// a
-		// 	border-bottom: 1px solid transparent
-		// 	transition: border-color .3s
-		// 	+hover
-		// 		border-color: currentColor
 	&__contacts
 		margin-left: 26px
 		display: flex
+		a
+			display: inline-block
+			border-bottom: 1px solid transparent
+			transition: border-color .3s
 	&__phone
 		position: relative
+		+hover
+			a
+				border-color: currentColor
 		&:not(:last-child)
 			padding-right: 45px
 		&:after
@@ -50,6 +52,10 @@
 			top: 50%
 			margin-top: -2.5px
 			right: 20px
+	&__mail
+		+hover
+			a
+				border-color: currentColor
 	&__main
 		background-color: transparent
 		padding: 9px 0
