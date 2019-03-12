@@ -2,7 +2,9 @@ ProjectTitle: template
 
 PageList:
 - file: page.html
-  ready: 50
+  ready: 100
+- file: contacts.html
+  ready: 100
 - file: UI.html
   ready: 50
 - file: seminar.html
@@ -10,8 +12,6 @@ PageList:
 - file: online-courses.html
   ready: 50
 - file: single-course.html
-  ready: 50
-- file: contacts.html
   ready: 50
 - file: personal-ofiice.html
   ready: 50

@@ -160,8 +160,15 @@
 
 // CONTACTS
 .contacts-block
-	padding: 0 0 128px
+	padding-bottom: 128px
 	overflow: hidden
+	+md
+		padding-bottom: 0
+	&__col
+		+md
+			padding: 0
+			&:not(:last-child)
+				margin-bottom: 40px
 	&__map
 		+md
 			margin: 0 -16px
