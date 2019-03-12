@@ -5,29 +5,31 @@ PageList:
   ready: 100
 - file: contacts.html
   ready: 100
-- file: UI.html
-  ready: 50
-- file: seminar.html
-  ready: 50
+- file: instructors.html
+  ready: 100
 - file: online-courses.html
   ready: 50
 - file: single-course.html
   ready: 50
-- file: personal-ofiice.html
-  ready: 50
-- file: instructors.html
-  ready: 50
-- file: instructor-page.html
-  ready: 50
 - file: reviews.html
+  ready: 50
+- file: gallery.html
   ready: 50
 - file: news.html
   ready: 50
 - file: news-one.html
   ready: 50
+- file: instructor-page.html
+  ready: 50
+- file: education.html
+  ready: 50
+- file: UI.html
+  ready: 50
+- file: personal-ofiice.html
+  ready: 50
 - file: direction.html
   ready: 50
-- file: gallery.html
+- file: seminar.html
   ready: 50
 - file: conventions.html
   ready: 50
@@ -37,5 +39,3 @@ PageList:
   ready: 50
 - file: internal-directions.html
   ready: 100
-- file: education.html
-  ready: 50
