@@ -60,3 +60,19 @@
 	+sm
 		font-size: 30px
 		line-height: 1.33
+		
+
+.article,
+article
+	&__title,
+	h1
+		&:not(:last-child)
+			margin-bottom: 30px
+	h1
+		@extend .title
+	p
+		margin-top: 30px
+		max-width: 900px
+		+ms
+			line-height: 1.8
+			padding-top: 20px

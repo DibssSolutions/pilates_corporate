@@ -21,7 +21,10 @@
 // GENERATE GRID EXAMPLE
 // CUSTOM PADDING ON BREAKPOINTS - NOT INCLUDED IN MIXIN
 +generate_grid($columns: 12, $sizeXs: true, $sizeSm: true, $sizeMd: true, $sizeLg: true, $padding: 15px)
-
+.col-sm-mt
+	&:not(:first-child)
+		+sm
+			margin-top: 16px
 .out
 	padding-top: 254px
 	+md
@@ -32,6 +35,7 @@
 			padding-top: 90px
 	&_main
 		padding-top: 0
+		
 .inner
 	max-width: 1420px
 	margin: 0 auto
@@ -50,13 +54,13 @@
 .section
 	&:not(:first-child)
 		padding-top: 150px 
-		+sm
+		+md
 			padding-top: 80px
 
-.section-sm
+.section-md
 	&:not(:first-child)
 		padding-top: 125px
-		+sm
+		+md
 			padding-top: 80px
 
 .section-sm
@@ -75,8 +79,11 @@
 	display: flex
 	align-items: center
 	flex-wrap: wrap
+	justify-content: space-between
 	&:not(:last-child)
 		margin-bottom: 70px
+		+md
+			margin-bottom: 36px
 	&__title
 		padding-right: 15px
 		+sm

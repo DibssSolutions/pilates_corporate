@@ -5,14 +5,14 @@ title: Online-courses
 
 {% block content %}
 	{{header.block({class: 'header_bg'})}}
-	{{topic.block(
-		{
-			title: 'Онлайн курсы',
-			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.'
-		}
-	)}}
 	<div class="online-courses">
-		<div class="online-courses__inner inner">
+		<div class="inner">
+			{{topic.block(
+				{
+					title: 'Онлайн курсы',
+					text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.'
+				}
+			)}}
 			<div class="online-courses__main-list">
 				<div class="online-courses__row row js-small-slider">
 					<div class="online-courses__main-col col-4 col-sm-12">
@@ -44,8 +44,8 @@ title: Online-courses
 		</div>
 		<div class="online-courses__wrap">
 			<div class="online-courses__inner inner">
-				<ul class="online-courses__list row">
-					<li class="online-courses__col col-3 col-md-6 col-sm-12">
+				<div class="online-courses__list row">
+					<div class="online-courses__col col-3 col-md-6 col-sm-12">
 						{{ui.course({
 							class: 'course_img',
 							img: 'event2.png',
@@ -53,8 +53,8 @@ title: Online-courses
 							time: '90 мин',
 							price: '1 500 ₽'
 						})}}
-					</li>
-					<li class="online-courses__col col-3 col-md-6 col-sm-12">
+					</div>
+					<div class="online-courses__col col-3 col-md-6 col-sm-12">
 						{{ui.course({
 							class: 'course_img',
 							img: 'event2.png',
@@ -62,8 +62,8 @@ title: Online-courses
 							time: '90 мин',
 							price: '1 500 ₽'
 						})}}
-					</li>
-					<li class="online-courses__col col-3 col-md-6 col-sm-12">
+					</div>
+					<div class="online-courses__col col-3 col-md-6 col-sm-12">
 						{{ui.course({
 							class: 'course_img',
 							img: 'event2.png',
@@ -71,8 +71,8 @@ title: Online-courses
 							time: '90 мин',
 							price: '1 500 ₽'
 						})}}
-					</li>
-					<li class="online-courses__col col-3 col-md-6 col-sm-12">
+					</div>
+					<div class="online-courses__col col-3 col-md-6 col-sm-12">
 						{{ui.course({
 							class: 'course_img',
 							img: 'event2.png',
@@ -80,8 +80,8 @@ title: Online-courses
 							time: '90 мин',
 							price: '1 500 ₽'
 						})}}
-					</li>
-					<li class="online-courses__col col-3 col-md-6 col-sm-12 sm-hide">
+					</div>
+					<div class="online-courses__col col-3 col-md-6 col-sm-12 sm-hide">
 						{{ui.course({
 							class: 'course_img',
 							img: 'event2.png',
@@ -89,8 +89,8 @@ title: Online-courses
 							time: '90 мин',
 							price: '1 500 ₽'
 						})}}
-					</li>
-					<li class="online-courses__col col-3 col-md-6 col-sm-12 sm-hide">
+					</div>
+					<div class="online-courses__col col-3 col-md-6 col-sm-12 sm-hide">
 						{{ui.course({
 							class: 'course_img',
 							img: 'event2.png',
@@ -98,8 +98,8 @@ title: Online-courses
 							time: '90 мин',
 							price: '1 500 ₽'
 						})}}
-					</li>
-					<li class="online-courses__col col-3 col-md-6 col-sm-12 sm-hide">
+					</div>
+					<div class="online-courses__col col-3 col-md-6 col-sm-12 sm-hide">
 						{{ui.course({
 							class: 'course_img',
 							img: 'event2.png',
@@ -107,8 +107,8 @@ title: Online-courses
 							time: '90 мин',
 							price: '1 500 ₽'
 						})}}
-					</li>
-					<li class="online-courses__col col-3 col-md-6 col-sm-12 sm-hide">
+					</div>
+					<div class="online-courses__col col-3 col-md-6 col-sm-12 sm-hide">
 						{{ui.course({
 							class: 'course_img',
 							img: 'event2.png',
@@ -116,10 +116,10 @@ title: Online-courses
 							time: '90 мин',
 							price: '1 500 ₽'
 						})}}
-					</li>
-				</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	{{footer.block()}}
+	{{footer.block({ class: 'footer_mod' })}}
 {% endblock %}

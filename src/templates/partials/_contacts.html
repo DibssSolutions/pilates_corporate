@@ -1,11 +1,9 @@
 {% import "partials/_ui.html" as ui %}
 {% macro block(props) %}
-<div class="contacts-block">
-	<div class="contacts-block__inner inner">
-		<h2 class="contacts-block__title title">Контакты</h2>
-		{% if props.text %}
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-		{% endif %}
+	<div class="contacts-block section">
+		<div class="head">
+			<h2 class="head__title title">Контакты</h2>
+		</div>
 		<div class="contacts-block__map row">
 			<div class="contacts-block__col col-6 col-md-12">
 				{{ui.map({
@@ -21,5 +19,4 @@
 			</div>
 		</div>
 	</div>
-</div>
 {% endmacro %}
