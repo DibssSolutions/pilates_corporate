@@ -5,38 +5,40 @@ title: Gallery
 
 {% block content %}
 {{header.block({class: 'header_bg'})}}
-	{{topic.block(
-		{
-			title: 'Галерея'
-		}
-	)}}
-	<div class="gallery-block">
-			<div class="gallery-block__inner inner">
-				{{gallery.block([
+	<div class="gallery-page">
+		<div class="gallery-page__inner inner">
+			<div class="head">
+				{{topic.block(
 					{
-						img: 'gallery.png'
-					},
-					{
-						video: 'event2.png',
-						img: 'event2.png'
-					},
-					{
-						img: 'gallery.png'
-					},
-					{
-						img: 'gallery.png'
-					},
-					{
-						img: 'gallery.png'
-					},
-					{
-						img: 'gallery.png'
-					},
-					{
-						img: 'gallery.png'
+						title: 'Галерея'
 					}
-					])}}
+				)}}
 			</div>
+			{{gallery.block([
+				{
+					img: 'gallery.png'
+				},
+				{
+					video: 'https://www.youtube.com/watch?v=_sI_Ps7JSEk',
+					img: 'event2.png'
+				},
+				{
+					img: 'gallery.png'
+				},
+				{
+					img: 'gallery.png'
+				},
+				{
+					img: 'gallery.png'
+				},
+				{
+					img: 'gallery.png'
+				},
+				{
+					img: 'gallery.png'
+				}
+				])}}
+		</div>
 	</div>
 	{{footer.block()}}
 {% endblock %}

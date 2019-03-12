@@ -5,7 +5,7 @@
 		{% for item in props %}
 			 <div class="gallery__slide">
 				 {% if item.video %}
-				 <a data-fancybox="gallery" href="./img/{{item.video}}" class="gallery__item js-fancybox" style="background-image: url(./img/{{item.img}})">
+				 <a data-fancybox="gallery" href="{{item.video}}" class="gallery__item js-fancybox" style="background-image: url(./img/{{item.img}})">
 					<button type="button" class="gallery__play play">
 						{{mixins.icon('play')}}
 					</button>
