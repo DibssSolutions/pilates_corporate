@@ -207,7 +207,7 @@
 			color: $orange
 			font-weight: 700
 		+xs
-			padding: 20px 16px 7px
+			padding: 20px 0 7px
 	&__title
 		max-width: 300px
 		margin-top: 0.25em
@@ -218,7 +218,7 @@
 				font-size: 21px
 				line-height: 1.47
 		+xs
-			padding: 0 16px
+			padding: 0
 			margin: 0
 
 // INSTRUCTOR
@@ -323,11 +323,12 @@
 		margin-top: 1.6em
 		+clr
 		p
-			line-height: 1.57
+			line-height: 1.9
 	&__quote
 		width: 54px
 		height: 38px
-		margin-right: -27px
+		// margin-right: -27px
+		margin-top: 7px
 		float: left
 		background-image: url(../img/quotes.svg)
 		+cover
@@ -349,7 +350,7 @@
 		+lg
 			padding: 30px
 		+md
-			padding: 26px 14px
+			padding: 28px 14px 24px
 	&__title
 		text-align: center
 		margin-bottom: 42px
@@ -357,14 +358,14 @@
 			color: $white
 		+sm
 			text-align: left
-			margin-bottom: 28px
+			margin-bottom: 31px
 	&__check
 		position: relative
 		margin-top: 2.66em
 		color: $white
 		letter-spacing: normal
 		+sm
-			margin-top: 22px
+			margin-top: 16px
 		.feedback &
 			.help-block.form-error
 				position: absolute
@@ -397,7 +398,7 @@
 		padding: 0 10px
 		+sm
 			&:not(:first-child)
-				margin-top: 16px
+				margin-top: 14px
 		+xs
 			padding: 0
 	.form-group
@@ -480,6 +481,8 @@
 		&.error
 			~ .checkbox__icon
 				border: 1px solid darken($orange, 20%)
+	&__text
+		line-height: 1.2
 
 .form-contacts
 	max-width: 880px
@@ -559,6 +562,8 @@
 			+md
 				padding: 18px
 				font-size: 11px
+			+sm 
+				padding: 17px 18px
 // 										MAP
 .map
 	width: 100%
@@ -583,6 +588,7 @@
 			position: static
 			transform: translateX(0)
 			margin: 0 auto
+
 .contacts-info
 	max-width: 350px
 	width: 100%
@@ -598,15 +604,16 @@
 		+md
 			margin-top: 40px
 	&__title
+		// margin-bottom: 12px
 		&.title_md
 			+md
 				font-size: 21px
 		.footer &
 			color: $white
 	&__aside
-		margin-top: 0.8em
-		margin-bottom: 0.1em
+		letter-spacing: 0
 		color: $grayLight
+		margin-top: 13px
 		.footer &
 			color: $white
 			opacity: 0.5
@@ -619,6 +626,10 @@
 		font-style: normal
 		line-height: 1.73
 		letter-spacing: -0.003em
+	&__phone
+		margin-top: -3px
+		&:not(:last-child)
+			margin-bottom: 20px
 
 // 										SMALL DOTS
 
