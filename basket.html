@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Contacts</title>
+    <title>Basket</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -110,98 +110,86 @@
           </div>
         </div>
       </header>
-      <div class="contacts-page">
-        <div class="inner">
-          <div class="contacts-block section">
-            <div class="head">
-              <h2 class="head__title title">Контакты</h2>
-            </div>
-            <div class="contacts-block__map row">
-              <div class="contacts-block__col col-6 col-md-12">
-                <div class="contacts">
-                  <div class="map" id="map"></div>
-                  <div class="contacts__info contacts-info">
-                    <h4 class="contacts-info__title title title_md">Москва</h4>
-                    <div class="contacts-info__aside">Адрес</div>
-                    <address>Метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж</address>
-                    <div class="contacts-info__aside">Телефон</div>
-                    <div class="contacts-info__phone">
-                      <a href="tel:+74952553056">+7(495)255-30-56</a>
-                    </div>
-                    <div class="contacts-info__aside">Почта</div>
-                    <div class="contacts-info__phone">
-                      <a href="mailto:contact@pilates-institute.ru">Сontact@pilates-institute.ru</a>
-                    </div>
+      <div class="basket-page">
+        <div class="basket-page__inner inner">
+          <h2 class="basket-page__title title">Корзина</h2>
+          <div class="basket-page__basket">
+            <div class="basket row">
+              <div class="basket__info col-9 col-sm-12">
+                <div class="basket-info">
+                  <div class="basket-info__name">
+                    <div class="basket-info__title">Курс</div>
+                    <div class="basket-info__text">Microwave Cooking Is The Wave Of The Future</div>
+                  </div>
+                  <div class="basket-info__duration">
+                    <div class="basket-info__title">Длительность</div>
+                    <div class="basket-info__text">90 минут</div>
+                  </div>
+                  <div class="basket-info__price">
+                    <div class="basket-info__title">Стоимость</div>
+                    <div class="basket-info__text">1500 ₽</div>
+                  </div>
+                  <div class="basket-info__delete">
+                    <button type="button" class="delete-btn">
+                      <svg class="icon icon-close">
+                        <use xlink:href="img/sprite.svg#icon-close"></use>
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </div>
-              <div class="contacts-block__col col-6 col-md-12">
-                <div class="contacts">
-                  <div class="map" id="map"></div>
-                  <div class="contacts__info contacts-info">
-                    <h4 class="contacts-info__title title title_md">Санкт-петербург</h4>
-                    <div class="contacts-info__aside">Адрес</div>
-                    <address>Метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж</address>
-                    <div class="contacts-info__aside">Телефон</div>
-                    <div class="contacts-info__phone">
-                      <a href="tel:+74952553056">+7(495)255-30-56</a>
-                    </div>
-                    <div class="contacts-info__aside">Почта</div>
-                    <div class="contacts-info__phone">
-                      <a href="mailto:contact@pilates-institute.ru">Сontact@pilates-institute.ru</a>
-                    </div>
-                  </div>
+              <div class="basket__total col-3  col-sm-12">
+                <div class="basket-total">
+                  <span class="basket-total__title">Итого:</span>
+                  <span class="basket-total__number">1500 ₽</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="section-sm">
-            <div class="feedback feedback_md sm-hide">
-              <div class="feedback__inner">
-                <h3 class="feedback__title title title_lg">Связаться с нами</h3>
-                <form class="form-contacts js-validation">
-                  <div class="form-contacts__row row">
-                    <div class="form-contacts__col col-4 col-md-12">
-                      <div class="form-group">
-                        <input type="text" placeholder="Имя" data-validation="length" data-validation-length="min2" data-validation-error-msg="Имя должно быть не менее двух символов" />
-                      </div>
-                    </div>
-                    <div class="form-contacts__col col-4 col-md-12">
-                      <div class="form-group">
-                        <input type="text" placeholder="Телефон" data-validation="custom" data-validation-regexp="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" data-validation-error-msg="Пожалуйста, введите правильный номер телефона" />
-                      </div>
-                    </div>
-                    <div class="form-contacts__col col-4 col-md-12">
-                      <div class="form-group">
-                        <input type="text" placeholder="Email" data-validation="email" data-validation-error-msg="Пожалуйста, введите правильный адрес" />
-                      </div>
-                    </div>
-                    <div class="form-contacts__col col-12">
-                      <div class="form-group">
-                        <textarea placeholder="Сообщение" data-validation="required" data-validation-error-msg="Пожалуйста, введите сообщение"></textarea>
-                      </div>
+          <div class="basket-page__descr section-sm">
+            <p>Чтобы оформить заказ, введите ниже свой e-mail.</p>
+            <p>Если вы еще не зарегистрированы на сайте, вам автоматически будет создан аккаунт для этого e-mail’а.</p>
+            <p>Пожалуйста, сразу активируйте ссылку, которая придёт на почту, после чего вы получите пароль для входа.</p>
+          </div>
+          <div class="basket-page__checkout-wrapper row">
+            <div class="basket-page__checkout col-6 col-sm-12">
+              <form action="/" class="checkout-form js-validation">
+                <div class="checkout-form__inputs row">
+                  <div class="col-6 col-sm-12">
+                    <div class="form-group">
+                      <input class="form-group__border-input" type="text" placeholder="Имя" data-validation="required length" data-validation-length="min2" data-validation-error-msg="Пожалуйста, введите ваше имя" />
                     </div>
                   </div>
-                  <div class="form-contacts__footer row">
-                    <div class="form-contacts__col col-8">
-                      <div class="form-contacts__check">
-                        <!-- begin input -->
-                        <label class="checkbox">
-                          <input type="checkbox" name="checkbox" checked data-validation="required" data-validation-event="keyup change" data-validation-error-msg="Пожалуйста, примите условия обработки персональных данных" />
-                          <span class="checkbox__text">Я согласен с <a href="#">условиями обработки персональных данных</a></span>
-                          <span class="checkbox__icon"></span>
-                        </label>
-                        <!-- end input -->
-                      </div>
-                    </div>
-                    <div class="form-contacts__col col-4">
-                      <div class="form-contacts__footer-btn">
-                        <button type="submit" class="btn btn_w100 btn_bsnone">Отправить</button>
-                      </div>
+                  <div class="col-6 col-sm12">
+                    <div class="form-group">
+                      <input class="form-group__border-input" type="text" placeholder="Фамилия" data-validation="required length" data-validation-length="min2" data-validation-error-msg="Пожалуйста, введите вашу фамилию" />
                     </div>
                   </div>
-                </form>
-              </div>
+                </div>
+                <h4 class="checkout-form__title title title_md">Способ оплаты</h4>
+                <div class="checkout-form__payment row">
+                  <div class="col-6 col-sm-12">
+                    <label class="btn-checkbox">
+                      <input type="radio" name="payment" checked />
+                      <span class="btn-checkbox__text">Банковская карта</span>
+                      <span class="btn-checkbox__bg"></span>
+                    </label>
+                  </div>
+                  <div class="col-6 col-sm-12">
+                    <label class="btn-checkbox">
+                      <input type="radio" name="payment" />
+                      <span class="btn-checkbox__text">Электронные деньги</span>
+                      <span class="btn-checkbox__bg"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="checkout-form__agreement user-agreement"> Нажимая кнопку «Оплатить», я принимаю условия Договора публичной оферты и даю своё согласие НОУ «ПИЛАТЕС Институт» на обработку моих персональных данных, в соответствии с ФЗ от 27.07.2006 года №152-ФЗ «О персональных данных». </div>
+                <div class="checkout-form__submit-wrapper row">
+                  <div class="col-6 checkout-form__submit">
+                    <button type='submit' class='btn btn_w100'>Оплатить</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
