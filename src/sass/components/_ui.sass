@@ -226,6 +226,8 @@
 	border-radius: 10px
 	overflow: hidden
 	transition: transform .15s
+	+sm 
+		border-radius: 7px
 	+hover
 		transform: translateY(-8px)
 	&__top
@@ -288,7 +290,7 @@
 .testimonial
 	height: 100%
 	background-color: $white
-	padding: 2em 2em 2.66em
+	padding: 2em 2em 2.96em
 	box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
 	border-radius: 10px
 	transition: transform .15s
@@ -319,20 +321,26 @@
 		position: relative
 		margin-top: 1.6em
 		+clr
+		+sm 
+			margin-top: 12px
 		p
 			line-height: 1.9
+			+sm 
+				font-size: 14px
+				line-height: 1.65
 	&__quote
 		width: 54px
 		height: 38px
-		// margin-right: -27px
 		margin-top: 7px
+
+		margin-right: -2px
 		float: left
 		background-image: url(../img/quotes.svg)
 		+cover
 		+ms
 			width: 36px
 			height: 26px
-			margin-right: -18px
+			margin-right: 2px
 
 // 										FEEDBACK
 .feedback
@@ -611,7 +619,8 @@
 		letter-spacing: 0
 		color: $grayLight
 		margin-top: 13px
-		margin-bottom: 3px
+		+sm 
+			margin-top: 15px
 		.footer &
 			color: $white
 			opacity: 0.5
@@ -622,9 +631,11 @@
 	// 		border-color: currentColor
 	address
 		font-style: normal
-		line-height: 1.15
+		line-height: 1.73
 		letter-spacing: -0.003em
+		margin-top: 0
 	&__phone
+		margin-top: 3px
 		line-height: 1.15
 		&:not(:last-child)
 			margin-bottom: 23px

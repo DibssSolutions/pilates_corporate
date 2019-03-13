@@ -2,26 +2,30 @@
 {# 									COURSE #}
 {% macro course(props) %}
 <a href="#" class="course {% if props.class %}{{props.class}}{% endif %}">
-	{% if props.img %}
-	<div class="course__img">
-		<img src="./img/{{props.img}}" alt="course">
-	</div>
-	{% endif %}
-	<div class="course__top">
-		<div class="course__aside">Пилатес</div>
-		<h3 class="course__title title title_md">{{props.title}}</h3>
-	</div>
-	<div class="course__bottom">
-		{% if props.single %}
-		<div class="course__time">{{props.single}}</div>
-		{% else %}
-		<div class="course__time">{{props.time}}</div>
-		<div class="course__price">{{props.price}}</div>
+	<span class="course__top-wrap">
+		{% if props.img %}
+		<div class="course__img">
+			<img src="./img/{{props.img}}" alt="course">
+		</div>
 		{% endif %}
-	</div>
-	<div class="course__buy">
-		Купить курс
-	</div>
+		<div class="course__top">
+			<div class="course__aside">Пилатес</div>
+			<h3 class="course__title title title_md">{{props.title}}</h3>
+		</div>
+	</span>
+	<span class="course__bottom-wrap">
+		<div class="course__bottom">
+			{% if props.single %}
+			<div class="course__time">{{props.single}}</div>
+			{% else %}
+			<div class="course__time">{{props.time}}</div>
+			<div class="course__price">{{props.price}}</div>
+			{% endif %}
+		</div>
+		<div class="course__buy">
+			Купить курс
+		</div>
+	</span>
 </a>
 {% endmacro %}
 {# 									COURSE #}
