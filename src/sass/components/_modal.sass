@@ -81,10 +81,14 @@
 		letter-spacing: normal
 		+md 
 			font-size: 15px
+			padding: 0 15px
 		+sm 
 			line-height: 1.8667
+			margin-bottom: 14px
 	&__date
 		margin-bottom: 35px
+		+sm 
+			margin-bottom: 28px
 	&__form-wrapper
 		display: inline-block
 		max-width: 350px
@@ -121,9 +125,13 @@
 		top: 100%
 		left: 0
 		color: $errorRed
+		text-align: left
 	.form-group
 		+ .form-group
 			margin-top: 21px
+		&.has-error
+			+sm 
+				margin-bottom: 32px
 	&__submit
 		margin-top: 30px
 		margin-bottom: 16px

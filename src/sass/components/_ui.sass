@@ -17,6 +17,9 @@
 			padding: 15px
 	&.course_lg
 		min-height: 424px
+	&.course_payment
+		+sm 
+			padding-bottom: 25px
 	+hover
 		background-color: $orange
 		color: $white
@@ -33,6 +36,23 @@
 		.course__buy
 			color: $white
 			border-color: $white
+	&.is-active
+		background-color: $orange
+		color: $white
+		box-shadow: 0 25px 42px -14px $orange
+		.course__aside
+			color: $white
+		.course__bottom
+			color: $white
+		.course__price:before
+			background-color: $white
+		.course__title.title
+			color: $white
+		.course__buy
+			color: $white
+			border-color: $white
+		.course__price-big
+			color: $white
 	+lg
 		padding: 27px
 	+sm
@@ -44,6 +64,10 @@
 		height: 200px
 		.course_lg &, .course_buy &
 			height: 235px
+		.course_payment &
+			height: 257px
+			+sm 
+				height: 235px
 		img
 			display: block
 			width: 100%
@@ -78,6 +102,8 @@
 	&__price
 		margin-left: 30px
 		position: relative
+		.course__payment-top &
+			margin-left: 24px
 		&:before
 			content: ''
 			position: absolute
@@ -87,15 +113,35 @@
 			top: 50%
 			margin-top: -3.5px
 			transition: background-color .4s
+			.course__payment-top &
+				+circle(5)
 			+sm
 				+circle(5)
 				left: -13px
 				margin-top: -1.5px
 		+sm
 			margin-left: 24px
+	&__payment-top
+		display: flex
+		margin-top: 20px
+		font-size: 15px
+		letter-spacing: 0.12em
+		+sm 
+			margin-top: 11px
+	&__price-big
+		+verdana
+		color: $black
+		letter-spacing: normal
+		+f(30px, 700, 1.34)
+		+md 
+			font-size: 15px
 	&__title
 		margin-top: .4em
 		transition: color .4s
+		+ .course__price-big
+			margin-top: 14px
+			+sm 
+				margin-top: 24px
 		.course_img &
 			+sm
 				margin-top: 11px
@@ -351,6 +397,10 @@
 				margin-top: 16px
 		+xs
 			padding: 0
+	.form-group
+		&.has-error
+			+sm
+				margin-bottom: 16px
 
 .form-group
 	position: relative
@@ -385,9 +435,6 @@
 		resize: none
 		padding: 41px 20px
 		display: block
-	&.has-error
-		+sm
-			margin-bottom: 16px
 
 .checkbox
 	display: inline-block

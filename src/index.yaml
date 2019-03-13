@@ -41,6 +41,8 @@ PageList:
   ready: 100
 - file: basket.html
   ready: 100
+- file: payment.html
+  ready: 100
 - file: success-modal.html
   ready: 100
 - file: my-course.html
