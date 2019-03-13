@@ -306,7 +306,7 @@
       margin: 0 -8px
       justify-content: center
     &.slick-slider
-      +r(1023)
+      +r(767)
         margin: 0
   [class*='col']
     padding: 0 $padding
@@ -315,8 +315,9 @@
       padding: 0 8px
     .slick-slider &
       +r(1023)
-        padding: 0
         height: 100%
+      +r(767)
+        padding: 0
   @for $i from 1 through $columns
     $width: percentage($i / $columns)
     .col-#{$i}
