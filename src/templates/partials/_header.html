@@ -1,6 +1,6 @@
 {% import "partials/_mixins.html" as mixins %}
 {% macro block(props) %}
-<header class="header {% if props.class %}{{props.class}}{% endif %} js-header is-open">
+<header class="header {% if props.class %}{{props.class}}{% endif %} js-header">
 	<div class="header__top">
 		<div class="header__inner inner">
 			<p>Обучение и повышение квалификации тренеров по пилатесу с 2001 года</p>
@@ -24,7 +24,7 @@
 						<img src="./img/logo.png" alt="pilates">
 					</a>
 				</h1>
-				{# <nav class="header__nav nav">
+				<nav class="header__nav nav">
 					<ul class="nav__list">
 						{% for item in [
 							{nav: 'Главная'},
@@ -36,14 +36,20 @@
 							{nav: 'Преподаватели'},
 							{nav: 'Контакты'}
 							] %}
-						<li class="nav__item {% if loop.index == props.index %}nav__item_current{% endif %}">
-							<a href="#" class="nav__link js-dropdown-trigger">{{item.nav}}</a>
+						<li class="nav__item {% if loop.index == props.index %}nav__item_current{% endif %} js-dropdown">
+							<a href="#" class="nav__link js-dropdown-trigger">
+								{{item.nav}}
+								{% if item.list %}
+									{{mixins.icon('Triangle')}}
+								{% endif %}
+							</a>
 							{% if item.list %}
 							<ul class="nav__sublist js-dropdown-text">
 								<div class="nav__sublist-inner">
 									{% for sub in item.list %}
 									<li class="nav__subitem">
 										<a href="#">{{sub}}</a>
+
 									</li>
 									{% endfor %}
 								</div>
@@ -52,7 +58,12 @@
 						</li>
 						{% endfor %}
 					</ul>
-				</nav> #}
+					<div class="nav__contacts">
+						<a href="tel:+74952553056">+7 (495) 255 30 56</a>
+						<a href="tel:+78123856366">+7 (812) 385 63 66</a>
+						<a href="mailto:contact@pilates-institute.ru">contact@pilates-institute.ru</a>
+					</div>
+				</nav>
 				<div class="header__group">
 					<a href="#" class="header__icon">{{mixins.icon('user')}}</a>
 					<a href="#" class="header__icon">{{mixins.icon('basket')}}</a>
