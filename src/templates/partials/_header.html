@@ -36,26 +36,27 @@
 							{nav: 'Преподаватели'},
 							{nav: 'Контакты'}
 							] %}
-						<li class="nav__item {% if loop.index == props.index %}nav__item_current{% endif %} js-dropdown">
-							<a href="#" class="nav__link js-dropdown-trigger">
-								{{item.nav}}
-								{% if item.list %}
+						{% if item.list %}
+							<li class="nav__item {% if loop.index == props.index %}nav__item_current{% endif %} js-dropdown">
+								<a href="#" class="nav__link">{{item.nav}}</a>
+								<ul class="nav__sublist js-dropdown-text">
+									<div class="nav__sublist-inner">
+										{% for sub in item.list %}
+										<li class="nav__subitem">
+											<a href="#">{{sub}}</a>
+										</li>
+										{% endfor %}
+									</div>
+								</ul>
+								<div class="nav__sublist-icon js-dropdown-trigger">
 									{{mixins.icon('Triangle')}}
-								{% endif %}
-							</a>
-							{% if item.list %}
-							<ul class="nav__sublist js-dropdown-text">
-								<div class="nav__sublist-inner">
-									{% for sub in item.list %}
-									<li class="nav__subitem">
-										<a href="#">{{sub}}</a>
-
-									</li>
-									{% endfor %}
 								</div>
-							</ul>
-							{% endif %}
+							</li>
+						{% else %}
+						<li class="nav__item {% if loop.index == props.index %}nav__item_current{% endif %}">
+							<a href="#" class="nav__link">{{item.nav}}</a>
 						</li>
+						{% endif %}
 						{% endfor %}
 					</ul>
 					<div class="nav__contacts">
