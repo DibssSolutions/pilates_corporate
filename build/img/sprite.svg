@@ -20,7 +20,9 @@
         <style>
             .cls-1{fill:#fff}
         </style>
-    </defs><symbol id="icon-arr-up" viewBox="0 0 15.007 21">
+    </defs><symbol id="icon-Triangle" viewBox="0 0 10.004 7.333">
+    <path d="M5.802.4a1 1 0 0 0-1.6 0l-4 5.333a1 1 0 0 0 .8 1.6h8a1 1 0 0 0 .8-1.6z"/>
+</symbol><symbol id="icon-arr-up" viewBox="0 0 15.007 21">
     <path d="M14.246 7.037a.715.715 0 0 1 .235.71.708.708 0 0 1-.524.529.7.7 0 0 1-.7-.237L8.18 2.927v16.897a.71.71 0 0 1-.707.676.71.71 0 0 1-.706-.676v-16.9L1.7 8.047a.715.715 0 0 1-.993 0 .711.711 0 0 1-.206-.5.711.711 0 0 1 .206-.5L6.984.715a.686.686 0 0 1 .5-.213.686.686 0 0 1 .5.213z" stroke-miterlimit="10"/>
 </symbol><symbol id="icon-arrow-left" viewBox="0 0 20 14">
     
@@ -75,8 +77,6 @@
             <path class="cls-1" d="M38 18a2 2 0 0 1 0 4H2a2 2 0 0 1 0-4z"/>
         </g>
     </g>
-</symbol><symbol id="icon-Triangle" viewBox="0 0 10.004 7.333">
-    <path d="M5.802.4a1 1 0 0 0-1.6 0l-4 5.333a1 1 0 0 0 .8 1.6h8a1 1 0 0 0 .8-1.6z"/>
 </symbol><symbol id="icon-user" viewBox="0 0 20 20">
     
     <title>
