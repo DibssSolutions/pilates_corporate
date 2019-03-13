@@ -20,9 +20,6 @@
 	&.course_payment
 		+sm 
 			padding-bottom: 25px
-	[class^="col"] &,
-	[class*="col-"] &
-		height: 100%
 	+hover
 		background-color: $orange
 		color: $white
@@ -229,6 +226,8 @@
 	border-radius: 10px
 	overflow: hidden
 	transition: transform .15s
+	+sm 
+		border-radius: 7px
 	+hover
 		transform: translateY(-8px)
 	&__top
@@ -291,7 +290,7 @@
 .testimonial
 	height: 100%
 	background-color: $white
-	padding: 2em 2em 2.66em
+	padding: 2em 2em 2.96em
 	box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
 	border-radius: 10px
 	transition: transform .15s
@@ -322,20 +321,26 @@
 		position: relative
 		margin-top: 1.6em
 		+clr
+		+sm 
+			margin-top: 12px
 		p
 			line-height: 1.9
+			+sm 
+				font-size: 14px
+				line-height: 1.65
 	&__quote
 		width: 54px
 		height: 38px
-		// margin-right: -27px
 		margin-top: 7px
+
+		margin-right: -2px
 		float: left
 		background-image: url(../img/quotes.svg)
 		+cover
 		+ms
 			width: 36px
 			height: 26px
-			margin-right: -18px
+			margin-right: 2px
 
 // 										FEEDBACK
 .feedback
@@ -614,6 +619,8 @@
 		letter-spacing: 0
 		color: $grayLight
 		margin-top: 13px
+		+sm 
+			margin-top: 15px
 		.footer &
 			color: $white
 			opacity: 0.5
@@ -626,10 +633,12 @@
 		font-style: normal
 		line-height: 1.73
 		letter-spacing: -0.003em
+		margin-top: 0
 	&__phone
-		margin-top: -3px
+		margin-top: 3px
+		line-height: 1.15
 		&:not(:last-child)
-			margin-bottom: 20px
+			margin-bottom: 23px
 
 // 										SMALL DOTS
 
@@ -668,17 +677,17 @@
 	overflow: hidden
 	display: block
 	&__content
-		padding: 35px 30px 25px
+		padding: 30px 30px 25px
 		background-color: $white
 		height: 100%
 		display: flex
 		flex-direction: column
 		+xs
-			padding: 35px 15px 17px
+			padding: 30px 15px 17px
 	&__date
 		flex: 0 0 auto
 	&__title
-		margin-top: 13px
+		margin-top: 5px
 		flex: 1 0 auto
 	&__img
 		width: 100%
