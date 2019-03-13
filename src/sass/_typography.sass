@@ -68,6 +68,8 @@ article
 	p
 		line-height: 1.95
 		letter-spacing: -.003em
+		+sm
+			line-height: 1.8
 		&:not(:first-child)
 			margin-top: 18px
 		&:not(:last-child)
@@ -90,14 +92,16 @@ article
 	h1
 		&:not(:last-child)
 			margin-bottom: 30px
+			+sm
+				margin-bottom: 18px
 	h1, h4, h5
 		@extend .title
 		&:not(:first-child)
 			margin-top: 18px
-	h1
-		@extend .title_xl
 	h4
 		@extend .title_sm
+		&:not(:first-child)
+			margin-top: 8px
 	h5
 		font-size: 18px
 		+md
