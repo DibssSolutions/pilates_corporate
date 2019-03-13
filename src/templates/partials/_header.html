@@ -29,7 +29,7 @@
 						{% for item in [
 							{nav: 'Главная'},
 							{nav: 'О нас',
-								list: ['Новости', 'Отзывы', 'Галерея']},
+								list: ['Кто мы', 'Философия', 'Как мы']},
 							{nav: 'Обучение',
 								list: ['Пилатес  MatWork 1', 'Пилатес  MatWork 2', 'Большое оборудование', 'Постуральная гимнастика']},
 							{nav: 'Онлайн курсы'},
@@ -40,11 +40,13 @@
 							<a href="#" class="nav__link">{{item.nav}}</a>
 							{% if item.list %}
 							<ul class="nav__sublist">
-								{% for sub in item.list %}
-								<li class="nav__subitem">
-									<a href="#">{{sub}}</a>
-								</li>
-								{% endfor %}
+								<div class="nav__sublist-inner">
+									{% for sub in item.list %}
+									<li class="nav__subitem">
+										<a href="#">{{sub}}</a>
+									</li>
+									{% endfor %}
+								</div>
 							</ul>
 							{% endif %}
 						</li>

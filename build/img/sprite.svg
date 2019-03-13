@@ -20,7 +20,9 @@
         <style>
             .cls-1{fill:#fff}
         </style>
-    </defs><symbol id="icon-arrow-left" viewBox="0 0 20 14">
+    </defs><symbol id="icon-arr-up" viewBox="0 0 15.007 21">
+    <path d="M14.246 7.037a.715.715 0 0 1 .235.71.708.708 0 0 1-.524.529.7.7 0 0 1-.7-.237L8.18 2.927v16.897a.71.71 0 0 1-.707.676.71.71 0 0 1-.706-.676v-16.9L1.7 8.047a.715.715 0 0 1-.993 0 .711.711 0 0 1-.206-.5.711.711 0 0 1 .206-.5L6.984.715a.686.686 0 0 1 .5-.213.686.686 0 0 1 .5.213z" stroke-miterlimit="10"/>
+</symbol><symbol id="icon-arrow-left" viewBox="0 0 20 14">
     
     <use xlink:href="#a" transform="translate(-488 -2234)"/>
 </symbol><symbol id="icon-arrow-right" viewBox="0 0 20 14">
@@ -41,13 +43,8 @@
 </symbol><symbol id="icon-check" viewBox="0 0 48 36">
     <path d="M46.225 1.125c-1.5-1.5-3.8-1.5-5.3 0l-23.9 24.9-10.6-11.1c-1.5-1.5-3.8-1.5-5.3 0s-1.5 4 0 5.5l13.3 13.8c1.5 1.5 3.8 1.5 5.3 0l26.5-27.6c1.5-1.5 1.5-4 0-5.5z"/>
 </symbol><symbol id="icon-close" viewBox="0 0 27 27">
-    <title>
-        Group 17
-    </title>
-    <g transform="translate(-1 -1)" fill-rule="evenodd" opacity=".3">
-        <rect transform="rotate(45 14.102 14.102)" x="12.102" y="-3.398" width="4" height="35" rx="2"/>
-        <rect transform="rotate(135 14.102 14.102)" x="12.102" y="-3.398" width="4" height="35" rx="2"/>
-    </g>
+    <path d="M25.5.7c.8.8.8 2 0 2.8l-21.9 22c-.8.8-2 .8-2.8 0-.8-.8-.8-2 0-2.8L22.6.7c.8-.8 2.1-.8 2.9 0z"/>
+    <path d="M25.5 25.5c-.8.8-2 .8-2.8 0L.7 3.6c-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0l21.9 21.9c.9.7.9 2 .1 2.8z"/>
 </symbol><symbol id="icon-facebook" viewBox="0 0 10 22">
     
     <title>

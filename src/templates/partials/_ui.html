@@ -356,3 +356,36 @@
 {% endmacro %}
 {# 										CERTIFICATE #}
 
+{# DROPDOWN #}
+{% macro dropdown(props) %}
+<div class="dropdown js-dropdown">
+	<div class="dropdown__top js-dropdown-trigger">
+		<h3 class="dropdown__title title title_sm">{{props.title}}</h3>
+		<div class="dropdown__icon js-dropdown-icon">
+			{{mixins.icon('arr-up')}}
+		</div>
+	</div>
+	<div class="dropdown__text js-dropdown-text">
+		<p>{{props.text}}</p>
+	</div>
+</div>
+{% endmacro %}
+{# DROPDOWN #}
+
+{# BULLET #}
+{% macro bullet(props) %}
+<div class="bullet">
+	<div class="bullet__number"></div>
+	<div class="bullet__text">{{props.text}}</div>
+</div>
+{% endmacro %}
+{# BULLET #}
+
+{# QUOTE #}
+{% macro quote(props) %}
+<div class="quote-item">
+	<h3 class="quote-item__title">{{props}}</h3>
+</div>
+{% endmacro %}
+{# QUOTE #}
+

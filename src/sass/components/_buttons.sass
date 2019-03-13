@@ -136,4 +136,18 @@
 	.icon
 		position: absolute
 		+vcenter
-		margin-left: 3px
+		margin-left: 2px
+
+.delete-btn
+	display: inline-block
+	+circle(36)
+	background-color: $red
+	+vertical
+	transition: opacity 0.3s
+	+hover
+		opacity: 0.8
+	.icon
+		display: inline-block
+		vertical-align: middle
+		font-size: 16px
+		color: $white

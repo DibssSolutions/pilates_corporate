@@ -85,28 +85,7 @@ title: Education
 				{{event.block()}}
 			</div>
 			{{instructor.block()}}
-			<div class="section">
-				<div class="head">
-					<h2 class="head__title title">Отзывы</h2>
-					<div class="sm-hide">
-						<a href="#" class="btn">Остальные отзывы</a>
-					</div>
-				</div>
-				<div class="row">
-					{% for item in range(0, 3) %}
-					<div class="col-sm-mt col-4 col-sm-12">
-						{{ui.instructor({
-							name: 'Gussie Hammond',
-							aside: 'Стаж инструктора 10 лет',
-							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-						})}}
-					</div>
-					{% endfor %}
-				</div>
-				<div class="sm-block">
-					<a href="#" class="btn">Остальные отзывы</a>
-				</div>
-			</div>
+			{{testimonial.block()}}
 		</div>
 	</div>
 	{{footer.block()}}

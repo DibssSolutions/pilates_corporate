@@ -394,6 +394,7 @@
 	position: relative
 	cursor: pointer
 	padding-left: 40px
+	user-select: none
 	+sm
 		font-size: 10px
 	&__icon
@@ -420,7 +421,6 @@
 		border: 0
 		clip: rect(0 0 0 0)
 		overflow: hidden
-		user-select: none
 		&:checked
 			~ .checkbox__icon
 				background-image: url(../img/check.svg)
@@ -739,3 +739,72 @@
 			max-width: none
 	&__text
 		margin-top: 20px
+
+// DROPDOWN
+.dropdown
+	color: $blue
+	border: 2px solid $blue
+	border-radius: 10px
+	&__top
+		cursor: pointer
+		padding: 18px 50px 18px 30px
+		position: relative
+		padding-right: 20px
+	&__title
+		&.title
+			color: inherit
+	&__icon
+		position: absolute
+		top: 50%
+		transform: translateY(-50%) rotate(180deg)
+		right: 30px
+		line-height: 1
+		font-size: 
+		transition: transform .3s
+		&.is-active
+			transform: translateY(-50%) rotate(0)
+		.icon
+			font-size: 22px
+	&__text
+		display: none
+		margin-top: 40px
+		padding: 0 30px 30px
+// DROPDOWN
+
+// BULLET
+.bullet
+	display: flex
+	align-items: center
+	+f(15px, 700)
+	&__number
+		flex-shrink: 0
+		+circle(45)
+		border: 1px solid $grayLight
+		margin-right: 20px
+		position: relative
+		&:before
+			counter-increment: section
+			content: '0'counter(section)
+			+f(15px, 700)
+			+vcenter
+// BULLET
+
+// QUOTE
+.quote-item
+	padding: 40px 30px
+	height: 100%
+	box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
+	background-color: $white
+	border-radius: 10px
+	transition: transform .15s
+	+sm
+		padding: 20px 15px
+	+hover
+		transform: translateY(-8px)
+	&__title
+		color: $black
+		+f(21px, 700, 1.47)
+		+sm
+			font-size: 15px
+			line-height: 1.86
+// QUOTE

@@ -46,32 +46,36 @@
                 <li class="nav__item ">
                   <a href="#" class="nav__link">О нас</a>
                   <ul class="nav__sublist">
-                    <li class="nav__subitem">
-                      <a href="#">Новости</a>
-                    </li>
-                    <li class="nav__subitem">
-                      <a href="#">Отзывы</a>
-                    </li>
-                    <li class="nav__subitem">
-                      <a href="#">Галерея</a>
-                    </li>
+                    <div class="nav__sublist-inner">
+                      <li class="nav__subitem">
+                        <a href="#">Кто мы</a>
+                      </li>
+                      <li class="nav__subitem">
+                        <a href="#">Философия</a>
+                      </li>
+                      <li class="nav__subitem">
+                        <a href="#">Как мы</a>
+                      </li>
+                    </div>
                   </ul>
                 </li>
                 <li class="nav__item ">
                   <a href="#" class="nav__link">Обучение</a>
                   <ul class="nav__sublist">
-                    <li class="nav__subitem">
-                      <a href="#">Пилатес MatWork 1</a>
-                    </li>
-                    <li class="nav__subitem">
-                      <a href="#">Пилатес MatWork 2</a>
-                    </li>
-                    <li class="nav__subitem">
-                      <a href="#">Большое оборудование</a>
-                    </li>
-                    <li class="nav__subitem">
-                      <a href="#">Постуральная гимнастика</a>
-                    </li>
+                    <div class="nav__sublist-inner">
+                      <li class="nav__subitem">
+                        <a href="#">Пилатес MatWork 1</a>
+                      </li>
+                      <li class="nav__subitem">
+                        <a href="#">Пилатес MatWork 2</a>
+                      </li>
+                      <li class="nav__subitem">
+                        <a href="#">Большое оборудование</a>
+                      </li>
+                      <li class="nav__subitem">
+                        <a href="#">Постуральная гимнастика</a>
+                      </li>
+                    </div>
                   </ul>
                 </li>
                 <li class="nav__item ">
@@ -226,6 +230,11 @@
                       <div class="gallery__nav-item">
                         <div class="gallery__img-wrap">
                           <img src="./img/event2.png">
+                          <button type="button" class="gallery__play-sm play">
+                            <svg class="icon icon-play">
+                              <use xlink:href="img/sprite.svg#icon-play"></use>
+                            </svg>
+                          </button>
                         </div>
                       </div>
                       <div class="gallery__nav-item">
@@ -485,49 +494,61 @@
               <a href="#" class="btn">Все преподаватели</a>
             </div>
           </div>
-          <div class="section">
+          <div class="testimonial-block section">
             <div class="head">
               <h2 class="head__title title">Отзывы</h2>
-              <div class="sm-hide">
+              <div class="head__btn sm-hide">
                 <a href="#" class="btn">Остальные отзывы</a>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-mt col-4 col-sm-12">
-                <div class="instructor ">
-                  <div class="instructor__top"></div>
-                  <div class="instructor__bottom">
-                    <div class="instructor__img" style="background-image: url(./img/instructor.png)"></div>
-                    <h4 class="instructor__title title title_md">Gussie Hammond</h4>
-                    <div class="instructor__aside">Стаж инструктора 10 лет</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="testimonial-block__row row js-medium-slider">
+              <div class="testimonial-block__col col-4 col-md-12">
+                <div class="testimonial ">
+                  <div class="testimonial__top">
+                    <div class="testimonial__img" style="background-image: url(./img/testimonial.png)"></div>
+                    <div class="testimonial__main">
+                      <h4 class="testimonial__title title title_md">Harold Roberts</h4>
+                      <div class="testimonial__aside">Студентка Пилатоса</div>
+                    </div>
+                  </div>
+                  <div class="testimonial__bottom">
+                    <div class="testimonial__quote"></div>
+                    <p>Lorem ipsum dolor sit amet, outdd consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-mt col-4 col-sm-12">
-                <div class="instructor ">
-                  <div class="instructor__top"></div>
-                  <div class="instructor__bottom">
-                    <div class="instructor__img" style="background-image: url(./img/instructor.png)"></div>
-                    <h4 class="instructor__title title title_md">Gussie Hammond</h4>
-                    <div class="instructor__aside">Стаж инструктора 10 лет</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="testimonial-block__col col-4 col-md-12">
+                <div class="testimonial ">
+                  <div class="testimonial__top">
+                    <div class="testimonial__img" style="background-image: url(./img/testimonial.png)"></div>
+                    <div class="testimonial__main">
+                      <h4 class="testimonial__title title title_md">Harold Roberts</h4>
+                      <div class="testimonial__aside">Студентка Пилатоса</div>
+                    </div>
+                  </div>
+                  <div class="testimonial__bottom">
+                    <div class="testimonial__quote"></div>
+                    <p>Lorem ipsum dolor sit amet, outdd consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-mt col-4 col-sm-12">
-                <div class="instructor ">
-                  <div class="instructor__top"></div>
-                  <div class="instructor__bottom">
-                    <div class="instructor__img" style="background-image: url(./img/instructor.png)"></div>
-                    <h4 class="instructor__title title title_md">Gussie Hammond</h4>
-                    <div class="instructor__aside">Стаж инструктора 10 лет</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="testimonial-block__col col-4 col-md-12">
+                <div class="testimonial ">
+                  <div class="testimonial__top">
+                    <div class="testimonial__img" style="background-image: url(./img/testimonial.png)"></div>
+                    <div class="testimonial__main">
+                      <h4 class="testimonial__title title title_md">Harold Roberts</h4>
+                      <div class="testimonial__aside">Студентка Пилатоса</div>
+                    </div>
+                  </div>
+                  <div class="testimonial__bottom">
+                    <div class="testimonial__quote"></div>
+                    <p>Lorem ipsum dolor sit amet, outdd consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="sm-block">
+            <div class="testimonial-block__btn sm-block">
               <a href="#" class="btn">Остальные отзывы</a>
             </div>
           </div>
@@ -640,29 +661,9 @@
                 <div class="registration-form__submit">
                   <button type="submit" class="btn">Записаться на курс</button>
                 </div>
-                <div class="registration-form__agreement"> Я согласен с условиями обработки персональных данных </div>
+                <div class="registration-form__agreement user-agreement"> Я согласен с условиями обработки персональных данных </div>
               </form>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal" data-modal="registration-success">
-        <div class="modal__container" data-modal-container>
-          <button class="modal__close" data-modal-close>
-            <svg class="icon icon-close">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-          <div class="modal__content">
-            <div class="modal__icon">
-              <div class="success-mark">
-                <svg class="icon icon-check">
-                  <use xlink:href="img/sprite.svg#icon-check"></use>
-                </svg>
-              </div>
-            </div>
-            <h2 class="modal__title"> Регистрация на семинар </h2>
-            <div class="modal__text"> Мы свяжемся с Вами в течении N часов для подтвреждения регистрации </div>
           </div>
         </div>
       </div>

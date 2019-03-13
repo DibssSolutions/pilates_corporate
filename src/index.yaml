@@ -1,4 +1,4 @@
-ProjectTitle: template
+ProjectTitle: Pilates INSTITUTE
 
 PageList:
 - file: page.html
@@ -8,36 +8,42 @@ PageList:
 - file: instructors.html
   ready: 100
 - file: online-courses.html
-  ready: 50
+  ready: 100
 - file: single-course.html
-  ready: 50
+  ready: 100
 - file: reviews.html
-  ready: 50
+  ready: 100
 - file: gallery.html
-  ready: 50
+  ready: 100
 - file: news.html
-  ready: 50
+  ready: 100
 - file: news-one.html
-  ready: 50
+  ready: 100
 - file: instructor-page.html
-  ready: 50
+  ready: 100
 - file: education.html
-  ready: 50
-- file: UI.html
-  ready: 50
+  ready: 100
 - file: personal-ofiice.html
-  ready: 50
+  ready: 100
 - file: direction.html
-  ready: 50
+  ready: 100
+- file: seminars.html
+  ready: 100
 - file: seminar.html
   ready: 50
 - file: conventions.html
-  ready: 50
+  ready: 100
 - file: about.html
-  ready: 50
+  ready: 100
 - file: schedule.html
-  ready: 50
+  ready: 100
 - file: internal-directions.html
   ready: 100
+- file: basket.html
+  ready: 100
+- file: success-modal.html
+  ready: 100
 - file: my-course.html
+  ready: 100
+- file: UI.html
   ready: 100

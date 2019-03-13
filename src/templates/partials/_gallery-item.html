@@ -35,7 +35,14 @@
 			{% for item in props %}
 				<div class="gallery__nav-item">
 					<div class="gallery__img-wrap">
+						{% if item.video %}
+							<img src="./img/{{item.img}}">
+							<button type="button" class="gallery__play-sm play">
+								{{mixins.icon('play')}}
+							</button>
+						{% else %}
 						<img src="./img/{{item.img}}">
+						{% endif %}
 					</div>
 				</div>
 			{% endfor %}

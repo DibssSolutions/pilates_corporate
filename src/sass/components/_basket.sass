@@ -1,0 +1,156 @@
+.basket-page
+	&__title
+		margin-bottom: 60px
+	&__descr
+		margin-bottom: 42px
+		p
+			&:not(:last-child)
+				margin-bottom: 5px
+
+.basket
+	display: flex
+	flex-wrap: wrap
+	+sm 
+		flex-direction: column
+
+.basket-info,
+.basket-total
+	// @extend %cardShadow
+	border-radius: $radius
+	background-color: $white
+	box-shadow: $shadow
+	height: 100%
+
+%basketBold
+	color: $black
+	+verdana
+	+f(15px, 700, 1.667)
+	letter-spacing: 0
+
+.basket-info
+	display: flex
+	position: relative
+	+sm
+		flex-direction: column
+	&__name,
+	&__duration
+		border-right: 2px solid #f0f0f3
+		+sm 
+			border-right: none
+			border-bottom: 2px solid #f0f0f3
+	&__name
+		+flex-size(51%)
+		padding: 30px
+		+md 
+			padding: 20px
+		+sm
+			+flex-size(100%)
+	&__duration
+		+flex-size(19.5%)
+	&__price
+		+flex-size(20%)
+	&__duration,
+	&__price
+		padding: 30px 10px 30px 40px
+		+lg
+			padding: 30px 10px 30px 20px
+		+md 
+			padding: 20px 10px
+		+sm
+			+flex-size(100%)
+			padding: 30px
+	&__title
+		color: $grayLight
+		font-family: Verdana
+		font-size: 15px
+		letter-spacing: 0.033em
+		line-height: 1.867
+		margin-bottom: 8px
+		+lg 
+			font-size: 12px
+		+sm 
+			font-size: 15px
+	&__text
+		@extend %basketBold
+		+md 
+			font-size: 12px
+		+sm 
+			font-size: 15px
+	&__delete
+		position: absolute
+		top: 50%
+		right: 30px
+		transform: translateY(-50%)
+		+sm 
+			top: auto
+			right: 15px
+			bottom: 36px
+			transform: none
+
+.basket-total
+	@extend %basketBold
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 30px
+
+.checkout-form
+	&__inputs
+		margin-bottom: 38px
+	&__title
+		margin-bottom: 24px
+	&__payment
+		margin-bottom: 67px
+	&__agreement
+		margin-right: -96px
+		margin-bottom: 20px
+	&__submit
+	.help-block.form-error
+		position: absolute
+		top: 100%
+		left: 0
+		color: $errorRed
+
+
+.btn-checkbox
+	position: relative
+	width: 100%
+	padding: 19px 15px
+	text-align: center
+	display: block
+	box-shadow: 0 20px 56px -33px rgba(0, 0, 0, 0.2)
+	+vertical
+	user-select: none
+	input
+		position: absolute
+		width: 1px
+		height: 1px
+		margin: -1px
+		padding: 0
+		border: 0
+		clip: rect(0 0 0 0)
+		overflow: hidden
+		&:checked
+			~ .btn-checkbox__bg
+				background-color: $blue
+				box-shadow: 0 28px 25px -22px #0053a5
+			~ .btn-checkbox__text
+				color: $white
+	&__text
+		position: relative
+		z-index: 3
+		display: inline-block
+		vertical-align: middle
+		color: $black
+		+verdana
+		+f(18px, 700, 1.778)
+		transition: color 0.25s
+	&__bg
+		+coverdiv
+		background-color: $white
+		border-radius: $radius
+		transition: box-shadow 0.25s
+		// box-shadow: 0 20px 42px -24px rgba(0,0,0,.3)
+
+
+

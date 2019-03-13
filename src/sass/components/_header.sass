@@ -5,8 +5,6 @@
 	width: 100%
 	z-index: 5
 	color: $white
-	// background-color: $body
-	// transition: .3s
 	+md
 		color: rgba($text,.5)
 
@@ -92,7 +90,6 @@
 		font-size: 20px
 		transition: border-color .3s, color .3s
 		border: 2px solid currentColor
-		// padding: 0.75em
 		width: 50px
 		height: 50px
 		border-radius: 10px
@@ -100,10 +97,6 @@
 		+hover
 			border-color: $blueHover
 			color: $blueHover
-		// .header.is-active &
-		// 	color: rgba($text,.5)
-		// 	+hover
-		// 		opacity: 1
 		+lg
 			width: 40px
 			height: 40px
@@ -152,26 +145,12 @@
 		.header.is-active &,
 		.header_bg &
 			color: rgba($text,.3)
-		// &:before
-		// 	content: ''
-		// 	position: absolute
-		// 	top: 100%
-		// 	left: 0
-		// 	width: 100%
-		// 	height: 2px
-		// 	background-color: currentColor
-		// 	transform: scaleX(0)
-		// 	transform-origin: right
-		// 	transition: transform .5s
 		&:not(:first-child)
-			margin-left: 2.7em
+			margin-left: 33px
 			+lg
-				margin-left: 1.5em
+				margin-left: 22px
 		+hover
 			color: $text
-			// &:before
-			// 	transform: scaleX(1)
-			// 	transform-origin: left
 			.nav__sublist
 				opacity: 1
 				visibility: visible
@@ -181,19 +160,36 @@
 		display: block
 		+lg
 			font-size: 13px
-		.header__absolute &
-			opacity: 1
 	&__sublist
 		position: absolute
-		top: 30px
-		left: -10px
-		padding: 0 10px 10px
+		top: 45px
+		left: -24px
+		padding: 20px 25px
+		background-color: $footer
+		color: $white
+		border-radius: 4px
 		opacity: 0
 		visibility: hidden
 		transition: opacity .3s, visibility .3s
+		&-inner
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: -26px
+				left: -4px
+				width: 20px
+				height: 20px
+				border-radius: 4px
+				background-color: $footer
+				+rotate(45)
 	&__subitem
+		&:not(:last-child)
+			padding-bottom: 10px
 		+lg
 			font-size: 13px
+		a
+			display: block
 
 
 // 									MOBILE

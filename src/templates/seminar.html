@@ -4,31 +4,207 @@ title: Seminar
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	{{header.block({class: 'header_bg'})}}
-	<div class="seminar">
-		<div class="seminar__inner inner">
-			{{topic.block(
-				{
-					title: 'Семинары',
-					text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.'
-				}
-			)}}
-			<div class="section-sm">
-				{{pilates.block({title: 'Пилатес'})}}
+    {{ header.block({class: 'header_bg'}) }}
+    <div class="inner">
+		<div class="seminar-page__main">
+			<div class="seminar-page__gallery">
+				{{gallery.block([
+					{
+						img: 'gallery.png'
+					},
+					{
+						video: 'event2.png',
+						img: 'event2.png'
+					},
+					{
+						img: 'gallery.png'
+					},
+					{
+						img: 'gallery.png'
+					},
+					{
+						img: 'gallery.png'
+					},
+					{
+						img: 'gallery.png'
+					},
+					{
+						img: 'gallery.png'
+					}
+					])}}
 			</div>
-			<div class="section-md">
-				{{pilates.block({title: 'Постуральная гимнастика'})}}
-			</div>
-			<div class="section-md">
-				{{pilates.block({title: 'Разное'})}}
-			</div>
-			<div class="section">
-				{{event.block()}}
-			</div>
-			<div class="section-md">
-				{{ui.form({title: 'Получите подробную консультацию об обучении'})}}
+			<div class="seminar-page__text">
+				<h2 class="seminar-page__title title-lg">Пилатес для беременных</h2>
+				<div class="seminar-page__descr">
+					<p>Компания «Институт Пилатеса Россия» (НОУ «ПИЛАТЕС Институт») была образована в 2001 г. и стала первой компанией, которая привезла пилатес в Россию. Более 15 лет Институт является ведущим учебным заведением дополнительного образования по обучению и повышению квалификации тренеров по пилатесу. За эти годы мы обучили более 5000 тренеров по всей России и СНГ. У нас работает высококвалифицированная команда преподавателей с большим опытом работы. Наши мастер-тренеры постоянно повышают свой уровень профессионализма у лучших мировых мастеров. Мы никогда не стояли на месте, развивая и усовершенствуя учебные программы. Мы ищем для Вас лучшие методики по всему миру. И, как когда -то, мы открыли для России методику Джозефа Пилатеса, так сейчас мы открываем новое направление Body&Mind - "Постуральную гимнастику - гимнастику осанки". Мы проводим регулярные семинары, а также являемся организаторами Международных конвенций Body&Mind, которые проходят два раза в год.</p>
+				</div>
 			</div>
 		</div>
-	</div>
-	{{footer.block()}}
+		<div class="section-sm">
+			<div class="dropdown-section">
+				<div class="dropdown-section__row row">
+					{% for item in [
+						{
+							title: 'Практика',
+							text: 'Компания «Институт Пилатеса Россия» (НОУ «ПИЛАТЕС Институт») была образована в 2001 г. и стала первой компанией, которая привезла пилатес в Россию. Более 15 лет Институт является ведущим учебным заведением дополнительного образования по обучению и повышению квалификации тренеров по пилатесу. За эти годы мы обучили более 5000 тренеров по всей России и СНГ. У нас работает высококвалифицированная команда преподавателей с большим опытом работы. Наши мастер-тренеры постоянно повышают свой уровень профессионализма у лучших мировых мастеров. Мы никогда не стояли на месте, развивая и усовершенствуя учебные программы. Мы ищем для Вас лучшие методики по всему миру. И, как когда -то, мы открыли для России методику Джозефа Пилатеса, так сейчас мы открываем новое направление Body&Mind - "Постуральную гимнастику - гимнастику осанки". Мы проводим регулярные семинары, а также являемся организаторами Международных конвенций Body&Mind, которые проходят два раза в год.'
+						},
+						{
+							title: 'Теория',
+							text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, earum!'
+						}
+						] %}
+						<div class="dropdown-section__col col-6 col-sm-12">
+							{{ui.dropdown(item)}}
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="head">
+				<div class="head__title title">Для кого</div>
+			</div>
+			<div class="bullet-block">
+				<ol class="bullet-block__row row">
+					{% for item in [
+						{
+							text: 'Танцовщикам и спортсменам'
+						},
+						{
+							text: 'Преподавателям йоги или пилатеса'
+						},
+						{
+							text: 'Инструкторам по фитнесу'
+						},
+						{
+							text: 'Педагогам по балету или другим видам танца'
+						},
+						{
+							text: 'Преподавателям реабилитационных физических программ'
+						},
+						{
+							text: 'Профессионалам в области телесно-ориентированной терапии'
+						}
+						] %}
+						<li class="bullet-block__col col-4 col-md-6 col-sm-12">
+							{{ui.bullet(item)}}
+						</li>
+					{% endfor %}
+				</ol>
+			</div>
+		</div>
+		<div class="section">
+			<div class="head">
+				<div class="head__title title">Чему вы научитись на семинаре</div>
+			</div>
+			<div class="quotes-block">
+				<div class="quotes-block__row row js-medium-slider">
+					{% for item in 
+						[
+							'29 Motivational Quotes For Business And Other Work Environments',
+							'Advertising Relationships Vs Business Decisions',
+							'Train Your Brain This New Years',
+							'Benjamin Franklin S Method Of Habit Formation',
+							'An Ugly Myspace Profile Will Sure Ruin Your Reputation',
+							'Control Your Own Level Of Motivation'
+						] 
+						%}
+					<div class="quotes-block__col col-4 col-md-12">
+						{{ui.quote(item)}}
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+    	<div class="section">
+    		{{ ui.form({title: 'Получите подробную консультацию об обучении'}) }}
+    	</div>
+        {{instructor.block()}}
+        {{testimonial.block()}}
+        <div class="section">
+            {% set item = {
+                img: 'certificate.png',
+                title: 'Сертификат по окончании',
+                text: 'После прохождения любого семинара мы предоставстим вам сертификат'
+            } %}
+            {{ui.certificate(item)}}
+        </div>
+    	<div class="section">
+            <div class="head">
+                <h3 class="title">Расписание</h3>
+            </div>
+		  {% set schedules = [
+		    {
+		      title: 'Microwave Cooking Is The Wave Of The Future',
+		      blocks: [
+		        { 
+		          dayStart: '01.12.2018',
+		          dayEnd: '03.12.2018',
+		          city: 'Москва',
+		          direction: 'Пилатес',
+		          treners: [
+		            {
+		              name: 'Otmar Doležal'
+		            },
+		            {
+		              name: 'Otmar Doležal'
+		            }
+		          ],
+		          adress: 'метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж',
+		          price: '17900'
+		        },
+		        {
+		          dayStart: '01.12.2018',
+		          dayEnd: '03.12.2018',
+		          city: 'Санкт-Петербург',
+		          direction: 'Пилатес',
+		          treners: [
+		            {
+		              name: 'Otmar Doležal'
+		            },
+		            {
+		              name: 'Otmar Doležal'
+		            }
+		          ],
+		          adress: 'метро Китай-Город, ул. Солянка, 1/2, 2 подъезд, 2 этаж',
+		          price: '17900'
+		        }
+		      ]
+		    }
+		  ] %}
+		  {% for item in schedules %}
+		      {{ ui.schedule(item) }}
+		  {% endfor %}
+    	</div>
+    	<div class="section">
+    		<div class="head">
+    			<h1 class="title">Галерея</h1>
+    		</div>
+    		{{gallery.block([
+    			{
+    				img: 'gallery.png'
+    			},
+    			{
+    				video: 'https://www.youtube.com/watch?v=_sI_Ps7JSEk',
+    				img: 'event2.png'
+    			},
+    			{
+    				img: 'gallery.png'
+    			},
+    			{
+    				img: 'gallery.png'
+    			},
+    			{
+    				img: 'gallery.png'
+    			},
+    			{
+    				img: 'gallery.png'
+    			},
+    			{
+    				img: 'gallery.png'
+    			}
+    			])}}
+    	</div>
+    </div>
+    {{ footer.block() }}
 {% endblock %}
