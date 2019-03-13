@@ -1,0 +1,37 @@
+---
+title: Payment page
+---
+{% import "partials/_checkout-form.html" as checkout %}
+{% import "partials/_ui.html" as ui %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+		{{header.block({class: 'header_bg'})}}
+		<div class="payment-page">
+			<div class="payment-page__inner inner">
+				<h2 class="payment-page__title title">Оплата семинара</h2>
+				<div class="payment-page__content row">
+					<div class="payment-page__checkout col-6 col-lg-8 col-md-12">
+						{{ checkout.form({
+							payment: true,
+							btnText: 'ЗАПИСАТЬСЯ НА КУРС'
+						}) }}
+          </div>
+          <div class="payment-page__course col-4 col-md-6 col-sm-8 col-xs-12">
+						<a href="#" class="course course_img course_payment is-active">
+							<div class="course__img">
+								<img src="./img/course.png" alt="course">
+							</div>
+							<div class="course__payment-top">
+								<div class="course__time">19.11.2018</div>
+								<div class="course__price">Москва</div>
+							</div>
+							<h3 class="course__title title title_md">Пилатес для беременных</h3>
+							<div class="course__price-big">1590 ₽</div>
+						</a>
+          </div>
+				</div>
+			</div>
+		</div>
+	{{footer.block()}}
+{% endblock %}

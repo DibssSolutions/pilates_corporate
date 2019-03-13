@@ -1,53 +1,88 @@
-<form action="/" class="checkout-form js-validation">
-  <div class="checkout-form__inputs row">
-    <div class="col-6 col-sm-12">
-      <div class="form-group">
-        <input
-          class="form-group__border-input"
-          type="text"
-          placeholder="Имя"
-          data-validation="required length"
-          data-validation-length="min2"
-          data-validation-error-msg="Пожалуйста, введите ваше имя"
-        />
-      </div>
-    </div>
-    <div class="col-6 col-sm12">
-      <div class="form-group">
-        <input
-          class="form-group__border-input"
-          type="text"
-          placeholder="Фамилия"
-          data-validation="required length"
-          data-validation-length="min2"
-          data-validation-error-msg="Пожалуйста, введите вашу фамилию"
-        />
-      </div>
-    </div>
-  </div>
-  <h4 class="checkout-form__title title title_md">Способ оплаты</h4>
-  <div class="checkout-form__payment row">
-    <div class="col-6 col-sm-12">
-      <label class="btn-checkbox">
-        <input type="radio" name="payment" checked />
-        <span class="btn-checkbox__text">Банковская карта</span>
-        <span class="btn-checkbox__bg"></span>
-      </label>
-    </div>
-    <div class="col-6 col-sm-12">
-      <label class="btn-checkbox">
-        <input type="radio" name="payment" />
-        <span class="btn-checkbox__text">Электронные деньги</span>
-        <span class="btn-checkbox__bg"></span>
-      </label>
-    </div>
-  </div>
-  <div class="checkout-form__agreement user-agreement">
-    Нажимая кнопку «Оплатить», я принимаю условия Договора публичной оферты и даю своё согласие НОУ «ПИЛАТЕС Институт» на обработку моих персональных данных, в соответствии с ФЗ от 27.07.2006 года №152-ФЗ «О персональных данных».
-  </div>
-  <div class="checkout-form__submit-wrapper row">
-    <div class="col-6 checkout-form__submit">
-      <button type='submit' class='btn btn_w100'>Оплатить</button>
-    </div>
-  </div>
-</form>
+{% import "partials/_mixins.html" as mixins %} 
+{% macro form(props) %}
+	<form action="/" class="checkout-form js-validation">
+		<div class="checkout-form__inputs row">
+			<div class="col-6 col-sm-12">
+				<div class="form-group">
+					<input
+						class="form-group__border-input"
+						type="text"
+						placeholder="Имя"
+						data-validation="required length"
+						data-validation-length="min2"
+						data-validation-error-msg="Пожалуйста, введите ваше имя"
+					/>
+				</div>
+			</div>
+			<div class="col-6 col-sm-12">
+				<div class="form-group">
+					<input
+						class="form-group__border-input"
+						type="text"
+						placeholder="Фамилия"
+						data-validation="required length"
+						data-validation-length="min2"
+						data-validation-error-msg="Пожалуйста, введите вашу фамилию"
+					/>
+				</div>
+			</div>
+		</div>
+			{% if props.payment %}
+				<div class="checkout-form__inputs row">
+					<div class="col-6 col-sm-12">
+						<div class="form-group">
+							<input 
+								type="text" 
+								class="form-group__border-input"
+								placeholder="Телефон" 
+								data-validation="custom"
+								data-validation-regexp="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$"
+								data-validation-error-msg="Пожалуйста, введите правильный номер телефона"
+							/>
+						</div>
+					</div>
+					<div class="col-6 col-sm-12">
+						<div class="form-group">
+							<input
+								type="text"
+								class="form-group__border-input"
+								placeholder="Email"
+								data-validation="email"
+								data-validation-error-msg="Пожалуйста, введите правильный адрес"
+							/>
+						</div>
+					</div>
+				</div>
+			{% endif %}
+		<div class="checkout-form__title-wrapper">
+			<h4 class="checkout-form__title title title_md">Способ оплаты</h4>
+		</div>
+		<div class="checkout-form__payment row">
+			<div class="col-6 col-xs-12">
+				<label class="btn-checkbox">
+					<input type="radio" name="payment" checked />
+					<span class="btn-checkbox__text">Банковская карта</span>
+					<span class="btn-checkbox__bg"></span>
+				</label>
+			</div>
+			<div class="col-6 col-xs-12">
+				<label class="btn-checkbox">
+					<input type="radio" name="payment" />
+					<span class="btn-checkbox__text">Электронные деньги</span>
+					<span class="btn-checkbox__bg"></span>
+				</label>
+			</div>
+		</div>
+		<div class="checkout-form__agreement user-agreement">
+			Нажимая кнопку «Оплатить», я принимаю условия Договора публичной оферты и
+			даю своё согласие НОУ «ПИЛАТЕС Институт» на обработку моих персональных
+			данных, в соответствии с ФЗ от 27.07.2006 года №152-ФЗ «О персональных
+			данных».
+		</div>
+		<div class="checkout-form__submit-wrapper row">
+			<div class="checkout-form__submit col-6 col-xs-12">
+				<button type="submit" class="btn btn_w100 btn_big">{{ props.btnText or 'Оплатить' }}</button>
+			</div>
+		</div>
+	</form>
+{% endmacro %}

@@ -1,6 +1,6 @@
 {% import "partials/_mixins.html" as mixins %}
 {% macro block(props) %}
-<header class="header {% if props.class %}{{props.class}}{% endif %} js-header">
+<header class="header {% if props.class %}{{props.class}}{% endif %} js-header is-open">
 	<div class="header__top">
 		<div class="header__inner inner">
 			<p>Обучение и повышение квалификации тренеров по пилатесу с 2001 года</p>
@@ -31,15 +31,15 @@
 							{nav: 'О нас',
 								list: ['Кто мы', 'Философия', 'Как мы']},
 							{nav: 'Обучение',
-								list: ['Пилатес  MatWork 1', 'Пилатес  MatWork 2', 'Большое оборудование', 'Постуральная гимнастика']},
+								list: ['Пилатес MatWork 1', 'Пилатес MatWork 2', 'Большое оборудование', 'Постуральная гимнастика']},
 							{nav: 'Онлайн курсы'},
 							{nav: 'Преподаватели'},
 							{nav: 'Контакты'}
 							] %}
 						<li class="nav__item {% if loop.index == props.index %}nav__item_current{% endif %}">
-							<a href="#" class="nav__link">{{item.nav}}</a>
+							<a href="#" class="nav__link js-dropdown-trigger">{{item.nav}}</a>
 							{% if item.list %}
-							<ul class="nav__sublist">
+							<ul class="nav__sublist js-dropdown-text">
 								<div class="nav__sublist-inner">
 									{% for sub in item.list %}
 									<li class="nav__subitem">
