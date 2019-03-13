@@ -306,12 +306,14 @@
 		+circle(90)
 		+cover
 		overflow: hidden
-		margin-right: 1.33em
+		margin-right: 20px
 		+ms
 			+circle(60)
+			margin-right: 12px
 	&__title
 		+ms
 			font-size: 14px
+			line-height: 1.5
 	&__aside
 		color: $grayLight
 		letter-spacing: 0.033em
@@ -451,6 +453,7 @@
 	cursor: pointer
 	padding-left: 40px
 	user-select: none
+	line-height: 1.5
 	+sm
 		font-size: 10px
 	&__icon
@@ -486,8 +489,6 @@
 		&.error
 			~ .checkbox__icon
 				border: 1px solid darken($orange, 20%)
-	&__text
-		line-height: 1.2
 
 .form-contacts
 	max-width: 880px
@@ -788,7 +789,11 @@
 .certificate
 	display: flex
 	align-items: center
-	justify-content: center
+	padding-left: 112px
+	// justify-content: center
+	+lg 
+		padding-left: 0
+		justify-content: center
 	+md
 		flex-wrap: wrap
 	&__img
@@ -806,7 +811,7 @@
 			margin-left: 30px
 		+md
 			margin-left: 0
-			margin-top: 70px
+			margin-top: 78px
 			max-width: none
 	&__text
 		margin-top: 20px
