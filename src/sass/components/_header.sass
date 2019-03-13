@@ -11,7 +11,6 @@
 	&.is-active,
 	&.header_bg
 		color: rgba($text,.5)
-		box-shadow: 0 8px 65px -45px rgba(0, 0, 0, 0.5)
 	&__top
 		padding: 16px 0 15px
 		text-transform: uppercase
@@ -57,6 +56,7 @@
 	&__main
 		background-color: transparent
 		padding: 9px 0
+		box-shadow: 0 8px 65px -45px rgba(0, 0, 0, 0.5)
 		transition: background-color .3s
 		.inner
 			display: flex
@@ -133,9 +133,7 @@
 		display: block
 
 .nav
-	// +md
-	// 	opacity: 0
-	// 	visibility: hidden
+	transition: transform .5s
 	&__list
 		display: flex
 		align-items: center
@@ -159,8 +157,23 @@
 			opacity: 1
 	&__link
 		display: block
+		position: relative
 		+lg
 			font-size: 13px
+		&.is-open
+			.icon
+				transform: translateY(-50%) rotate(0)
+		.icon
+			display: none
+			position: absolute
+			top: 50%
+			transform: translateY(-50%) rotate(180deg)
+			right: 0
+			color: $orange
+			font-size: 8px
+			transition: transform .3s
+			+md
+				display: block
 	&__sublist
 		position: absolute
 		top: 45px
@@ -191,6 +204,8 @@
 			font-size: 13px
 		a
 			display: block
+	&__contacts
+		display: none
 
 
 // 									MOBILE
@@ -262,30 +277,38 @@
 	0%
 		transform: translateY(0)
 
-.header.is-open
-	.nav
+.nav
+	+md
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		transform: translateX(200%)
 		position: absolute
 		top: 60px
 		left: 0
 		width: 100%
-		height: auto
+		height: calc(100vh - 60px)
 		background-color: $white
-		padding: 0 30px
+		padding: 0
 		&__list
+			padding: 0 30px
 			display: block
 		&__item
-			margin: 0
+			&:not(:first-child)
+				margin: 0
 		&__link
 			line-height: 1
 			padding: 15px 0
+			transition: color .3s
+			&.is-open
+				color: $text
 		&__sublist
+			display: none
 			position: static
-			padding: 20px 25px
-			// background-color: $footer
-			border-radius: 4px
+			padding: 0
+			background-color: transparent
 			opacity: 1
 			visibility: visible
-			transition: opacity .3s, visibility .3s
 			&-inner
 				&:before
 					display: none
@@ -297,3 +320,12 @@
 			a
 				display: block
 				color: $text
+		&__contacts
+			display: block
+			background-color: $footer
+			color: $white
+			padding: 30px
+			a
+				display: block
+		.header.is-open &
+			transform: translateX(0)

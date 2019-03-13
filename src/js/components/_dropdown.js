@@ -1,4 +1,4 @@
-import {  ACTIVE } from '../constants';
+import {  ACTIVE, OPEN } from '../constants';
 
 const drop = $('.js-dropdown');
 drop.each(function() {
@@ -9,5 +9,7 @@ drop.each(function() {
   dropTrigger.on('click', () => {
     dropText.slideToggle('300');
     dropIcon.toggleClass(ACTIVE);
+    dropTrigger.toggleClass(OPEN);
   });
 });
+
