@@ -6,7 +6,6 @@
 	box-shadow: 0 20px 56px -33px rgba($black, 0.2)
 	min-height: 300px
 	display: flex
-	height: 100%
 	flex-direction: column
 	justify-content: space-between
 	border-radius: 10px
@@ -21,6 +20,9 @@
 	&.course_payment
 		+sm 
 			padding-bottom: 25px
+	[class^="col"] &,
+	[class*="col-"] &
+		height: 100%
 	+hover
 		background-color: $orange
 		color: $white
