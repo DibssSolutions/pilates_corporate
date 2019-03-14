@@ -13,29 +13,31 @@ import {
 
 const heroSlider = $('.js-hero-slider');
 const duration = heroSlider.data('duration');
-
+const speed = 800;
+let durationSpeed = duration;
 heroSlider.each((i, el) => {
   let slider = $(el);
   let sliderParent = slider.parents('.js-hero-slider-wrap');
   slider.on('init', () => {
     sliderParent.addClass(INIT);
     let dots = slider.find('.js-dot svg circle');
-    $(dots[0]).css('animation-duration', duration + 'ms');
+    $(dots[0]).css('animation-duration', durationSpeed + 'ms');
+    durationSpeed = duration + speed;
   });
   slider.on('beforeChange', (event, slick, currentSlide, nextSlide) => {
     let dots = slider.find('.js-dot svg circle');
-    dots.each((i, el) => {
-      $(el).css('animation-duration', '.8s');
-    });
+    dots.removeAttr('style');
     const dot = dots[nextSlide];
-    $(dot).css('animation-duration', duration + 'ms');
+    $(dot).css('animation-duration', durationSpeed + 'ms');
   });
   slider.slick({
     dots: true,
     arrows: false,
     infinite: true,
-    speed: 800,
+    speed: speed,
     slidesToShow: 1,
+    pauseOnHover: false,
+    pauseOnFocus: false,
     autoplay: true,
     autoplaySpeed: duration,
     customPaging: (slider, pageIndex) => {

@@ -626,28 +626,33 @@
     <!-- END content -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
-    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=7a9648bf-398b-4673-ad66-512ef28875ce&lang=ru_RU" type="text/javascript"></script> -->
-    <!-- <script>
-		const map = document.querySelectorAll('.map');
-		if (map) {
-      if(ymaps) {
-			map.forEach(function(el) {
-				ymaps.ready(function() {
-				  var map = new ymaps.Map(el, {
-					center: [55.76, 37.64], 
-					zoom: 10
-				  });
-				  map.behaviors.disable('scrollZoom');
-				  map.controls.remove('smallMapDefaultSet');
-				  map.controls.remove('trafficControl');
-				  map.controls.remove('rulerControl');
-				  map.container.fitToViewport();
-				});
-      });
-    }
-			}
-        
-    </script> -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=7a9648bf-398b-4673-ad66-512ef28875ce&lang=ru_RU" type="text/javascript"></script>
+    <script>
+      const map = document.querySelectorAll('.map');
+      if (map)
+      {
+        if (ymaps)
+        {
+          map.forEach(function(el)
+          {
+            ymaps.ready(function()
+            {
+              var map = new ymaps.Map(el,
+              {
+                center: [55.76, 37.64],
+                zoom: 10
+              });
+              map.behaviors.disable('scrollZoom');
+              map.controls.remove('smallMapDefaultSet');
+              map.controls.remove('trafficControl');
+              map.controls.remove('rulerControl');
+              map.container.fitToViewport();
+            });
+          });
+        }
+      }
+
+    </script>
     <!-- END scripts -->
   </body>
 

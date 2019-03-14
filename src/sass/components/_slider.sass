@@ -27,6 +27,7 @@
         background-position: center
         background-size: cover
         background-repeat: no-repeat
+        display: block
     .slick-dots
         position: absolute
         display: flex
@@ -72,10 +73,13 @@
                 .slick-initialized &
                     stroke-dasharray: 100
                     stroke-dashoffset: 0
-                    animation: dashRevers 0.8s ease alternate forwards
+                    animation: dashRevers 0.8s ease forwards
                 .slick-initialized li.slick-active &
                     // stroke: $white
-                    animation: dashPlay ease alternate forwards
+                    animation-name: dashPlay
+                    animation-timing-function: linear
+                    animation-fill-mode: forwards
+                    // animation: dashPlay linear forwards
 
 @keyframes dashPlay
     from
