@@ -59,7 +59,7 @@ heroSlider.each((i, el) => {
   });
 });
 
-// 									small slider
+// small slider
 
 const testimonialSlider = $('.js-small-slider');
 const options = {
