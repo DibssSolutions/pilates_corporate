@@ -1,0 +1,82 @@
+
+.gallery
+	line-height: 0
+	+sm
+		margin: 0 -16px
+	&__slider
+		white-space: nowrap
+		opacity: 0
+		visibility: hidden
+		transition: opacity .3s, visibility .3s
+		&.slick-initialized
+			white-space: normal
+			opacity: 1
+			visibility: visible
+	&__slide
+	&__item
+		// height: 0
+		// padding-bottom: 37.1%
+		display: block
+		+cover
+		border-radius: 10px
+		overflow: hidden
+		height: 550px
+		min-height: 400px
+		+sm
+			height: 400px
+			padding-bottom: 0
+			border-radius: 0
+	&__nav
+		display: flex
+		justify-content: center
+		&-item
+			padding: 0 10px
+			+sm
+				padding: 0 8px
+		&-wrap
+			padding: 15px 80px
+			max-width: 610px
+			border-radius: 10px
+			background-color: $white
+			position: relative
+			margin: -46px auto 0
+			box-shadow: 0 20px 56px rgba($black, .2)
+			+sm
+				padding: 15px 12px
+				max-width: 288px
+				margin-top: -40px
+	&__img-wrap
+		cursor: pointer
+		position: relative
+		border-radius: 10px
+		overflow: hidden
+		width: 70px
+		height: 70px
+		+sm
+			width: 50px
+			height: 50px
+		img
+			display: block
+			// min-height: 70px
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+			// +sm
+			// 	min-height: 50px
+	&__prev, &__next
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 1
+	&__prev
+		left: 20px
+	&__next
+		right: 20px
+	&__play-sm
+		+vcenter
+		+circle(25)
+		font-size: 12px
+		+sm
+			+circle(18)
+			font-size: 8px

@@ -13,14 +13,29 @@
 	text-align: center
 	vertical-align: top
 	position: relative
+	overflow: hidden
 	outline: none
 	transition: background-color .3s, box-shadow .3s
 	line-height: 1.4
 	cursor: pointer
 	box-shadow: 0 12px 20px -6px $orange
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	// &:before
+	// 	content: ''
+	// 	position: absolute
+	// 	top: 0
+	// 	left: 0
+	// 	right: 0
+	// 	bottom: 0
+	// 	transition: background-color .3s
 	+hover
 		background-color: $orangeHover
 		box-shadow: none
+		// background-color: $orange
+		// background-image: linear-gradient(to right,rgba(0,0,0,0.15), rgba(0,0,0,0.15))
+		// &:before
 	+ms
 		width: 100%
 	&_bold
@@ -114,6 +129,7 @@
 	position: relative
 	font-size: 40px
 	color: $white
+	transition: box-shadow .3s, background-color .3s
 	+sm
 		+circle(60)
 		font-size: 30px

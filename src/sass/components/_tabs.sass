@@ -1,0 +1,36 @@
+.tabs
+	display: flex
+	align-items: center
+	+sm
+		overflow: auto
+	&__item
+		flex-shrink: 0
+		&:not(:last-child)
+			margin-right: 32px
+			+sm 
+				margin-right: 15px
+
+[data-tabs]
+	overflow: hidden
+	[data-tabs-control]
+		cursor: pointer
+		user-select: none
+		&[disabled],
+		&.is-disabled
+			cursor: not-allowed
+			+nosel
+	[data-tabs-wrapper]
+		position: relative
+	[data-tabs-container]
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		opacity: 0
+		visibility: hidden
+		transition: opacity 0.3s, visibility 0.3s
+		&.is-open
+			position: relative
+			opacity: 1
+			visibility: visible
