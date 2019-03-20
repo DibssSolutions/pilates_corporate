@@ -9,11 +9,13 @@
                     titleSpan: 'Пилатеса'
                 },
                 {
+                    linkTitle: true,
                     bg: 'hero1.jpg',
                     title: 'Об Институте ',
                     titleSpan: 'Пилатеса'
                 },
                 {
+                    linkSlide: true,
                     bg: 'hero1.jpg',
                     title: 'Об Институте ',
                     titleSpan: 'Пилатеса'
@@ -26,6 +28,33 @@
             ] %}
                 
                 <div class="hero-slider__slide">
+                    {% if item.linkTitle %}
+                    <div class="hero-slider__content" style="background-image: url(./img/{{ item.bg }})">
+                        <div class="hero__container">
+                            <div class="hero__content">
+                                <div class="hero__inner inner inner_md">
+                                    <a href="#" class="hero__title title title_line title_white">
+                                        {{ item.title }}
+                                        <span>{{ item.titleSpan }}</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% elseif item.linkSlide %}
+                    <a href="#" class="hero-slider__content" style="background-image: url(./img/{{ item.bg }})">
+                        <div class="hero__container">
+                            <div class="hero__content">
+                                <div class="hero__inner inner inner_md">
+                                    <h2 class="hero__title title title_line title_white">
+                                        {{ item.title }}
+                                        <span>{{ item.titleSpan }}</span>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    {% else %}
                     <div class="hero-slider__content" style="background-image: url(./img/{{ item.bg }})">
                         <div class="hero__container">
                             <div class="hero__content">
@@ -38,6 +67,7 @@
                             </div>
                         </div>
                     </div>
+                    {% endif %}
                 </div>
 
             {% endfor %}
