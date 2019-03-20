@@ -235,6 +235,23 @@ galleryNav.slick({
   ]
 });
 
+let timeOutGallery;
+let arrayHref = [];
+const sliderIcons = $('.js-gallery-slider-wrap .icon use');
+sliderIcons.each((i, el) => {
+  const atr = $(el).attr('xlink:href');
+  arrayHref.push(atr);
+});
+
+WIN.on('load resize orientationchange', function(e) {
+  clearTimeout(timeOutGallery);
+  timeOutGallery = setTimeout(() => {
+    for (let i = 0; i <= sliderIcons.length - 1; i++) {
+      $(sliderIcons[i]).attr('xlink:href', `${arrayHref[i]}`);
+    }
+  }, 120);
+});
+
 // 										INSTRUCTOR slider
 const instructorSlider = $('.js-instructor-slider');
 const instructorNav = $('.js-instructor-slider-nav');
