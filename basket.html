@@ -105,11 +105,17 @@
               </div>
             </nav>
             <div class="header__group">
-              <a href="#" class="header__icon">
-                <svg class="icon icon-user">
-                  <use xlink:href="img/sprite.svg#icon-user"></use>
-                </svg>
-              </a>
+              <div class="header__wrapper js-dropdown">
+                <a href="#" class="header__icon js-dropdown-trigger">
+                  <svg class="icon icon-user">
+                    <use xlink:href="img/sprite.svg#icon-user"></use>
+                  </svg>
+                </a>
+                <ul class="header__list js-dropdown-text">
+                  <li><a href="#">Мои курсы</a></li>
+                  <li><a href="#">Выход</a></li>
+                </ul>
+              </div>
               <a href="#" class="header__icon">
                 <svg class="icon icon-basket">
                   <use xlink:href="img/sprite.svg#icon-basket"></use>
@@ -129,34 +135,61 @@
         <div class="basket-page__inner inner">
           <h2 class="basket-page__title title">Корзина</h2>
           <div class="basket-page__basket">
-            <div class="basket row">
-              <div class="basket__info col-9 col-sm-12">
-                <div class="basket-info">
-                  <div class="basket-info__name">
-                    <div class="basket-info__title">Курс</div>
-                    <div class="basket-info__text"> Microwave Cooking Is The Wave Of The Future </div>
-                  </div>
-                  <div class="basket-info__duration">
-                    <div class="basket-info__title">Длительность</div>
-                    <div class="basket-info__text">90 минут</div>
-                  </div>
-                  <div class="basket-info__price">
-                    <div class="basket-info__title">Стоимость</div>
-                    <div class="basket-info__text">1500 ₽</div>
-                  </div>
-                  <div class="basket-info__delete">
-                    <button type="button" class="delete-btn">
-                      <svg class="icon icon-close">
-                        <use xlink:href="img/sprite.svg#icon-close"></use>
-                      </svg>
-                    </button>
+            <div class="basket">
+              <div class="basket__row row">
+                <div class="basket__info col-9 col-sm-12">
+                  <div class="basket-info">
+                    <div class="basket-info__name">
+                      <div class="basket-info__title">Курс</div>
+                      <div class="basket-info__text"> Microwave Cooking Is The Wave Of The Future </div>
+                    </div>
+                    <div class="basket-info__duration">
+                      <div class="basket-info__title">Длительность</div>
+                      <div class="basket-info__text">90 минут</div>
+                    </div>
+                    <div class="basket-info__price">
+                      <div class="basket-info__title">Стоимость</div>
+                      <div class="basket-info__text">1500 ₽</div>
+                    </div>
+                    <div class="basket-info__delete">
+                      <button type="button" class="delete-btn">
+                        <svg class="icon icon-close">
+                          <use xlink:href="img/sprite.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="basket__total col-3  col-sm-12">
-                <div class="basket-total">
-                  <span class="basket-total__title">Итого:</span>
-                  <span class="basket-total__number">1500 ₽</span>
+              <div class="basket__row row">
+                <div class="basket__info col-9 col-sm-12">
+                  <div class="basket-info">
+                    <div class="basket-info__name">
+                      <div class="basket-info__title">Курс</div>
+                      <div class="basket-info__text"> Microwave Cooking Is The Wave Of The Future </div>
+                    </div>
+                    <div class="basket-info__duration">
+                      <div class="basket-info__title">Длительность</div>
+                      <div class="basket-info__text">90 минут</div>
+                    </div>
+                    <div class="basket-info__price">
+                      <div class="basket-info__title">Стоимость</div>
+                      <div class="basket-info__text">1500 ₽</div>
+                    </div>
+                    <div class="basket-info__delete">
+                      <button type="button" class="delete-btn">
+                        <svg class="icon icon-close">
+                          <use xlink:href="img/sprite.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="basket__total col-3  col-sm-12">
+                  <div class="basket-total">
+                    <span class="basket-total__title">Итого:</span>
+                    <span class="basket-total__number">1500 ₽</span>
+                  </div>
                 </div>
               </div>
             </div>

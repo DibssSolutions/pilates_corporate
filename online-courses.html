@@ -105,11 +105,17 @@
               </div>
             </nav>
             <div class="header__group">
-              <a href="#" class="header__icon">
-                <svg class="icon icon-user">
-                  <use xlink:href="img/sprite.svg#icon-user"></use>
-                </svg>
-              </a>
+              <div class="header__wrapper js-dropdown">
+                <a href="#" class="header__icon js-dropdown-trigger">
+                  <svg class="icon icon-user">
+                    <use xlink:href="img/sprite.svg#icon-user"></use>
+                  </svg>
+                </a>
+                <ul class="header__list js-dropdown-text">
+                  <li><a href="#">Мои курсы</a></li>
+                  <li><a href="#">Выход</a></li>
+                </ul>
+              </div>
               <a href="#" class="header__icon">
                 <svg class="icon icon-basket">
                   <use xlink:href="img/sprite.svg#icon-basket"></use>
