@@ -49,3 +49,13 @@ PageList:
   ready: 100
 - file: UI.html
   ready: 100
+- file: personal-login.html
+  ready: 100
+- file: personal-registration.html
+  ready: 100
+- file: personal-registration-2.html
+  ready: 100
+- file: personal-creation.html
+  ready: 100
+- file: 404.html
+  ready: 100

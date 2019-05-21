@@ -1,0 +1,40 @@
+---
+title: Personal-creation
+---
+{% import "partials/_checkout-form.html" as checkout %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	{{header.block({class: 'header_bg'})}}
+	<div class="basket-page">
+		<div class="basket-page__inner inner">
+			<h2 class="basket-page__title title">Создайте новый пароль</h2>
+			<div class="basket-page__checkout-wrapper row">
+				<div class="basket-page__checkout col-6 col-lg-8 col-md-12">
+					<form action="/" class="checkout-form js-validation">
+						<div class="checkout-form__inputs row">
+							<div class="col-6 col-sm-12">
+								<div class="form-group">
+									<input
+										class="form-group__border-input"
+										type="password"
+										placeholder="Пароль"
+										data-validation="required length"
+										data-validation-length="min2"
+										data-validation-error-msg="Пожалуйста, введите ваш пароль"
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="checkout-form__save row">
+							<div class="checkout-form__submit col-6 col-xs-12">
+								<button type="submit" class="btn btn_w100 btn_big">Сохранить</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{footer.block()}}
+{% endblock %}

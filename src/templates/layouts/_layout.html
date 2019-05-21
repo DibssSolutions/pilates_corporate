@@ -12,7 +12,7 @@
 {% import "partials/_top-title.html" as topic %}
 {% import "partials/_gallery-item.html" as gallery %}
 <!doctype html>
-<html>
+<html{% if classHtml %} class="{{ classHthml }}"{% endif %}>
   <head>
     <meta charset="utf-8">
     <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>

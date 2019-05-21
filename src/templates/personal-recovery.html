@@ -1,0 +1,111 @@
+---
+title: personal-recovery
+classHtml: is-overflow-hidden
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	{{header.block({class: 'header_bg'})}}
+	<div class="personal-office online-courses">
+		<div class="personal-office__inner inner">
+			{{topic.block(
+				{
+					title: 'Мои курсы'
+				}
+			)}}
+			<div class="online-courses__main-list">
+				<div class="online-courses__row row">
+					<div class="online-courses__main-col col-4 col-md-6 col-xs-12">
+						{{ui.course({
+							class: 'course_img course_lg',
+							img: 'course.png',
+							title: 'Пилатес для беременных',
+							single: '90 мин'
+						})}}
+					</div>
+					<div class="online-courses__main-col col-4 col-md-6 col-xs-12">
+						<a href="#" class="empty">
+							<div class="empty__inner">
+								<button type="button" class="empty__plus plus">{{mixins.icon('plus')}}</button>
+								<div class="empty__title">Выбрать новый курс</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="personal-office__recommend">
+				<h2 class="personal-office__title title">Рекомендуем</h2>
+				<div class="personal-office__row row js-small-slider">
+					<div class="personal-office__col col-3 col-md-12">
+							{{ui.course({
+								class: 'course_img',
+								img: 'course.png',
+								title: 'Пилатес для беременных',
+								time: '90 мин',
+								price: '1 500 ₽'
+							})}}
+					</div>
+					<div class="personal-office__col col-3 col-md-12">
+							{{ui.course({
+								class: 'course_img',
+								img: 'course.png',
+								title: 'Пилатес для беременных',
+								time: '90 мин',
+								price: '1 500 ₽'
+							})}}
+					</div>
+					<div class="personal-office__col col-3 col-md-12">
+							{{ui.course({
+								class: 'course_img',
+								img: 'course.png',
+								title: 'Пилатес для беременных',
+								time: '90 мин',
+								price: '1 500 ₽'
+							})}}
+					</div>
+					<div class="personal-office__col col-3 col-md-12">
+							{{ui.course({
+								class: 'course_img',
+								img: 'course.png',
+								title: 'Пилатес для беременных',
+								time: '90 мин',
+								price: '1 500 ₽'
+							})}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{footer.block()}}
+	<div class="modal is-open" data-modal="login">
+	  <div class="modal__container modal__container_ha" data-modal-container>
+	    <button class="modal__close" data-modal-close>
+	      {{ mixins.icon("close") }}
+	    </button>
+	    <div class="modal__content">
+	      <h2 class="modal__title">Восстановление пароля</h2>
+	      <div class="modal__form-wrapper">
+	        <form action="/" class="registration-form js-validation">
+	          <div class="form-group registration-form__agreement user-agreement">Ссылка для смены пароля будет отправлена на указанный вами e-mail</div>
+	          <div class="form-group">
+	            <input
+	              class="form-group__border-input"
+	              type="text"
+	              placeholder="Email"
+	              data-validation="email"
+	              data-validation-error-msg="Пожалуйста, введите правильный адрес"
+	            />
+	          </div>
+	          <div class="registration-form__submit">
+	            <button type="submit" class="btn">Зарегестрироваться</button>
+	          </div>
+	          <div class="registration-form__agreement user-agreement">
+	            Я согласен с условиями обработки персональных данных
+	          </div>
+	        </form>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+{% endblock %}
